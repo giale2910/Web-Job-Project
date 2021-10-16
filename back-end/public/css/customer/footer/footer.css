@@ -1,0 +1,254 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div#footer {
+    width: 100vw;
+    height: auto;
+}
+
+div#footer-top {
+    width: 98vw;
+    height: 210px;
+}
+
+div#contact {
+    width: 98vw;
+    height: 210px;
+    padding: 50px 0px;
+}
+
+div#follow-section {
+    width: 30%;
+    height: 110px;
+    padding: 0px 15px;
+}
+
+div#social-media {
+    width: 100%;
+    height: 110px;
+}
+
+div#social-media h2 {
+    width: max-content;
+    height: 40px;
+    margin: 0px 0px 25px 0px;
+}
+
+div#social-links {
+    width: max-content;
+    height: 40px;
+}
+
+.fa {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 8px 5px 5px 5px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+div#contact-section {
+    width: 70%;
+    height: 110px;
+    padding: 0 15px;
+}
+
+div#contact-summery {
+    width: 100%;
+    height: 110px;
+    margin: 0;
+}
+
+div#contact-summery h2 {
+    width: 100%;
+    height: 40px;
+    margin: 0px 0px 25px 0px;
+    float: left;
+    line-height: 40px;
+}
+
+div#contact3ways {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div#address {
+    display: flex;
+}
+
+div#address p {
+    height: 48px;
+    font-size: 14px;
+    color: #888888;
+    margin: 0;
+    width: max-content;
+}
+
+div#phone {
+    display: flex;
+}
+
+div#phone p {
+    height: 48px;
+    font-size: 14px;
+    color: #888888;
+    margin: 0;
+}
+
+div#email {
+    display: flex;
+}
+
+div#email p {
+    height: 48px;
+    font-size: 14px;
+    color: #888888;
+    margin: 0;
+}
+
+div#footer-mid {
+    width: 98vw;
+    height: 200px;
+}
+
+div#cover-mid {
+    width: 98vw;
+    height: 200px;
+    margin-top: 30px;
+}
+
+div.cover-mid-common {
+    width: 33.4%;
+    height: 166px;
+}
+
+div.mid-common {
+    height: 166px;
+    padding: 0 15px;
+}
+
+div.mid-common h3 {
+    font-size: 16px;
+    color: #888888;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+div.mid-common ul {
+    list-style: none;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+}
+
+div.mid-common ul li {
+    padding-top: 10px;
+}
+
+div.mid-common ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #888888;
+    letter-spacing: 0.5px;
+}
+
+div.mid-common ul li a:hover {
+    color: #70b100;
+}
+
+div#footer-bottom {
+    width: 98vw;
+    height: 118px;
+}
+
+div#cover-bottom {
+    width: 98vw;
+    height: 118;
+    padding: 35px 0px 35px 0px;
+}
+
+div#cover-bottom-left {
+    height: 48px;
+    margin: 0;
+    width: 35%;
+}
+
+div#cover-bottom-right {
+    height: 48px;
+    margin: 0;
+    width: 65%;
+}
+
+div#bottom-left {
+    height: 48px;
+    padding: 0 15px;
+}
+
+div#bottom-left p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #888888;
+    width: max-content;
+}
+
+div#bottom-left p a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #888888;
+}
+
+div#bottom-left p a:hover {
+    color: #70b100;
+}
+
+div#bottom-right {
+    height: 48px;
+    padding: 0 15px;
+}
+
+div#bottom-right p {
+    height: 48px;
+    margin: 0;
+    font-size: 16px;
+    color: #888888;
+    width: max-content;
+}
+
+div#bottom-right p a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #888888;
+    float: left;
+    line-height: 48px;
+    height: 48px;
+}
