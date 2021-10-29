@@ -41,21 +41,11 @@
 </head>
 
 <body>
-    <?php include SITE_PATH . "views/blocks/management/header.php" ?>
+    <?php include SITE_PATH . "views/blocks/customer/header.php" ?>
 
-    <div class="dashboard">
-        <div class="container-fluid">
-            <div class="row">
-                <?php include SITE_PATH . "views/blocks/management/side-bar.php" ?>
-                <div class="col-lg-9 col-md-12 col-sm-12 col-pad">
-                    <div class="content-area5 dashboard-content">
-                        <?php include $subview ?>
-                        <?php include SITE_PATH . "views/blocks/management/footer.php" ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php include $subview ?>
+
+    <?php include SITE_PATH . "views/blocks/customer/footer.php" ?>
 
     <script src="/public/js/imported/jquery-2.2.0.min.js"></script>
     <script src="/public/js/imported/popper.min.js"></script>

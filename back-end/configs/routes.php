@@ -1,39 +1,32 @@
 <?php
 $routes = array(
     "" => array(
-        "handler" => "home/renderHome",
+        "handler" => "customer/home/renderHomePage",
         "roles" => ["all"]
     ),
-    "login" => array(
-        "handler" => "user/renderLoginForm",
+    "job-listing" => array(
+        "handler" => "customer/job/renderJobListing",
         "roles" => ["all"]
     ),
-    "register" => array(
-        "handler" => "user/renderRegisterForm",
-        "roles" => ["all"]
-    ),
-    "user/register" => array(
-        "handler" => "user/register",
-        "roles" => ["all"]
-    ),
-    "user/login" => array(
-        "handler" => "user/login",
-        "roles" => ["all"]
-    ),
-    "logout" => array(
-        "handler" => "user/logout",
-        "roles" => ["all"]
-    ),
-    "shop" => array(
-        "handler" => "customer/product/renderHomeShop",
-        "roles" => ["all"]
-    ),
-    "admin" => array(
-        "handler" => "admin/dashboard/renderDashboard",
+    "job-detail" => array(
+        "handler" => "customer/job/renderJobDetail",
         "roles" => ["all"]
     ),
     "home" => array(
         "handler" => "customer/home/renderHomePage",
         "roles" => ["all"]
-    )
+    ),
+    "management" => array(
+        "handler" => "management/management/renderDashboardManagement",
+        "roles" => ["all"]
+    ),
+    "management/dashboard" => array(
+        "handler" => "management/management/renderDashboardManagement",
+        "roles" => ["all"]
+    ),
+    "management/post-job" => array(
+        "handler" => "management/management/renderPostJobManagement",
+        "roles" => ["all"]
+    ),
+    
 );

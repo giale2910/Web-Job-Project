@@ -1,82 +1,79 @@
-<div id="header-top">
-    <div id="currency">
-        <div><a><span id="currency-active"></span><i style="font-size: 10px" class="fa fa-chevron-down"></i></a></div>
-        <ul id="currency-unit">
-            <li onclick="changeUnittoVND()"><a class="unit">VNĐ</a></li>
-            <li onclick="changeUnittoUSD()"><a class="unit">USD</a></li>
-        </ul>
-    </div>
-
-
-    <div id="header-top-menu">
-        <ul>
-            <li><a class="top_menu" href="#">Tài Khoản</a></li>
-            <li><a class="top_menu" href="#">Yêu Thích</a></li>
-            <li><a class="top_menu" href="#">Thanh Toán</a></li>
-            <li><a class="top_menu" href="#">Đăng Nhập</a></li>
-            <li><a class="top_menu" href="#">Đăng Ký</a></li>
-        </ul>
-    </div>
-</div>
-
-
-
-<!--header-bottom-->
-<div id="header-bottom">
-
-    <!--logo-->
-    <div id="cover-logo">
-        <div id="logo">
-            <a href="#"><img alt="logo" src="/public/images/logo.png" /></a>
-        </div>
-    </div>
-
-    <!--right bar-->
-    <div id="cover-right">
-        <div id="cover-right-top">
-            <!--phone-->
-            <div id="phone">
-                <img src="/public/images/phonee.jpg" width="60px" height="60px" />
-                <p>Phone:<br /><br />+84282828289</p>
-            </div>
-            <!--search-->
-            <div id="search">
-                <form action="#" style="max-width: 350px" target="_blank">
-                    <input id="input" type="text" placeholder="Nhập sản phẩm cần tìm...">
-                    <button type="submit"></button>
-                </form>
-            </div>
-            <!--cart-->
-            <div id="cart">
-                <div>
-                    <a href="#"><img src="/public/images/bagicon.jpg" width="60px" height="60px" /><span>Giỏ Hàng</span></a>
-                </div>
-                <ul>
-                    <li>
-                        <a href="#"><img src="/public/images/e71.jpg" width="70px" height="70px" style="border: 0.1pt solid #dddddd" /></a>
-                        <p><span id="E71">1</span><span>x</span><span id="gia-e71"></span><span class="currency-unit"></span></p>
+<header class="main-header header-transparent sticky-header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="/public/images/logos/black-logo.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav header-ml">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="home" id="navbarDropdownMenuLink">
+                            Home
+                        </a>
                     </li>
-
-                    <li>
-                        <a href="#"><img src="/public/images/e72.jpg" width="70px" height="70px" style="border: 0.1pt solid #dddddd" /></a>
-                        <p><span id="E72">1</span><span>x</span><span id="gia-e72"></span><span class="currency-unit"></span></p>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="management" id="navbarDropdownMenuLink2">
+                            Management
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="job-listing" id="navbarDropdownMenuLink10">
+                            Jobs
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown megamenu-li">
+                        <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More </a>
+                        <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
+                            <div class="megamenu-area">
+                                <div class="row sobuz">
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <div class="megamenu-section">
+                                            <h6 class="megamenu-title">Pages</h6>
+                                            <a class="dropdown-item" href="about.html">About Us</a>
+                                            <a class="dropdown-item" href="pricing-plan.html">Pricing Plan</a>
+                                            <a class="dropdown-item" href="terms-and-condition.html">Terms And Condition</a>
+                                            <a class="dropdown-item" href="how-it-work.html">How It Work</a>
+                                            <a class="dropdown-item" href="invoices.html">Invoice</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <div class="megamenu-section">
+                                            <h6 class="megamenu-title">Pages</h6>
+                                            <a class="dropdown-item" href="contact.html">Contact Us</a>
+                                            <a class="dropdown-item" href="gallery.html">Gallery</a>
+                                            <a class="dropdown-item" href="typography.html">Typography</a>
+                                            <a class="dropdown-item" href="checkout.html">Checkout</a>
+                                            <a class="dropdown-item" href="faq.html">Faq</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <div class="megamenu-section">
+                                            <h6 class="megamenu-title">Pages</h6>
+                                            <a class="dropdown-item" href="icon.html">Icons</a>
+                                            <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
+                                            <a class="dropdown-item" href="login.html">Login</a>
+                                            <a class="dropdown-item" href="404.html">Error Page</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="login.html">
+                            <i class="flaticon-logout"></i>Sign In
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="employer-dashboard-post-job.html" class="nav-link link-color"><i class="flaticon-plus"></i> Post a Job</a>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div id="cover-right-bottom">
-            <ul>
-                <li><a href="#">TRANG CHỦ<i style="font-size: 10px" class="fa fa-chevron-down"></i></a>
-                    <ul id="direction">
-                        <li><a href="#">Home 1</a></li>
-                        <li><a href="#">Home 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">SẢN PHẨM<i style="font-size: 10px" class="fa fa-chevron-down"></i></a></li>
-                <li><a href="#">TRANG<i style="font-size: 10px" class="fa fa-chevron-down"></i></a></li>
-                <li><a href="#">TIN TỨC</a></li>
-                <li><a href="#">LIÊN HỆ</a></li>
-            </ul>
-        </div>
+        </nav>
     </div>
-</div>
+</header>

@@ -1,99 +1,115 @@
-<div id="footer">
-    <div id="footer-top">
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div id="follow-section">
-                        <div id="social-media">
-                            <h2 style="color:#888888; font-size: 25px;">Follow us</h2>
-                            <div id="social-links">
-                                <a class="fa fa-facebook" href="#"></a>
-                                <a class="fa fa-instagram" href="#"></a>
-                                <a class="fa fa-youtube" href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="contact-section">
-                        <div id="contact-summery">
-                            <h2 style="color:#888888; font-size: 25px;">Liên hệ</h2>
-                            <div id="contact3ways">
-                                <div id="address"><span class="material-icons-outlined" style="font-size:40px;">location_on</span>
-                                    <p>Địa chỉ:<br>HCM city</p>
-                                </div>
-                                <div id="phone"><span class="material-icons-outlined" style="font-size:40px;"> phone_android</span>
-                                    <p>Phone:<br>+84282828289</p>
-                                </div>
-                                <div id="email"><span class="material-icons-outlined" style="font-size:40px;">
-                                        email
-                                    </span>
-                                    <p>Email:<br>abc@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="footer-item clearfix">
+                    <img src="/public/images/logos/logo.png" alt="logo" class="f-logo">
+                    <ul class="contact-info">
+                        <li>
+                            <i class="flaticon-pin"></i>20/F Green Road, Dhanmondi, Dhaka
+                        </li>
+                        <li>
+                            <i class="flaticon-mail"></i><a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+                        </li>
+                        <li>
+                            <i class="flaticon-internet"></i><a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+                        </li>
+                        <li>
+                            <i class="flaticon-phone"></i><a href="tel:+55-417-634-7071">+0477 85X6 552</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="footer-item">
+                    <h4>Helpful Links</h4>
+                    <ul class="links">
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="footer-item">
+                    <h4>Job Seekers</h4>
+                    <ul class="links">
+                        <li>
+                            <a href="#">Create Account</a>
+                        </li>
+                        <li>
+                            <a href="about.html">Career Counseling</a>
+                        </li>
+                        <li>
+                            <a href="pricing-tables.html">My Oficiona</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="footer-item">
+                    <h4>Employers</h4>
+                    <ul class="links">
+                        <li>
+                            <a href="#">Create Account</a>
+                        </li>
+                        <li>
+                            <a href="#">Products $ Service</a>
+                        </li>
+                        <li>
+                            <a href="#">Post a Task</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-8 col-sm-12">
+                <div class="footer-item clearfix">
+                    <h4>Newsletter</h4>
+                    <div class="Subscribe-box">
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                        <form class="form-inline" action="#" method="GET">
+                            <input type="text" class="form-control mb-sm-0" id="inlineFormInputName3" placeholder="Email Address">
+                            <button type="submit" class="btn"><i class="fa fa-paper-plane"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <hr style="width: 70vw;">
-    <div id="footer-mid">
-        <div id="cover-mid">
-            <div class="container">
-                <div class="row">
-                    <div class="cover-mid-common">
-                        <div class="mid-common">
-                            <h3>THÔNG TIN</h3>
-                            <ul>
-                                <li><a href="#">Cửa hàng</a></li>
-                                <li><a href="#">Vận chuyển</a></li>
-                                <li><a href="#">Chính sách</a></li>
-                                <li><a href="#">Điều khoản</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="cover-mid-common">
-                        <div class="mid-common">
-                            <h3>TÀI KHOẢN</h3>
-                            <ul>
-                                <li><a href="#">Tài khoản của bạn</a></li>
-                                <li><a href="#">Yêu thích</a></li>
-                                <li><a href="#">Giỏ hàng</a></li>
-                                <li><a href="#">Tin tức</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="cover-mid-common">
-                        <div class="mid-common">
-                            <h3>CSKH</h3>
-                            <ul>
-                                <li><a href="#">Liên hệ</a< /li>
-                                <li><a href="#">Dịch vụ</a></li>
-                                <li><a href="#">Hoàn trả</a></li>
-                                <li><a href="#">Quà tặng</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+</footer>
+
+<div class="sub-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <p class="copy">© 2019 <a href="#">Theme Vessel.</a> Trademarks and brands are the property of their respective owners.</p>
             </div>
-        </div>
-    </div>
-    <hr style="width: 70vw;">
-    <div id="footer-bottom">
-        <div id="cover-bottom">
-            <div class="container">
-                <div class="row">
-                    <div id="cover-bottom-left">
-                        <div id="bottom-left">
-                            <p>Chính sách<span> | </span>Điều Khoản</p>
-                            <p>© Copyright <a href="#">BK Mobile</a></p>
-                        </div>
-                    </div>
-                    <div id="cover-bottom-right">
-                        <div id="bottom-right">
-                            <p><a href="#">Thanh toán</a><img src="https://cdn.shopify.com/s/files/1/0049/8407/8400/files/payment-icon.png?v=1543387168" /></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-4 col-md-4">
+                <ul class="social-list clearfix">
+                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
