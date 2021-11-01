@@ -65,13 +65,13 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                    <?php if ($_SESSION["user_id"]) { ?>
-                        <a class="nav-link" href="login">
-                            <i class="flaticon-login"></i>Sign In
-                        </a>
-                    <?php } else { ?>
+                    <?php if ($_SESSION["logged"] === true) { ?>
                         <a class="nav-link" href="logout">
                             <i class="flaticon-logout"></i>Sign Out
+                        </a>
+                    <?php } else { ?>
+                        <a class="nav-link" href="login">
+                            <i class="flaticon-login"></i>Sign In
                         </a>
                     <?php } ?>
                     </li>
