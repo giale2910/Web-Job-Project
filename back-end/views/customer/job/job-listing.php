@@ -36,10 +36,9 @@
                                 <label>Categories</label>
                                 <select class="selectpicker search-fields" name="categories">
                                     <option>All Categories</option>
-                                    <option>Accounting / Finance</option>
-                                    <option>Industrial Engineer</option>
-                                    <option>hospital / Health Care</option>
-                                    <option>Design & Creative</option>
+                                <?php foreach ($categoryList as $category) { ?>
+                                    <option><?php echo $category["category"];?></option>
+                                <?php } ?>
                                 </select>
                             </div>
                             <br>
@@ -226,6 +225,33 @@
                     </div>
                 </div>
                 <!-- job box start -->
+            <?php foreach ($jobList as $job) { ?> 
+                <div class="job-box">
+                    <div class="company-logo">
+                        <img src="http://placehold.it/90x90" alt="logo">
+                    </div>
+                    <div class="description">
+                        <div class="float-left">
+                            <h5 class="title">
+                                <a href="/job-detail?id=<?php echo $job["id"];?>"><?php echo $job["title"];?></a>
+                            </h5>
+                            <div class="candidate-listing-footer">
+                                <ul>
+                                    <li><i class="flaticon-work"></i> <?php echo $job["company"];?></li>
+                                    <li><i class="flaticon-pin"></i> <?php echo $job["city"];?></li>
+                                    <li><i class="flaticon-time"></i> <?php echo $job["job_type"];?></li>
+                                </ul>
+                                <h6>Deadline: <?php echo dateFormat($job["deadline"]);?></h6>
+                            </div>
+                        </div>
+                        <div class="div-right">
+                            <a href="#" class="apply-button">Apply Now</a>
+                            <a href="#"><i class="flaticon-heart favourite"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+                <!-- hard-coded job list
                 <div class="job-box">
                     <div class="company-logo">
                         <img src="http://placehold.it/90x90" alt="logo">
@@ -402,6 +428,7 @@
                         </div>
                     </div>
                 </div>
+                -->
                 <!-- Page navigation start -->
                 <div class="pagination-box hidden-mb-45 text-center">
                     <nav aria-label="Page navigation example">

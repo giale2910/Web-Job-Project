@@ -1,3 +1,18 @@
+<?php 
+    $jobOverview = $jobDetail["overview"];
+    $minSalary = $jobOverview["min_salary"];
+    $maxSalary = $jobOverview["max_salary"];
+    $minExperience = $jobOverview["min_experience"];
+    $maxExperience = $jobOverview["max_experience"];
+    $salaryDisplay = "£$minSalary - £$maxSalary";
+    $experienceDisplay = "";
+    if ($minExperience==-1) $experienceDisplay = "None";
+    else {
+        if ($maxExperience==-1) $experienceDisplay = "$minExperience+ year(s)";
+        else $experienceDisplay = "$minExperience - $maxExperience year(s)";
+    }
+?>
+
 <div class="sub-banner bg-color-full">
     <div class="container">
         <div class="breadcrumb-area">
@@ -21,12 +36,12 @@
                         <img src="http://placehold.it/80x80" alt="avatar">
                     </div>
                     <div class="description">
-                        <h5 class="title"><a href="#">Development Marketer</a></h5>
+                        <h5 class="title"><a href="#"><?php echo $jobOverview["title"];?></a></h5>
                         <div class="candidate-listing-footer">
                             <ul>
-                                <li><i class="flaticon-work"></i>UX Designer</li>
-                                <li><i class="flaticon-pin"></i> New York City</li>
-                                <li><i class="flaticon-time"></i> Full Time</li>
+                                <li><i class="flaticon-work"></i><?php echo $jobOverview["company"];?></li>
+                                <li><i class="flaticon-pin"></i> <?php echo $jobOverview["city"];?></li>
+                                <li><i class="flaticon-time"></i> <?php echo $jobOverview["job_type"];?></li>
                             </ul>
                         </div>
                     </div>
@@ -35,7 +50,7 @@
                 <!-- job description start -->
                 <div class="job-description mb-40">
                     <h3 class="heading-2">Job Description</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra a. Aliquam pellentesque nibh et nibh feugiat gravida. Maecenas ultricies, diam vitae semper placerat, velit risus accumsan nisl, eget tempor lacus est vel nunc. Proin accumsan elit sed neque euismod fringilla. Curabitur lobortis nunc velit, et fermentum urna dapibus non. Vivamus magna lorem, elementum id gravida ac, laoreet tristique augue. Maecenas dictum lacus eu nunc porttitor, ut hendrerit arcu efficitur.</p>
+                    <p><?php echo $jobOverview["description"];?></p>
                 </div>
                 <!-- Education + experience start-->
                 <div class="education-experience amenities mb-40">
@@ -189,12 +204,12 @@
                         <h3 class="sidebar-title">Job Overview</h3>
                         <div class="s-border"></div>
                         <ul>
-                            <li><i class="flaticon-money"></i><h5>Salary</h5><span>£12,000 - £25,000</span></li>
-                            <li><i class="flaticon-pin"></i><h5>Location</h5><span>New York City</span></li>
-                            <li><i class="flaticon-woman"></i><h5>Gender</h5><span>Any</span></li>
-                            <li><i class="flaticon-work"></i><h5>Job Type</h5><span>Full Time</span></li>
-                            <li><i class="flaticon-honor"></i><h5>Qualification</h5><span>Mba</span></li>
-                            <li><i class="flaticon-notepad"></i><h5>Experience</h5><span>2 to 3 year</span></li>
+                            <li><i class="flaticon-money"></i><h5>Salary</h5><span><?php echo $salaryDisplay;?></span></li>
+                            <li><i class="flaticon-pin"></i><h5>Location</h5><span><?php echo $jobOverview["city"];?></span></li>
+                            <li><i class="flaticon-woman"></i><h5>Gender</h5><span><?php echo $jobOverview["gender"];?></span></li>
+                            <li><i class="flaticon-work"></i><h5>Job Type</h5><span><?php echo $jobOverview["job_type"];?></span></li>
+                            <li><i class="flaticon-honor"></i><h5>Qualification</h5><span><?php echo $jobOverview["qualification"];?></span></li>
+                            <li><i class="flaticon-notepad"></i><h5>Experience</h5><span><?php echo $experienceDisplay;?></span></li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
@@ -232,11 +247,11 @@
         ga('send', 'pageview');
     </script>
 
-    <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgCdL8eyrNZ4mR0qmepD6Q4N3ULd76J94"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgCdL8eyrNZ4mR0qmepD6Q4N3ULd76J94"></script>
     <script>
         function LoadMap(propertes) {
-            var defaultLat = 40.7110411;
-            var defaultLng = -74.0110326;
+            var defaultLat = <?php echo $jobOverview["lat"]?>;
+            var defaultLng = <?php echo $jobOverview["lng"]?>;
             var mapOptions = {
                 center: new google.maps.LatLng(defaultLat, defaultLng),
                 zoom: 15,
@@ -269,7 +284,7 @@
             };
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
             var infoWindow = new google.maps.InfoWindow();
-            var myLatlng = new google.maps.LatLng(40.7110411, -74.0110326);
+            var myLatlng = new google.maps.LatLng(defaultLat, defaultLng);
 
             var marker = new google.maps.Marker({
                 position: myLatlng,
