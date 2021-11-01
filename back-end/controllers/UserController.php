@@ -39,7 +39,7 @@ class UserController extends BaseController
     {
         $user = $this->user->findUserByEmail($_POST["email"]);
         if ($user) {
-            if ($user["password"] === password_hash($_POST["password"], PASSWORD_BCRYPT, array("cost" => 12))) {
+            if (password_verify($_POST["password"], $user["password"])) {
                 $_SESSION["user_id"] = $user["id"];
                 $_SESSION["role"] = $user["role"];
                 $_SESSION["logged"] = true;

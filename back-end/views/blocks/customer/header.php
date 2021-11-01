@@ -65,7 +65,7 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                    <?php if ($_SESSION["logged"] === true) { ?>
+                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
                         <a class="nav-link" href="logout">
                             <i class="flaticon-logout"></i>Sign Out
                         </a>
