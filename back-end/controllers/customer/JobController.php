@@ -4,6 +4,8 @@ class JobController extends BaseController
     public function __construct()
     {
         parent::__construct();
+        $this->load->model("job");
+        $this->load->model("category");
     }
 
     public function renderJobListing()
@@ -28,6 +30,8 @@ class JobController extends BaseController
         $data["jsFiles"] = [
             
         ];
+        $data["jobList"] = $this->getJobView();
+        $data["categoryList"] = $this->getCategoryList();
         $this->load->view("layouts/customer", "customer/job/job-listing", $data);
     }
 
@@ -53,6 +57,25 @@ class JobController extends BaseController
         $data["jsFiles"] = [
             
         ];
+        $data["jobDetail"] = $this->getJobDetail($_GET["id"]);
         $this->load->view("layouts/customer", "customer/job/job-detail", $data);
+    }
+
+    public function getJobView(){
+        # $jobType = $_GET["job-type"];
+        $jobs = $this->job->getJobView();
+        return $jobs;
+    }
+
+    public function getCategoryList(){
+        $categories = $this->category->getCategoryList();
+        return $categories;
+    }
+
+    public function getJobDetail($id){
+        $result["overview"] = $this->job->getJobOverview($id);
+        $result["experience"] = $this->job->getJobExperience($id);
+        $result["responsibility"] = $this->job->getJobResponsibility($id);
+        return $result;
     }
 }
