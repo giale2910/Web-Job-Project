@@ -14,7 +14,7 @@ class UserController extends BaseController
             "css/customer/commons/breadcum.css",
             "css/customer/login/login-form.css",
         ];
-        $this->load->view("layouts/client", "account/login", $data);
+        $this->load->view("layouts/customer", "account/login", $data);
     }
 
     public function renderRegisterForm()
@@ -24,7 +24,7 @@ class UserController extends BaseController
             "css/customer/commons/breadcum.css",
             "css/customer/register/register-form.css",
         ];
-        $this->load->view("layouts/client", "account/register", $data);
+        $this->load->view("layouts/customer", "account/register", $data);
     }
 
     public function register()
@@ -39,15 +39,18 @@ class UserController extends BaseController
     {
         $user = $this->user->findUserByEmail($_POST["email"]);
         if ($user) {
-            if ($user["password"] = password_hash($_POST["password"], PASSWORD_BCRYPT, array("cost" => 12))) {
+            if (password_verify($_POST["password"], $user["password"])) {
                 $_SESSION["user_id"] = $user["id"];
                 $_SESSION["role"] = $user["role"];
+                $_SESSION["logged"] = true;
                 header("Location: /");
             }
         }
+        header("Location: /");
     }
     public function logout()
     {
+        $_SESSION["logged"] = false;
         session_destroy();
         header("Location: /");
     }
