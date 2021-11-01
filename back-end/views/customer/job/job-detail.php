@@ -56,36 +56,22 @@
                 <div class="education-experience amenities mb-40">
                     <h3 class="heading-2">Education + Experience</h3>
                     <ul>
+                    <?php foreach ($jobDetail["experience"] as $experience){ ?>
                         <li>
-                            <i class="fa fa-check"></i>M.B.S / M.B.A under National University with CA course complete.
+                            <i class="fa fa-check"></i><?php echo $experience["experience_text"]; ?>
                         </li>
-                        <li><i class="fa fa-check"></i>3 or more years of professional design experience</li>
-                        <li>
-                            <i class="fa fa-check"></i>Excellent communication skills, most notably a demonstrated ability to solicit and address creative and design feedback
-                        </li>
-                        <li>
-                            <i class="fa fa-check"></i>Masters of library science any Green University.
-                        </li>
-                        <li><i class="fa fa-check"></i>BA/BS degree in a technical field or equivalent practical experience.</li>
-                        <li>
-                            <i class="fa fa-check"></i>Ability to work independently and to carry out assignments to completion within parameters of instructions given, prescribed routines, and standard accepted practices
-                        </li>
+                    <?php } ?>
                     </ul>
                 </div>
                 <!-- Responsibilities start-->
                 <div class="responsibilities amenities mb-40">
                     <h3 class="heading-2">Responsibilities</h3>
                     <ul>
+                    <?php foreach ($jobDetail["responsibility"] as $responsibility){ ?>
                         <li>
-                            <i class="fa fa-check"></i>Explore and design dynamic and compelling consumer experiences.
+                            <i class="fa fa-check"></i><?php echo $responsibility["responsibility_text"]; ?>
                         </li>
-                        <li><i class="fa fa-check"></i>Have sound knowledge of commercial activities.</li>
-                        <li>
-                            <i class="fa fa-check"></i>Build next-generation web applications with a focus on the client side.
-                        </li>
-                        <li>
-                            <i class="fa fa-check"></i>The applicants should have experience in the following areas
-                        </li>
+                    <?php } ?>
                     </ul>
                 </div>
                 <!-- Location start -->
