@@ -70,6 +70,9 @@ function create_database(PDO $conn, $database, string $version) {
             `max_salary` BIGINT,
             `job_type` ENUM('Full time', 'Part time', 'Temporary', 'To be discussed'),
             `gender` ENUM('Male', 'Female', 'Others', 'Any'),
+            `qualification` VARCHAR(30),
+            `min_experience` INTEGER,
+            `max_experience` INTEGER,
             `contact_email` VARCHAR(50),
             `description` TEXT,
             CONSTRAINT `FK_manager` FOREIGN KEY (`manager_id`) REFERENCES `User`(`id`) ON DELETE CASCADE,
@@ -125,9 +128,9 @@ function create_database(PDO $conn, $database, string $version) {
         (5, 'Industrial Labour'),
         (6, 'Servicing')
         ",
-        "INSERT INTO Job(id, title, company, manager_id, location_id, category_id, date_posted, deadline, min_salary, max_salary, job_type, gender, contact_email, description) VALUES 
-        (1, 'A.I Replacement Lecturer', 'HCM University of Technology', 2, 2, 1, '2021-08-18', '2022-01-01', 200, 500, 'Full time', 'Any', 'oisp@hcmut.edu.vn', 'Please replace the current A.I. lecturer ASAP - this is a call for help.'),
-        (2, 'Hair dresser', '30Shine', 3, 3, 6, '2021-09-11', '2021-11-11', 120, 240, 'Part time', 'Any', 'abc@yahoo.com', 'Cut your hair and your self confidence')
+        "INSERT INTO Job(id, title, company, manager_id, location_id, category_id, date_posted, deadline, min_salary, max_salary, job_type, gender, qualification, min_experience, max_experience, contact_email, description) VALUES 
+        (1, 'A.I Replacement Lecturer', 'HCM University of Technology', 2, 2, 1, '2021-08-18', '2022-01-01', 200, 500, 'Full time', 'Any', 'Kindergarten', -1, -1, 'oisp@hcmut.edu.vn', 'Please replace the current A.I. lecturer ASAP - this is a call for help.'),
+        (2, 'Hair dresser', '30Shine', 3, 3, 6, '2021-09-11', '2021-11-11', 120, 240, 'Part time', 'Any', 'High school', 2, -1, 'abc@yahoo.com', 'Cut your hair and your self confidence')
         "
     );
     foreach ($sqls as $sql) {

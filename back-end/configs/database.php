@@ -4,7 +4,7 @@ $database["port"] = 3306;
 $database["databasename"] = "job_finding";
 $database["username"] = "root";
 $database["password"] = "root";
-$database["version"] = "1.2.3";
+$database["version"] = "1.2.4";
 $database["admins"] = array(
     array(
         "email" => "admin@mail.com",
