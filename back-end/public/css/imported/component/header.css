@@ -1,3 +1,4 @@
+/** Main header start **/
 .main-header{
     box-shadow: 0 0 8px 0 rgba(0,0,0,.12);
 }
@@ -150,47 +151,76 @@
     width: 200px;
 }
 
-/** Megamenu **/
-.megamenu-li {
-    position: static;
+/** Option Panel **/
+
+@media all and (min-width: 1200px) {
 }
 
-.megamenu {
-    position: absolute;
-    width: 100%;
-    max-width: 800px;
-    left: 0;
-    right: 0;
-    padding: 15px;
-}
+@media all and (min-width: 992px) {
+    .banner img {
+        animation: bgburnsEast 25s linear infinite alternate;
+        -webkit-animation: bgburnsEast 25s linear infinite alternate;
+    }
 
-.megamenu-area {
-    padding: 30px 30px 5px;
-    z-index: 2;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-}
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+        max-width: 700px;
+        margin: auto;
+    }
 
-.megamenu-title {
-    color: #535353;
-    font-size: 14px;
-    font-weight: 600;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
+    .dropdown .dropdown-item:hover > .dropdown-menu {
+        display: block;
+    }
 
-.megamenu-section {
-    margin-bottom: 25px;
-}
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
 
-.megamenu-area .dropdown-item {
-    padding: 0 !important;
-    margin-bottom: 8px;
-    font-size: 12px;
-    font-weight: 500;
-}
+    .sticky-header {
+        position: fixed;
+        background: transparent;
+        top: 0px;
+        z-index: 999;
+        width: 100%;
+        border-bottom: 1px solid rgba(220, 220, 220, .2);
+    }
 
-.megamenu-section p {
-    font-size: 13px;
-    color: #777;
+    .sticky-header .nav-link::after {
+        display: none !important;
+    }
+
+    .sticky-header .navbar-expand-lg .navbar-nav .nav-link {
+        color: #fff;
+    }
+
+    .sticky-header .open-offcanvas {
+        color: #fff;
+        display: inline-block;
+    }
+
+    .header-shrink {
+        background: #fff;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        transition: 0.5s;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+        top: 0px !important;
+    }
+
+    .header-shrink .navbar-expand-lg .navbar-nav .nav-link {
+        color: #515151;
+    }
+
+    .header-shrink .open-offcanvas {
+        color: #515151;
+    }
+
+    .header-shrink .link-color{
+        color: #FFF!important;
+    }
+
+    .hide-carat .nav-link::after {
+        display: none !important;
+    }
 }

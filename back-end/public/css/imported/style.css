@@ -3280,6 +3280,7 @@ footer {
 .quick-contact textarea {
     min-height: 120px;
 }
+
 /** Social media box **/
 .social-media-box .social-list li {
     float: left;
@@ -4665,7 +4666,7 @@ footer {
     margin-top: 27px;
 }
 
-<!-- job box-2 -->
+/* job box-2 */
 .job-box-2{
     width: 100%;
     display: inline-block;

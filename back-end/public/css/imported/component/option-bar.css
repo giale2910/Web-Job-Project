@@ -1,0 +1,68 @@
+/** Option bar start **/
+.option-bar {
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    background: #fff;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+}
+
+.option-bar .sort {
+    color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    line-height: 35px;
+}
+
+.sorting-options span {
+    line-height: 35px;
+}
+
+.sorting-options{
+    float: right;
+}
+
+.sorting-options2 .bootstrap-select{
+    width: 200px !important;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sorting-options2 .search-fields {
+    min-height: 36px;
+    padding:0;
+}
+
+.sorting-options2 .dropdown-toggle::after {
+    margin-left: .0em;
+}
+
+.sorting-options2 .bootstrap-select>.dropdown-toggle {
+    padding-right: 30px;
+}
+
+.change-view-btn {
+    border-radius: 2px;
+    background: transparent;
+    padding: 5px 9px;
+    margin: 0 2px;
+    display: inline-block;
+}
+
+.change-view-btn:hover {
+    color: #fff;
+}
+
+.active-view-btn {
+    color: #fff !important;
+    padding: 5px 9px;
+}
+
+.active-view-btn:hover {
+    background: transparent;
+}
+
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #ccc !important;
+    filter: "alpha(opacity=20)";
+    -ms-filter: "alpha(opacity=20)";
+}

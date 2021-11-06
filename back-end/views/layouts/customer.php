@@ -24,8 +24,11 @@
     <link rel="stylesheet" type="text/css"  href="/public/css/imported/slick.css">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css">
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
+    <!-- <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css"> -->
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/header.css?version=3">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/public.css?version=3">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/footer.css?version=2">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css"> -->
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" >
@@ -68,12 +71,12 @@
     <script  src="/public/js/imported/jquery.magnific-popup.min.js"></script>
     <script  src="/public/js/imported/jquery.countdown.js"></script>
     <script  src="/public/js/imported/maps.js"></script>
-    <script  src="/public/js/imported/app.js"></script>
+    <script  src="/public/js/imported/app.js?version=2"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script  src="/public/js/imported/ie10-viewport-bug-workaround.js"></script>
     <!-- Custom javascript -->
-    <script  src="/public/js/imported/ie10-viewport-bug-workaround.js"></script>
+    <!-- <script  src="/public/js/imported/ie10-viewport-bug-workaround.js"></script> -->
 
 </body>
 

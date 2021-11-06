@@ -1,0 +1,161 @@
+/* Job box */
+.job-box{
+    width: 100%;
+}
+
+.job-box{
+    display: inline-block;
+    width: 100%;
+    padding: 20px 20px 15px;
+    border: dashed 1px #e6e6e6;
+    border-radius: 5px;
+    position: relative;
+}
+
+.job-box:hover{
+    border: dashed 1px transparent;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.job-box .company-logo{
+    width: 90px;
+    position: absolute;
+}
+
+.job-box .company-logo img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.job-box .description{
+    margin: 0 0 0 110px;
+}
+
+.job-box .description h5{
+    font-size: 22px;
+    margin:5px 0 10px;
+    font-weight: 500;
+}
+
+.job-box .description h6{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.job-box .description ul{
+    display: inline-block;
+    list-style: none;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.job-box .description ul li{
+    float: left;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.job-box .apply-button{
+    float: right;
+    display: inline-block;
+    padding: 7px 30px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 0;
+    color: #9a9898;
+    border: solid 1px #9a9898;
+}
+
+.job-box .apply-button:hover{
+    color: #9a9898;
+    border: solid 1px #9a9898;
+}
+
+.job-box .description ul li:last-child{
+    margin: 0;
+}
+
+.job-box .favourite{
+    font-size: 17px;
+    float: right;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 15px;
+    color: #9a9898;
+    border: solid 1px #9a9898;
+    border-radius: 50px;
+}
+
+.job-box .apply-button{
+    margin-top: 27px;
+}
+
+.job-box .favourite{
+    margin-top: 27px;
+}
+
+/* job box-2 */
+.job-box-2{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.job-box-2{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.job-box-2 .description {
+    margin: 0 0 0 100px;
+}
+
+.job-box-2 .company-logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.job-box-2 .company-logo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.job-box-2 .description ul {
+    display: inline-block;
+    list-style: none;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.job-box-2 .description ul li {
+    float: left;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.job-box-2 .description ul li i{
+    margin-right: 2px;
+}
+
+.job-box-2 .description h5 {
+    font-size: 25px;
+    margin: 10px 0 10px;
+    font-weight: 500;
+}
+
+.hr-boder{
+    margin: 25px 0 20px;
+    border-top: 1px solid rgba(0,0,0,.1);
+
+}

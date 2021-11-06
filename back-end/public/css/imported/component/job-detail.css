@@ -1,0 +1,290 @@
+/** Contact 2 start **/
+.contact-2 .contact-info {
+    text-align: center;
+}
+
+.contact-2 .contact-info strong {
+    font-weight: 500;
+    font-size: 14px;
+    color: #525252;
+}
+
+.contact-2 .contact-info i {
+    font-size: 24px;
+    color: #212529;
+}
+
+.contact-2 .contact-info p {
+    margin: 15px 0 0;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.contact-2 .contact-info .mrg-btn-50 {
+    margin-bottom: 50px;
+}
+
+.contact-2 .form-control {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    background: transparent;
+    outline: 0;
+    height: 45px;
+    border-radius: 3px;
+}
+
+.contact-2 .form-control:focus {
+    color: #495057;
+    background-color: transparent;
+    border: 1px solid #eee;
+    outline: 0;
+    box-shadow: none;
+}
+
+.contact-2 .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-2 textarea {
+    min-height: 240px;
+}
+
+.contact-2 .btn-message {
+    border-radius: 50px;
+    padding: 10px 60px 11px;
+}
+
+.contact-2 .opening-hours {
+    padding: 30px;
+}
+
+.contact-2 .opening-hours .list-style-none li {
+    list-style: none;
+    line-height: 35px;
+    font-size: 13px;
+}
+
+.contact-2 .opening-hours .list-style-none li span{
+    float: right;
+}
+
+.contact-2 .opening-hours strong {
+    font-weight: 600;
+}
+
+.contact-2 .opening-hours h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.contact-2 .main-title{
+    margin-bottom: 60px;
+}
+
+.contact-map {
+    height: 350px !important;
+}
+
+.contact-map-content .map-content {
+    width: 250px;
+}
+
+.quick-contact textarea {
+    min-height: 120px;
+}
+
+/** Map **/
+.contact-map {
+    height: 350px !important;
+}
+
+.contact-map-content .map-content {
+    width: 250px;
+}
+
+
+/** Social List **/
+.social-list-2 {
+    float: right;
+}
+
+.social-list-2 a {
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+}
+
+.social-list-2 span {
+    margin-right: 10px;
+    font-weight: 600;
+    color: #4d4d4d;
+}
+
+.social-list-2 a {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    margin: 2px 0 2px 5px;
+    border-radius: 5%;
+}
+
+/** Job overview start **/
+.job-overview {
+    float: left;
+    width: 100%;
+}
+
+.job-overview ul {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.job-overview ul li {
+    float: left;
+    position: relative;
+    padding-left: 40px;
+    border-bottom: solid 1px #efefef;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.job-overview ul li:last-child{
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.job-overview ul li i {
+    left: 0;
+    position: absolute;
+    top: 7px;
+    font-size: 25px;
+}
+
+.job-overview ul li h5 {
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.job-overview ul li span {
+    float: left;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/** Button **/
+.search-button {
+    cursor: pointer;
+    padding: 14px 26px 12px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .5s;
+    width: 100%;
+    outline: none;
+}
+
+.search-button:hover {
+    color: #fff;
+}
+
+.sj-btn{
+    padding: 13px 25px 11px;
+}
+
+/** Social media bg**/
+.facebook-bg {
+    background: #4867aa;
+    color: #fff;
+}
+
+.twitter-bg {
+    background: #33CCFF;
+    color: #fff;
+}
+
+.google-bg {
+    background: #db4437;
+    color: #fff;
+}
+
+.linkedin-bg {
+    background: #0177b5;
+    color: #fff;
+}
+
+.rss-bg{
+    background: #e78733;
+    color: #fff;
+}
+
+.pinterest-bg {
+    background: #bd081c;
+    color: #fff;
+}
+
+.facebook-bg:hover {
+    background: #3b589e;
+    color: #fff;
+}
+
+.twitter-bg:hover {
+    background: #56d7fe;
+    color: #fff;
+}
+
+.linkedin-bg:hover {
+    background: #1c82ca;
+    color: #fff;
+}
+
+.google-bg:hover {
+    background: #dc4e41;
+    color: #fff;
+}
+
+.rss-bg:hover {
+    background: #e78701;
+    color: #fff;
+}
+
+.pinterest-bg:hover {
+    background: #a30618;
+    color: #fff;
+}
+
+/** Social media color **/
+.facebook:hover {
+    color: #3b589e !important;
+}
+
+.twitter:hover {
+    color: #56d7fe !important;
+}
+
+.google:hover {
+    color: #dc4e41 !important;
+}
+
+.rss:hover {
+    color: #e78733 !important;
+}
+
+.linkedin:hover {
+    color: #1c82ca !important;
+}
