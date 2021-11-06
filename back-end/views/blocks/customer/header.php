@@ -65,9 +65,15 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                        <a class="nav-link" href="login.html">
-                            <i class="flaticon-logout"></i>Sign In
+                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
+                        <a class="nav-link" href="logout">
+                            <i class="flaticon-logout"></i>Sign Out
                         </a>
+                    <?php } else { ?>
+                        <a class="nav-link" href="login">
+                            <i class="flaticon-login"></i>Sign In
+                        </a>
+                    <?php } ?>
                     </li>
                     <li class="nav-item">
                         <a href="employer-dashboard-post-job.html" class="nav-link link-color"><i class="flaticon-plus"></i> Post a Job</a>

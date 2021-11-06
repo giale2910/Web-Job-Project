@@ -13,7 +13,11 @@ require_once(SITE_PATH . 'application/BaseController.php');
 require_once(SITE_PATH . 'application/BaseModel.php');
 require_once(SITE_PATH . 'application/Load.php');
 require_once(SITE_PATH . 'application/Registry.php');
+require_once(SITE_PATH . 'application/Utils.php');
 require_once(SITE_PATH . 'controllers/ErrorController.php');
+
+/*Initial setup.*/
+include_once(SITE_PATH . 'MySQLDB.php');
 
 try {
 	Router::route(new Request);

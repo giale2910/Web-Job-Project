@@ -50,10 +50,9 @@
                                         <label>Categories</label>
                                         <select class="selectpicker search-fields" name="categories">
                                             <option>All Categories</option>
-                                            <option>Accounting / Finance</option>
-                                            <option>Industrial Engineer</option>
-                                            <option>hospital / Health Care</option>
-                                            <option>Design & Creative</option>
+                                        <?php foreach ($categoryList as $category) { ?>
+                                            <option><?php echo $category["category"];?></option>
+                                        <?php } ?>
                                         </select>
                                     </div>
                                     <br>
@@ -240,182 +239,32 @@
                             </div>
                         </div>
                         <!-- job box start -->
-                        <div class="job-box">
-                            <div class="company-logo">
-                                <img src="http://placehold.it/90x90" alt="logo">
-                            </div>
-                            <div class="description">
-                                <div class="float-left">
-                                    <h5 class="title"><a href="job-detail">Restaurant General Manager</a></h5>
-                                    <div class="candidate-listing-footer">
-                                        <ul>
-                                            <li><i class="flaticon-work"></i> Hotel</li>
-                                            <li><i class="flaticon-pin"></i> New York City</li>
-                                            <li><i class="flaticon-time"></i> Full Time</li>
-                                        </ul>
-                                        <h6>Deadline: Jan 31, 2019</h6>
+                        <?php foreach ($jobList as $job) { ?> 
+                            <div class="job-box">
+                                <div class="company-logo">
+                                    <img src="http://placehold.it/90x90" alt="logo">
+                                </div>
+                                <div class="description">
+                                    <div class="float-left">
+                                        <h5 class="title">
+                                            <a href="/job-detail?id=<?php echo $job["id"];?>"><?php echo $job["title"];?></a>
+                                        </h5>
+                                        <div class="candidate-listing-footer">
+                                            <ul>
+                                                <li><i class="flaticon-work"></i> <?php echo $job["company"];?></li>
+                                                <li><i class="flaticon-pin"></i> <?php echo $job["city"];?></li>
+                                                <li><i class="flaticon-time"></i> <?php echo $job["job_type"];?></li>
+                                            </ul>
+                                            <h6>Deadline: <?php echo dateFormat($job["deadline"]);?></h6>
+                                        </div>
+                                    </div>
+                                    <div class="div-right">
+                                        <a href="#" class="apply-button">Apply Now</a>
+                                        <a href="#"><i class="flaticon-heart favourite"></i></a>
                                     </div>
                                 </div>
-                                <div class="div-right">
-                                    <a href="#" class="apply-button">Apply Now</a>
-                                    <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                </div>
                             </div>
-                        </div>
-                        <div class="job-box">
-                            <div class="company-logo">
-                                <img src="http://placehold.it/90x90" alt="logo">
-                            </div>
-                            <div class="description">
-                                <div class="float-left">
-                                    <h5 class="title"><a href="job-detail">Marketing Dairector</a></h5>
-                                    <div class="candidate-listing-footer">
-                                        <ul>
-                                            <li><i class="flaticon-work"></i> Red</li>
-                                            <li><i class="flaticon-pin"></i> New York City</li>
-                                            <li><i class="flaticon-time"></i> Part Time</li>
-                                        </ul>
-                                        <h6>Deadline: Jan 31, 2019</h6>
-                                    </div>
-                                </div>
-                                <div class="div-right">
-                                    <a href="#" class="apply-button">Apply Now</a>
-                                    <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-box">
-                            <div class="company-logo">
-                                <img src="http://placehold.it/90x90" alt="logo">
-                            </div>
-                            <div class="description">
-                                <div class="float-left">
-                                    <h5 class="title"><a href="job-detail">Dhaka Event Support Specialist</a></h5>
-                                    <div class="candidate-listing-footer">
-                                        <ul>
-                                            <li><i class="flaticon-work"></i> Xero</li>
-                                            <li><i class="flaticon-pin"></i> New York City</li>
-                                            <li><i class="flaticon-time"></i> Temporary</li>
-                                        </ul>
-                                        <h6>Deadline: Jan 31, 2019</h6>
-                                    </div>
-                                </div>
-                                <div class="div-right">
-                                    <a href="#" class="apply-button">Apply Now</a>
-                                    <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-box">
-                            <div class="company-logo">
-                                <img src="http://placehold.it/90x90" alt="logo">
-                            </div>
-                            <div class="description">
-                                <div class="float-left">
-                                    <h5 class="title"><a href="job-detail">Green Development Marketer</a></h5>
-                                    <div class="candidate-listing-footer">
-                                        <ul>
-                                            <li><i class="flaticon-work"></i> Zooms</li>
-                                            <li><i class="flaticon-pin"></i> New York City</li>
-                                            <li><i class="flaticon-time"></i> Full Time</li>
-                                        </ul>
-                                        <h6>Deadline: Jan 31, 2019</h6>
-                                    </div>
-                                </div>
-                                <div class="div-right">
-                                    <a href="#" class="apply-button">Apply Now</a>
-                                    <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-box">
-                            <div class="company-logo">
-                                <img src="http://placehold.it/90x90" alt="logo">
-                            </div>
-                            <div class="description">
-                                <div class="float-left">
-                                    <h5 class="title"><a href="job-detail">Restaurant General Manager</a></h5>
-                                    <div class="candidate-listing-footer">
-                                        <ul>
-                                            <li><i class="flaticon-work"></i> Hexagon</li>
-                                            <li><i class="flaticon-pin"></i> New York City</li>
-                                            <li><i class="flaticon-time"></i> Part Time</li>
-                                        </ul>
-                                        <h6>Deadline: Jan 31, 2019</h6>
-                                    </div>
-                                </div>
-                                <div class="div-right">
-                                    <a href="#" class="apply-button">Apply Now</a>
-                                    <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-box">
-                            <div class="company-logo">
-                                <img src="http://placehold.it/90x90" alt="logo">
-                            </div>
-                            <div class="description">
-                                <div class="float-left">
-                                    <h5 class="title"><a href="job-detail">Restaurant General Manager</a></h5>
-                                    <div class="candidate-listing-footer">
-                                        <ul>
-                                            <li><i class="flaticon-work"></i> Hotel</li>
-                                            <li><i class="flaticon-pin"></i> New York City</li>
-                                            <li><i class="flaticon-time"></i> Full Time</li>
-                                        </ul>
-                                        <h6>Deadline: Jan 31, 2019</h6>
-                                    </div>
-                                </div>
-                                <div class="div-right">
-                                    <a href="#" class="apply-button">Apply Now</a>
-                                    <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-box">
-                            <div class="company-logo">
-                                <img src="http://placehold.it/90x90" alt="logo">
-                            </div>
-                            <div class="description">
-                                <div class="float-left">
-                                    <h5 class="title"><a href="job-detail">Marketing Dairector</a></h5>
-                                    <div class="candidate-listing-footer">
-                                        <ul>
-                                            <li><i class="flaticon-work"></i> Red</li>
-                                            <li><i class="flaticon-pin"></i> New York City</li>
-                                            <li><i class="flaticon-time"></i> Part Time</li>
-                                        </ul>
-                                        <h6>Deadline: Jan 31, 2019</h6>
-                                    </div>
-                                </div>
-                                <div class="div-right">
-                                    <a href="#" class="apply-button">Apply Now</a>
-                                    <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-box">
-                            <div class="company-logo">
-                                <img src="http://placehold.it/90x90" alt="logo">
-                            </div>
-                            <div class="description">
-                                <div class="float-left">
-                                    <h5 class="title"><a href="job-detail">Dhaka Event Support Specialist</a></h5>
-                                    <div class="candidate-listing-footer">
-                                        <ul>
-                                            <li><i class="flaticon-work"></i> Xero</li>
-                                            <li><i class="flaticon-pin"></i> New York City</li>
-                                            <li><i class="flaticon-time"></i> Temporary</li>
-                                        </ul>
-                                        <h6>Deadline: Jan 31, 2019</h6>
-                                    </div>
-                                </div>
-                                <div class="div-right">
-                                    <a href="#" class="apply-button">Apply Now</a>
-                                    <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
                         <!-- Page navigation start -->
                         <div class="pagination-box hidden-mb-45 text-center">
                             <nav aria-label="Page navigation example">
@@ -433,7 +282,6 @@
                             </nav>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </body>

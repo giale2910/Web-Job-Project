@@ -1,3 +1,18 @@
+<?php 
+    $jobOverview = $jobDetail["overview"];
+    $minSalary = $jobOverview["min_salary"];
+    $maxSalary = $jobOverview["max_salary"];
+    $minExperience = $jobOverview["min_experience"];
+    $maxExperience = $jobOverview["max_experience"];
+    $salaryDisplay = "£$minSalary - £$maxSalary";
+    $experienceDisplay = "";
+    if ($minExperience==-1) $experienceDisplay = "None";
+    else {
+        if ($maxExperience==-1) $experienceDisplay = "$minExperience+ year(s)";
+        else $experienceDisplay = "$minExperience - $maxExperience year(s)";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,14 +25,65 @@
         <link rel="stylesheet" type="text/css" href="/public/css/imported/component/sidebar-right.css?version=2">
     </head>
     <body>
-        <div class="sub-banner bg-color-full">
-            <div class="container">
-                <div class="breadcrumb-area">
-                    <h1>Job Detail</h1>
-                    <ul class="breadcrumbs">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Job Listing</li>
-                        <li class="active">Job Detail</li>
+    <div class="sub-banner bg-color-full">
+        <div class="container">
+            <div class="breadcrumb-area">
+                <h1>Job Detail</h1>
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Job Listing</li>
+                    <li class="active">Job Detail</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="job-details-page content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <!-- job box 2 start -->
+                    <div class="job-box-2">
+                        <div class="company-logo">
+                            <img src="http://placehold.it/80x80" alt="avatar">
+                        </div>
+                        <div class="description">
+                            <h5 class="title"><a href="#"><?php echo $jobOverview["title"];?></a></h5>
+                            <div class="candidate-listing-footer">
+                                <ul>
+                                    <li><i class="flaticon-work"></i><?php echo $jobOverview["company"];?></li>
+                                    <li><i class="flaticon-pin"></i> <?php echo $jobOverview["city"];?></li>
+                                    <li><i class="flaticon-time"></i> <?php echo $jobOverview["job_type"];?></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-boder">
+                    <!-- job description start -->
+                    <div class="job-description mb-40">
+                        <h3 class="heading-2">Job Description</h3>
+                        <p><?php echo $jobOverview["description"];?></p>
+                    </div>
+                    <!-- Education + experience start-->
+                    <div class="education-experience amenities mb-40">
+                        <h3 class="heading-2">Education + Experience</h3>
+                        <ul>
+                        <?php foreach ($jobDetail["experience"] as $experience){ ?>
+                            <li>
+                                <i class="fa fa-check"></i><?php echo $experience["experience_text"]; ?>
+                            </li>
+                        <?php } ?>
+                        </ul>
+                    </div>
+                    <!-- Responsibilities start-->
+                    <div class="responsibilities amenities mb-40">
+                        <h3 class="heading-2">Responsibilities</h3>
+                        <ul>
+                        <?php foreach ($jobDetail["responsibility"] as $responsibility){ ?>
+                            <li>
+                                <i class="fa fa-check"></i><?php echo $responsibility["responsibility_text"]; ?>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -181,7 +247,20 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
+                    </div>
+                    <!-- Job overview start -->
+                    <div class="job-overview widget">
+                        <h3 class="sidebar-title">Job Overview</h3>
+                        <div class="s-border"></div>
+                        <ul>
+                            <li><i class="flaticon-money"></i><h5>Salary</h5><span><?php echo $salaryDisplay;?></span></li>
+                            <li><i class="flaticon-pin"></i><h5>Location</h5><span><?php echo $jobOverview["city"];?></span></li>
+                            <li><i class="flaticon-woman"></i><h5>Gender</h5><span><?php echo $jobOverview["gender"];?></span></li>
+                            <li><i class="flaticon-work"></i><h5>Job Type</h5><span><?php echo $jobOverview["job_type"];?></span></li>
+                            <li><i class="flaticon-honor"></i><h5>Qualification</h5><span><?php echo $jobOverview["qualification"];?></span></li>
+                            <li><i class="flaticon-notepad"></i><h5>Experience</h5><span><?php echo $experienceDisplay;?></span></li>
+                        </ul>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="sidebar-right-2">
@@ -252,43 +331,44 @@
 
         <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgCdL8eyrNZ4mR0qmepD6Q4N3ULd76J94"></script>
 
-        <script>
-            function LoadMap(propertes) {
-                var defaultLat = 40.7110411;
-                var defaultLng = -74.0110326;
-                var mapOptions = {
-                    center: new google.maps.LatLng(defaultLat, defaultLng),
-                    zoom: 15,
-                    scrollwheel: false,
-                    styles: [
-                        {
-                            featureType: "administrative",
-                            elementType: "labels",
-                            stylers: [
-                                {visibility: "off"}
-                            ]
-                        },
-                        {
-                            featureType: "water",
-                            elementType: "labels",
-                            stylers: [
-                                {visibility: "off"}
-                            ]
-                        },
-                        {
-                            featureType: 'poi.business',
-                            stylers: [{visibility: 'off'}]
-                        },
-                        {
-                            featureType: 'transit',
-                            elementType: 'labels.icon',
-                            stylers: [{visibility: 'off'}]
-                        },
-                    ]
-                };
-                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                var infoWindow = new google.maps.InfoWindow();
-                var myLatlng = new google.maps.LatLng(40.7110411, -74.0110326);
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgCdL8eyrNZ4mR0qmepD6Q4N3ULd76J94"></script>
+    <script>
+        function LoadMap(propertes) {
+            var defaultLat = <?php echo $jobOverview["lat"]?>;
+            var defaultLng = <?php echo $jobOverview["lng"]?>;
+            var mapOptions = {
+                center: new google.maps.LatLng(defaultLat, defaultLng),
+                zoom: 15,
+                scrollwheel: false,
+                styles: [
+                    {
+                        featureType: "administrative",
+                        elementType: "labels",
+                        stylers: [
+                            {visibility: "off"}
+                        ]
+                    },
+                    {
+                        featureType: "water",
+                        elementType: "labels",
+                        stylers: [
+                            {visibility: "off"}
+                        ]
+                    },
+                    {
+                        featureType: 'poi.business',
+                        stylers: [{visibility: 'off'}]
+                    },
+                    {
+                        featureType: 'transit',
+                        elementType: 'labels.icon',
+                        stylers: [{visibility: 'off'}]
+                    },
+                ]
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            var infoWindow = new google.maps.InfoWindow();
+            var myLatlng = new google.maps.LatLng(defaultLat, defaultLng);
 
                 var marker = new google.maps.Marker({
                     position: myLatlng,
