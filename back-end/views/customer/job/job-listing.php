@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/banner.css?version=2">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/banner.css?version=3">
         <!-- Right body css -->
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/sidebar-right.css?version=2">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/search.css?version=2">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/pagination-box.css?version=2">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/custom-animation.css?version=2">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/sidebar-right.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/search.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/pagination-box.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/custom-animation.css">
         <!-- Left body css -->
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/option-bar.css?version=2">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-box.css?version=2">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/option-bar.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-box.css">
     </head>
     <body>
         <div class="sub-banner bg-color-full">
@@ -282,6 +282,7 @@
                             </nav>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </body>
