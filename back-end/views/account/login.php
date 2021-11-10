@@ -1,3 +1,4 @@
+<!-- 
 <div class="container">
     <div class="breadcum">
         <ul>
@@ -14,7 +15,7 @@
             </li>
         </ul>
     </div>
-</div>
+</div> -->
 <div class="container">
     <div class="wrapper-login-form">
         <div class="title-form">
@@ -29,22 +30,28 @@
                 <div class="form-group">
                     <input type="password" name="password" id="password" placeholder="Password">
                 </div>
+                <!-- <div class="" >
+                    <input type="radio" name="fav_language" value="user">
+                      <label for="user">User</label><br>
+                      <input type="radio" name="fav_language" value="admin">
+                      <label for="admin">Admin</label>
+                </div> -->
                 <div class="_row">
                     <button type="submit">
                         Sign in
                     </button>
-                    <a href="#">
+                    <!-- <a class="" href="#">
                         <p>Forgot your password?</p>
-                    </a>
+                    </a> -->
                 </div>
-                <div class="form-group">
-                    <a href="/register">
-                        <p>
-                            Create account
-                        </p>
-                    </a>
-                </div>
+
             </form>
+            <div class="footer">
+                <a class="content" href="/register">
+                    New user? <span class="lin">Create account</span>
+                </a>
+            </div>
         </div>
+        
     </div>
 </div>

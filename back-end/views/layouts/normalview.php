@@ -5,7 +5,7 @@
     <title>JOBB - Job Board HTML Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-
+    
     <!-- External CSS libraries -->
     <link rel="stylesheet" type="text/css" href="/public/css/imported/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/public/css/imported/animate.min.css">
@@ -24,13 +24,13 @@
     <link rel="stylesheet" type="text/css"  href="/public/css/imported/slick.css">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/header.css?version=4">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/public.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/footer.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/custom-animation.css">
     <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css">
-
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/customer/commons/breadcum.css?version=4">
+    <link rel="stylesheet" type="text/css" href="public/css/customer/register/register-form.css?version=4">
+    <link rel="stylesheet" type="text/css" href="/public/css/customer/login/login-form.css?version=4">
+ 
+    
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" >
 
@@ -41,14 +41,18 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link rel="stylesheet" type="text/css" href="/public/css/imported/ie10-viewport-bug-workaround.css">
 
-    <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
 
-    <?php include SITE_PATH . "views/blocks/customer/header.php" ?>
+    
+
+    <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
 </head>
 
-<body>
+<body style="background-color: #f9f9f9;">
+    <!-- <?php include SITE_PATH . "views/blocks/customer/header.php" ?> -->
 
     <?php include $subview ?>
+
+    <!-- <?php include SITE_PATH . "views/blocks/customer/footer.php" ?> -->
 
     <script src="/public/js/imported/jquery-2.2.0.min.js"></script>
     <script src="/public/js/imported/popper.min.js"></script>
@@ -71,7 +75,7 @@
     <script  src="/public/js/imported/jquery.magnific-popup.min.js"></script>
     <script  src="/public/js/imported/jquery.countdown.js"></script>
     <script  src="/public/js/imported/maps.js"></script>
-    <script  src="/public/js/imported/app.js?version=3"></script>
+    <script  src="/public/js/imported/app.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script  src="/public/js/imported/ie10-viewport-bug-workaround.js"></script>
@@ -80,8 +84,5 @@
 
 </body>
 
-<footer>
-    <?php include SITE_PATH . "views/blocks/customer/footer.php" ?>
-</footer>
 
 </html>

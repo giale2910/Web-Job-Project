@@ -14,7 +14,7 @@ class UserController extends BaseController
             "css/customer/commons/breadcum.css",
             "css/customer/login/login-form.css",
         ];
-        $this->load->view("layouts/customer", "account/login", $data);
+        $this->load->view("layouts/normalview", "account/login", $data);
     }
 
     public function renderRegisterForm()
@@ -24,7 +24,7 @@ class UserController extends BaseController
             "css/customer/commons/breadcum.css",
             "css/customer/register/register-form.css",
         ];
-        $this->load->view("layouts/customer", "account/register", $data);
+        $this->load->view("layouts/normalview", "account/register", $data);
     }
 
     public function register()

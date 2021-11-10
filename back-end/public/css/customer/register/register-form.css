@@ -1,20 +1,24 @@
 .wrapper-register-form {
-    width: 100%;
+    width: 40%;
     height: 680px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin:auto;
+    background-color:white;
 }
 
 .wrapper-register-form .title-form {
     text-align: center;
     margin-bottom: 15px;
+
 }
 
 .wrapper-register-form .title-form h3 {
     font-size: 30px;
     color: #000;
+    font-weight:bold;
 }
 
 .wrapper-register-form .title-form p {
@@ -32,6 +36,9 @@
     margin-bottom: 20px;
     font-size: 14px;
     color: #333;
+    border:1px solid gray;
+    border-radius:4px;
+    
 }
 
 .wrapper-register-form .register-form .form-group input {
@@ -39,10 +46,16 @@
     border: none;
     outline: none;
     width: 100%;
+    
+}
+
+.wrapper-register-form .register-form .form-group input:focus {
+    border:1px solid #376BFF;
+    
 }
 
 .wrapper-register-form .register-form button {
-    border-radius: 30px;
+    border-radius: 4px;
     background-color: black;
     transition: all .3s ease 0s;
     border: none;
@@ -60,16 +73,21 @@
 }
 
 .wrapper-register-form .register-form ._row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
     margin-bottom: 20px;
 }
 
 .wrapper-register-form .register-form ._row a,
 .wrapper-register-form .register-form ._row button {
+    background-color: #376BFF;
     display: inline-block;
-    width: 100px;
+    width: 100%;
+}
+
+.wrapper-register-form .register-form ._row button:hover {
+    filter:brightness(120%);
+}
+.wrapper-register-form .register-form ._rowbutton:focus {
+    filter:brightness(90%);
 }
 
 .wrapper-register-form .register-form ._row a {
@@ -80,4 +98,11 @@
 .wrapper-register-form .register-form a {
     text-decoration: none;
     font-size: 13px;
+}
+.content{
+    text-align:center;
+   
+}
+.content p{
+    color: #376BFF;
 }

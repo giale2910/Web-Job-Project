@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="breadcum">
         <ul>
             <li>
@@ -14,12 +14,12 @@
             </li>
         </ul>
     </div>
-</div>
+</div> -->
 <div class="container">
     <div class="wrapper-register-form">
         <div class="title-form">
             <h3>Create Account</h3>
-            <p>Please Register using account detail bellow</p>
+            <p>Please fill in to create your account</p>
         </div>
         <div class="register-form">
             <form action="user/register" method="POST">
@@ -36,21 +36,16 @@
                     <input type="password" name="password" id="password" placeholder="Password">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="rePassword" id="re-password" placeholder="Re-Password">
+                    <input type="password" name="rePassword" id="re-password" placeholder="Confirm Password">
                 </div>
                 <div class="_row">
                     <button type="submit">
                         Register
                     </button>
-                    <a href="/login">
-                        <p>Have an account?</p>
-                    </a>
                 </div>
-                <div class="form-group">
-                    <a href="#">
-                        <p>
-                            Back to shop
-                        </p>
+                <div class="content">
+                    <a href="/login">
+                        <p>Have an account? Login here</p>
                     </a>
                 </div>
             </form>
