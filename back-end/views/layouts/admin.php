@@ -25,6 +25,7 @@
 
     <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/header.css?version=4">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
 
     <!-- Favicon icon -->
@@ -41,12 +42,16 @@
 </head>
 
 <body>
-    <?php include SITE_PATH . "views/blocks/management/header.php" ?>
+    <?php include SITE_PATH . "views/blocks/admin/header.php" ?>
+
+    <!--  account modal-->
+    <?php include 'views/account/editProfile.php' ?>
+    <?php include 'views/account/changePassword.php' ?>
 
     <div class="dashboard">
         <div class="container-fluid">
             <div class="row">
-                <?php include SITE_PATH . "views/blocks/management/side-bar.php" ?>
+                <?php include SITE_PATH . "views/blocks/admin/side-bar.php" ?>
                 <div class="col-lg-9 col-md-12 col-sm-12 col-pad">
                     <div class="content-area5 dashboard-content">
                         <?php include $subview ?>

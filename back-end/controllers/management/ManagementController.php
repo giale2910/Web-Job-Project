@@ -28,7 +28,9 @@ class ManagementController extends BaseController
         $data["jsFiles"] = [
             
         ];
-        $this->load->view("layouts/admin", "management/post-job/post-job", $data);
+        // $this->load->view("layouts/admin", "management/post-job/post-job", $data);
+        $this->load->view("layouts/manager", "management/post-job/post-job", $data);
+
     }
 
     public function renderDashboardManagement()
@@ -53,7 +55,9 @@ class ManagementController extends BaseController
         $data["jsFiles"] = [
             
         ];
-        $this->load->view("layouts/admin", "management/dashboard/dashboard", $data);
+        // $this->load->view("layouts/admin", "management/dashboard/dashboard", $data);
+        $this->load->view("layouts/manager", "management/dashboard/dashboard", $data);
+
     }
 
     public function renderManageJobManagement()
@@ -78,6 +82,8 @@ class ManagementController extends BaseController
         $data["jsFiles"] = [
             
         ];
-        $this->load->view("layouts/admin", "management/manage-job/manage-job", $data);
+        // $this->load->view("layouts/admin", "management/manage-job/manage-job", $data);
+        $this->load->view("layouts/manager", "management/manage-job/manage-job", $data);
+
     }
 }

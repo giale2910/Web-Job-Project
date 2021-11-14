@@ -24,12 +24,9 @@
     <link rel="stylesheet" type="text/css"  href="/public/css/imported/slick.css">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/header.css?version=4">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/public.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/footer.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/custom-animation.css">
     <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/header.css?version=4">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" >
@@ -42,16 +39,31 @@
     <link rel="stylesheet" type="text/css" href="/public/css/imported/ie10-viewport-bug-workaround.css">
 
     <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
-
-    <?php include SITE_PATH . "views/blocks/customer/header.php" ?>
+    <?php include SITE_PATH . "views/blocks/management/header.php" ?>
 </head>
 
 <body>
+    
 
-    <?php include $subview ?>
+     <!--  account modal-->
     <?php include 'views/account/editProfile.php' ?>
     <?php include 'views/account/changePassword.php' ?>
 
+    <div class="dashboard">
+        <div class="container-fluid">
+            <div class="row">
+                <?php include SITE_PATH . "views/blocks/management/side-bar.php" ?>
+
+               
+                <div class="col-lg-9 col-md-12 col-sm-12 col-pad">
+                    <div class="content-area5 dashboard-content">
+                        <?php include $subview ?>
+                        <?php include SITE_PATH . "views/blocks/management/footer.php" ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="/public/js/imported/jquery-2.2.0.min.js"></script>
     <script src="/public/js/imported/popper.min.js"></script>
@@ -74,7 +86,7 @@
     <script  src="/public/js/imported/jquery.magnific-popup.min.js"></script>
     <script  src="/public/js/imported/jquery.countdown.js"></script>
     <script  src="/public/js/imported/maps.js"></script>
-    <script  src="/public/js/imported/app.js?version=3"></script>
+    <script  src="/public/js/imported/app.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script  src="/public/js/imported/ie10-viewport-bug-workaround.js"></script>
@@ -83,8 +95,5 @@
 
 </body>
 
-<footer>
-    <?php include SITE_PATH . "views/blocks/customer/footer.php" ?>
-</footer>
 
 </html>
