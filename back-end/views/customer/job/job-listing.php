@@ -24,57 +24,60 @@
             </div>
         </div>
 
-        <div class="job-listing-section content-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-12">
-                        <div class="sidebar-right">
-                            <!-- Advanced search start -->
-                            <div class="widget-4 advanced-search">
-                                <form method="GET" class="informeson">
-                                    <div class="form-group">
-                                        <label>Keywords</label>
-                                        <input type="text" name="search" class="form-control selectpicker search-fields" placeholder="Search Keywords">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Location</label>
-                                        <select class="selectpicker search-fields" name="Location">
-                                            <option>All Location</option>
-                                            <option>New York City</option>
-                                            <option>Australia</option>
-                                            <option>Brazil</option>
-                                            <option>Canada</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Categories</label>
-                                        <select class="selectpicker search-fields" name="categories">
-                                            <option>All Categories</option>
-                                        <?php foreach ($categoryList as $category) { ?>
-                                            <option><?php echo $category["category"];?></option>
-                                        <?php } ?>
-                                        </select>
-                                    </div>
-                                    <br>
+<div class="job-listing-section content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="sidebar-right">
+                    <!-- Advanced search start -->
+                    <div class="widget-4 advanced-search">
+                        <form method="GET" class="informeson">
+                            <div class="form-group">
+                                <label>Keywords</label>
+                                <input type="text" name="search" class="form-control selectpicker search-fields" placeholder="Search Keywords">
+                            </div>
+                            <div class="form-group">
+                                <label>Location</label>
+                                <select class="selectpicker search-fields" name="Location">
+                                    <option>All Location</option>
+                                    <option>Ho Chi Minh City</option>
+                                    <option>Hanoi</option>
+                                    <option>Vung Tau</option>
+                                    <option>Da Nang</option>
+                                    <option>Foreign Countries</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Categories</label>
+                                <select class="selectpicker search-fields" name="categories">
+                                    <option>All Categories</option>
+                                <?php foreach ($categoryList as $category) { ?>
+                                    <option><?php echo $category["category"];?></option>
+                                <?php } ?>
+                                </select>
+                            </div>
+                            <br>
 
                             <a class="show-more-options" data-toggle="collapse" data-target="#options-content4">
                                 <i class="fa fa-plus-circle"></i> Job Type
                             </a>
                             <div id="options-content4" class="collapse">
-                                <div class="checkbox checkbox-theme checkbox-circle">
-                                    <input id="fulltime" type="checkbox" name="job_type">
-                                    <label for="fulltime">
+                                <div class="radio">
+                                    <input id="fulltime" type="radio" name="job-type">
+                                    <label for="Full time">
                                         Full Time
                                     </label>
                                 </div>
-                                <div class="checkbox checkbox-theme checkbox-circle">
-                                    <input id="parttime" type="checkbox" name="job_type">
-                                    <label for="parttime">
+                                <div class="radio">
+                                    <input id="parttime" type="radio" name="job-type">
+                                    <label for="Part time">
                                         Part Time
                                     </label>
                                 </div>
                                 <br>
                             </div>
+
+                            <!-- date-posted is not really needed
                             <a class="show-more-options" data-toggle="collapse" data-target="#options-content5">
                                 <i class="fa fa-plus-circle"></i> Date Posted
                             </a>
@@ -104,7 +107,7 @@
                                     </label>
                                 </div>
                                 <br>
-                            </div>
+                            </div>-->
 
                             <a class="show-more-options" data-toggle="collapse" data-target="#options-content6">
                                 <i class="fa fa-plus-circle"></i> Experience
@@ -136,51 +139,24 @@
                             </a>
                             <div id="options-content3" class="collapse">
                                 <div class="checkbox checkbox-theme checkbox-circle">
-                                    <input id="high_school" type="checkbox" name="qualification">
+                                    <input id="high_school" type="checkbox" name="high-school">
                                     <label for="high_school">
                                         High school
                                     </label>
                                 </div>
                                 <div class="checkbox checkbox-theme checkbox-circle">
-                                    <input id="undergrad" type="checkbox" name="qualification">
+                                    <input id="undergrad" type="checkbox" name="undergraduate">
                                     <label for="undergrad">
                                         Undergraduate
                                     </label>
                                 </div>
                                 <div class="checkbox checkbox-theme checkbox-circle">
-                                    <input id="grad" type="checkbox" name="qualification">
+                                    <input id="grad" type="checkbox" name="graduate">
                                     <label for="grad">
                                         Graduate
                                     </label>
                                 </div>
                                 <br>
-                            </div>
-
-                            <a class="show-more-options" data-toggle="collapse" data-target="#options-content2">
-                                <i class="fa fa-plus-circle"></i> Gender
-                            </a>
-                            <div id="options-content2" class="collapse">
-                                <div class="checkbox checkbox-theme checkbox-circle">
-                                    <input id="male" type="checkbox" name="gender">
-                                    <label for="male">
-                                        Male
-                                    </label>
-                                </div>
-                                <div class="checkbox checkbox-theme checkbox-circle">
-                                    <input id="female" type="checkbox" name="gender">
-                                    <label for="female">
-                                        Female
-                                    </label>
-                                </div>
-                                <div class="checkbox checkbox-theme checkbox-circle">
-                                    <input id="others" type="checkbox" name="gender">
-                                    <label for="others">
-                                        Others
-                                    </label>
-                                </div>
-
-                                    </div>
-                                </form>
                             </div>
 
                             <div class="search-submission">
@@ -201,9 +177,9 @@
                                         <span class="sort">Sort by:</span>
                                     </label>
                                     <select id="sortby" class="selectpicker search-fields">
-                                        <option value="relevance">Relevance</option>
-                                        <option value="newest">Newest</option>
-                                        <option value="oldest">Oldest</option>
+                                        <option value="id">Relevance</option>
+                                        <option value="date_posted DESC">Newest</option>
+                                        <option value="date_posted ASC">Oldest</option>
                                     </select>
                                 </div>
                             </div>
