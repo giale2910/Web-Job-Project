@@ -8,20 +8,39 @@
         </div>
     </div>
 </div> -->
-<!-- Banner start -->
-<div class="banner bg-color-full" id="banner">
-    <div id="bannerCarousole" class="carousel slide" data-ride="carousel">
+<!-- Banner start   bg-color-full-->
+<div class=" " id="banner">
+    <!-- <div id="bannerCarousole" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item banner-max-height active">
-                <img class="d-block w-100 h-100" src="http://placehold.it/1920x1000" alt="banner">
-                <div class="carousel-caption banner-slider-inner d-flex text-center"></div>
+            <div class="imgplaceholder carousel-item banner-max-width banner-max-height active">
+                <img class="d-block w-100 h-100" src="/public/images/G1.png" alt="banner"> 
+                
+                 <div class="carousel-caption banner-slider-inner d-flex text-center"></div> 
             </div>
+
         </div>
-    </div>
-    <div class="banner-inner " >
+    </div> -->
+             <div class="imgplaceholder">
+                 <img class="" src="/public/images/bg4.png" alt="banner"> 
+                <div class="text">
+                <h3  class="">Find your job</h3>
+                <p class="">Get your dream job and upgrade your carrer</p>
+                
+                <button class="btn ">
+                    <a href="job-listing">
+                    <strong>Find Job Now</strong>
+                    </a>
+                </button>
+                </div>
+                
+                
+                <!-- <div class="carousel-caption banner-slider-inner d-flex text-center"></div> -->
+            </div>
+    <div class="banner-inner ">
         <div class="container">
-            <div class="text-center">
-                <h3 class="b-text text">Find your job</h3>
+            
+            <!-- <div class="text-center">
+                <h3  class="b-text text">Find your job</h3>
                 <p class="text">Get your dream job and </p>
                 <div class="inline-search-area ml-auto mr-auto none-768">
                     <div class="search-boxs ">
@@ -44,8 +63,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="banner-counter-box none-768">
+
+                  <div class="banner-counter-box none-768">
                     <div class="counter-box">
                         <h1 class="counter">2967</h1>
                         <p>Jobs Posted</p>
@@ -58,10 +77,10 @@
                         <h1 class="counter">150</h1>
                         <p>Candidates</p>
                     </div>
-                </div>
-            </div>
+                </div>  -->
         </div>
     </div>
+</div>
 </div>
 <!-- Banner end -->
 
@@ -73,7 +92,7 @@
         <!-- Main title -->
         <div class="main-title text-center">
             <h1>Popular Categories</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6">
@@ -264,18 +283,18 @@
     <div class="container">
         <div class="main-title text-center">
             <h1>Companies We've Helped</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Connect and promote opportunities</p>
         </div>
         <div class="slick-slider-area">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
-                <div class="slick-slide-item"><img src="http://placehold.it/130x66" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="http://placehold.it/130x66" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="http://placehold.it/130x66" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="http://placehold.it/130x66" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="http://placehold.it/130x66" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="http://placehold.it/130x66" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="http://placehold.it/130x66" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="http://placehold.it/130x66" alt="brand" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/Grab-logo.png" alt="brand" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/lazada-logo.png" alt="brand" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/shopee-logo.png" alt="brand" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/KMS-Logo.png" alt="brand" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/Viettel-logo.svg.png" alt="brand" class="img-fluid"></div>
+               
+               
+                
             </div>
         </div>
     </div>
