@@ -44,9 +44,6 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <a href="employer-dashboard-post-job.html" class="btn btn-theme btn-md"><i class="flaticon-plus"></i> Post a Job</a>
-                        </li>
                     </ul>
                 </div>
             </div>
