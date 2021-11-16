@@ -4,6 +4,7 @@ class JobController extends BaseController
     public function __construct()
     {
         parent::__construct();
+        $this->load->model("user");
         $this->load->model("job");
         $this->load->model("category");
     }
@@ -154,11 +155,16 @@ class JobController extends BaseController
         return $result;
     }
 
-    public function postJob(){
+    public function post(){
         /*
         TODO [front-end]: 
         Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)
         */
+        debugAlert("Posting job");
+        $_POST["manager_id"] = $_SESSION["user_id"];
+        $_POST["date_posted"] = date("Y-m-d");
+        $_POST["deadline"] = substr($_POST["deadline"], 0, 10);
         $this->job->postJob($_POST);
+        echo "<script>alert('Job added!'); document.location='/management';</script>";
     }
 }

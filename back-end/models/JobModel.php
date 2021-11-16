@@ -47,18 +47,51 @@ class JobModel extends BaseModel
 
     public function postJob($info)
     {
-        // $terms = array("title", "company", "manager_id", "location_id", "category_id", "date_posted", "deadline", "salary", "job_type", "gender", "qualification", "min_experience", "contact_email", "description");
-        // $jobTerms = array();
-        // foreach ($terms as $term) $jobTerms[] = $info[$term];
-        // $sql = 
-        // "INSERT INTO Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)
-        // VALUES (
-        // " . implode(",", $jobTerms)
-        // . ")";
-        // $stmt = $this->conn->prepare($sql);
-        // $stmt->execute();
+        // Create location point first
+        // Location(id, lat, lng, name, city)
+        // Temporarily do this until we get location from front-end
+        $info["location"] = array(
+            "lat" => "10.8144067",
+            "lng" => "106.7106083", 
+            "name" => "Ben xe Mien Dong", 
+            "city" => "Ho Chi Minh City"
+        );
 
-        // $jobId = $this->sqlFetchAll("SELECT id FROM Job ORDER BY id DESC LIMIT 1")
-        // $exprienceIds = $this->sqlFetchAll($sql)[0]["id"];
+        $newLocationId = $this->postAndGetId(
+            array("lat", "lng", "name", "city"),
+            array(),
+            $info["location"],
+            "Location(lat, lng, name, city)"
+        );
+
+        $info["location_id"] = $newLocationId;
+        $newJobId = $this->postAndGetId(
+            array("title", "company", "manager_id", "location_id", "category_id", "date_posted", "deadline", "salary", "job_type", "gender", "qualification", "min_experience", "contact_email", "description"),
+            array("manager_id", "location_id", "category_id", "salary", "min_experience"),
+            $info,
+            "Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)"
+        );
+        
+        if ($info["experience"] && count($info["experience"])>0){
+            $insertTerms = array();
+            foreach($info["experience"] as $text){
+                $insertTerms[] = "($newJobId, '$text')";
+            }
+            $sql = "INSERT INTO JobExperience(job_id, experience_text) VALUES " . implode(",", $insertTerms);
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+        }
+
+        if ($info["responsibility"] && count($info["experience"])>0){
+            $insertTerms = array();
+            foreach($info["responsibility"] as $text){
+                $insertTerms[] = "($newJobId, '$text')";
+            }
+            $sql = "INSERT INTO JobResponsibility(job_id, responsibility_text) VALUES " . implode(",", $insertTerms);
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+        }
+
+        return $newJobId;
     }
 }

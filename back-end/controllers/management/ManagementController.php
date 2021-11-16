@@ -4,6 +4,7 @@ class ManagementController extends BaseController
     public function __construct()
     {
         parent::__construct();
+        $this->load->model("category");
     }
 
     public function renderPostJobManagement()
@@ -28,6 +29,7 @@ class ManagementController extends BaseController
         $data["jsFiles"] = [
             
         ];
+        $data["categoryList"] = $this->getCategoryList();
         $this->load->view("layouts/admin", "management/post-job/post-job", $data);
     }
 
@@ -79,5 +81,11 @@ class ManagementController extends BaseController
             
         ];
         $this->load->view("layouts/admin", "management/manage-job/manage-job", $data);
+    }
+
+    public function getCategoryList()
+    {
+        $categories = $this->category->getCategoryList();
+        return $categories;
     }
 }
