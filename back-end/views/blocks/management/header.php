@@ -1,4 +1,4 @@
-<header class="main-header header-2 fixed-header">
+<header class="main-header header-2 fixed-header" style="z-index:9;">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand logo pad-0" href="index.html">

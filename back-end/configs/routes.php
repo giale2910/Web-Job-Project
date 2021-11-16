@@ -14,6 +14,10 @@ $routes = array(
         "handler" => "customer/job/renderJobDetail",
         "roles" => ["all"]
     ),
+    "fav-job" => array(
+        "handler" => "customer/job/renderFavJob",
+        "roles" => ["all"]
+    ),
     "home" => array(
         "handler" => "customer/home/renderHomePage",
         "roles" => ["all"]

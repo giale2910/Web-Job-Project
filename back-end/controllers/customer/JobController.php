@@ -108,6 +108,12 @@ class JobController extends BaseController
         $data["jobDetail"] = $this->getJobDetail($_GET["id"]);
         $this->load->view("layouts/customer", "customer/job/job-detail", $data);
     }
+    public function renderFavJob()
+    {
+        $data["title"] = "Favorite Job";
+        $data["jobList"] = $this->getJobView();
+        $this->load->view("layouts/customer", "customer/job/fav-job", $data);
+    }
 
     public function getJobView(){
         # $jobType = $_GET["job-type"];

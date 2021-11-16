@@ -1,4 +1,4 @@
-<header class="main-header header-2 fixed-header">
+<header class="main-header header-2 fixed-header" style="z-index:9;">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand logo pad-0" href="index.html">
@@ -18,9 +18,9 @@
                     <li class="nav-item dropdown">
                         <a href="#changePasswordModal" class="nav-link">Change Password</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a data-toggle="modal" href="#editProfileModal" class="nav-link">Edit Profile</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown">
                         <a data-toggle="modal" href="logout" class="nav-link">Logout</a>
                     </li>
@@ -35,7 +35,7 @@
                                     Hi, John
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" data-toggle="modal" href="#editProfileModal"> <i class="iconNav flaticon-pencil"></i>Edit Profile</a>
+                                    <!-- <a class="dropdown-item" data-toggle="modal" href="#editProfileModal"> <i class="iconNav flaticon-pencil"></i>Edit Profile</a> -->
                                     <a class="dropdown-item" data-toggle="modal" href="#changePasswordModal"> <i class="iconNav flaticon-lock"></i>Change password</a>
                                     <a class="dropdown-item" href="logout"> <i class="iconNav flaticon-logout"></i>Logout</a>
                                 </div>

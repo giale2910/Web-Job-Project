@@ -54,8 +54,13 @@
                         <li><a href="https://oisp.hcmut.edu.vn/"><img src="../../../public/images/weblink1.png" style="width:25px; height:25px;border-radius:25px"></a></li>  
                     </ul>
                 </td>
-                <td class="actions">
-                    <a href="#"><i class="delete fa fa-trash-o"></i></a>
+                <td >
+          
+                    <button href="#" class="apply-button">Active</a>
+            
+                    
+            
+                   
                 </td>
             </tr>
    

@@ -9,7 +9,7 @@
             <h4>Account</h4>
             <ul>
                 <li><a data-toggle="modal" href="#changePasswordModal"><i class="flaticon-lock"></i>Change Password</a></li>
-                <li><a data-toggle="modal" href="#editProfileModal"><i class="flaticon-user"></i>Edit Profile</a></li>
+                <!-- <li><a data-toggle="modal" href="#editProfileModal"><i class="flaticon-user"></i>Edit Profile</a></li> -->
                 <li><a href="logout"><i class="flaticon-logout"></i>Logout</a></li>
             </ul>
         </div>

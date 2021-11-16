@@ -1,10 +1,7 @@
-
-
-
 <?php 
-    include SITE_PATH . "controllers/customer/JobController.php" ;
-    $jobController = new JobController();
-    $categoryList = $jobController -> getCategoryList();
+    // include SITE_PATH . "controllers/customer/JobController.php" ;
+    // $jobController = new JobController();
+    // $categoryList = $jobController -> getCategoryList();
 ?>
 
 <div class="modal fade" id="editProfileModal" role="dialog" >
@@ -80,13 +77,8 @@
                             <textarea class="form-control inputFocus" name="aboutProfile" rows="3"></textarea>
                         </div>
 
-                    </div>
-              
-
-                   
-                    
-                </div>
-                
+                    </div>                 
+                </div>       
                 <button type="submit" class="btn pull-right " data-dismiss="modal" >Submit</button>
 
 

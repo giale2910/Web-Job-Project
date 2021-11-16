@@ -51,7 +51,8 @@
                     <a href="https://i.topcv.vn/giale?ref=4782604"><img src="../../../public/images/cv1.png" style="width:35px; height:35px;"></a>
                 </td>
                 <td class="actions">
-                    <a href="#"><i class="delete fa fa-trash-o"></i></a>
+                    <!-- <a href="#"><i class="delete fa fa-trash-o"></i></a> -->
+                    <button href="#" class="apply-button">Deactive</a>
                 </td>
             </tr>
             </tbody>
