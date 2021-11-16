@@ -31,6 +31,10 @@ $routes = array(
         "handler" => "management/management/renderPostJobManagement",
         "roles" => ["all"]
     ),
+    "management/update-job" => array(
+        "handler" => "management/management/renderUpdateJobManagement",
+        "roles" => ["all"]
+    ),
     "management/manage-job" => array(
         "handler" => "management/management/renderManageJobManagement",
         "roles" => ["all"]

@@ -14,6 +14,15 @@ class JobModel extends BaseModel
         return $this->sqlFetchAll($sql);
     }
 
+    public function getJobByUserId($id)
+    {
+        $sql = 
+        "SELECT Job.id, title, company, deadline, min_salary, max_salary, job_type, city  
+            FROM Job JOIN Location ON Job.`location_id`=Location.`id` WHERE Job.`manager_id`=:id
+        ";
+        return $this->sqlFetchAll($sql, array("id"=>$id));
+    }
+
     public function getJobOverview($id)
     {
         $sql = 

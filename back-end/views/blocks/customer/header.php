@@ -19,11 +19,13 @@
                             Admin
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="management/post-job" id="navbarDropdownMenuLink2">
-                            Management
-                        </a>
-                    </li>
+                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="management/post-job" id="navbarDropdownMenuLink2">
+                                Management
+                            </a>
+                        </li>
+                    <?php } ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="job-listing" id="navbarDropdownMenuLink10">
                             Jobs
@@ -82,38 +84,35 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
-                        <!-- <a class="nav-link" href="logout">
-                            <i class="flaticon-logout"></i>Sign Out
-                        </a> -->
-                        <div class="navbar-buttons ml-auto d-none d-xl-block d-lg-block">
-                            <ul>
-                                <li>
-                                    <div class="dropdown btns">
-                                        <a class="dropdown-toggle" data-toggle="dropdown">
-                                            <img src="../../../public/images/ava.png" alt="avatar">
-                                            Hi, John
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="fav-job"> <i class="iconNav flaticon-heart"></i>Favorite List</a>
-                                            <a class="dropdown-item"  data-toggle="modal" href="#editProfileModal"> <i class="iconNav flaticon-pencil"></i>Edit Profile</a>
-                                            <a class="dropdown-item" data-toggle="modal" href="#changePasswordModal"> <i class="iconNav flaticon-lock"></i>Change password</a>
-                                            <a class="dropdown-item" href="logout"> <i class="iconNav flaticon-logout"></i>Logout</a>
+                        <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
+                            <!-- <a class="nav-link" href="logout">
+                                <i class="flaticon-logout"></i>Sign Out
+                            </a> -->
+                            <div class="navbar-buttons ml-auto d-none d-xl-block d-lg-block">
+                                <ul>
+                                    <li>
+                                        <div class="dropdown btns">
+                                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                                <img src="../../../public/images/ava.png" alt="avatar">
+                                                Hi, John
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="fav-job"> <i class="iconNav flaticon-heart"></i>Favorite List</a>
+                                                <a class="dropdown-item"  data-toggle="modal" href="#editProfileModal"> <i class="iconNav flaticon-pencil"></i>Edit Profile</a>
+                                                <a class="dropdown-item" data-toggle="modal" href="#changePasswordModal"> <i class="iconNav flaticon-lock"></i>Change password</a>
+                                                <a class="dropdown-item" href="logout"> <i class="iconNav flaticon-logout"></i>Logout</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                          
-                            </ul>
-                        </div>
-                    <?php } else { ?>
-                        <a class="nav-link" href="login">
-                            <i class="flaticon-login"></i>Sign In
-                        </a>
-                    <?php } ?>
+                                    </li>
+                            
+                                </ul>
+                            </div>
+                        <?php } else { ?>
+                            <a class="nav-link" href="login">
+                                <i class="flaticon-login"></i>Sign In
+                            </a>
+                        <?php } ?>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a href="employer-dashboard-post-job.html" class="nav-link link-color"><i class="flaticon-plus"></i> Post a Job</a>
-                    </li> -->
                 </ul>
             </div>
         </nav>
