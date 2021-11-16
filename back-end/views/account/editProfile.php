@@ -4,13 +4,13 @@
     // $categoryList = $jobController -> getCategoryList();
 ?>
 
-<div class="modal fade" id="editProfileModal" role="dialog" >
-    <div class="modal-dialog  modal-dialog-centered modal-lg">
+<!-- <div class="modal fade" id="editProfileModal" role="dialog" >
+    <div class="modal-dialog  modal-dialog-centered modal-lg"> -->
         <!-- Modal content-->
         <div class="modal-content container " >
             <div class="modal-header ">
                 <h2 class="modal-title">Edit Profile</h2>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
             </div>
             <form action="user/edit-profile" method="POST"> 
                 <div class="modal-body  row " >
@@ -54,14 +54,24 @@
                                     <input type="text" name="phoneProfile" class="form-control inputFocus" placeholder="Phone">
                                 </div>
                                 
-                                <div class="form-group ">
-                                    <label >Facebook Link</label>
-                                    <input type="text" name="fbProfile" class="form-control inputFocus" placeholder="Facebook Link">
-                                </div> 
-                                <div class="form-group ">
-                                    <label >Web Link</label>
-                                    <input type="text" name="webProfile" class="form-control inputFocus" placeholder="Web Link">
-                                </div>  
+                                <?php
+                                    $role = 'user';
+                                    if ($role == 'manager') { ?>
+                                        <div class="form-group ">
+                                            <label >Facebook Link</label>
+                                            <input type="text" name="fbProfile" class="form-control inputFocus" placeholder="Facebook Link">
+                                        </div> 
+                                        <div class="form-group ">
+                                            <label >Web Link</label>
+                                            <input type="text" name="webProfile" class="form-control inputFocus" placeholder="Web Link">
+                                        </div> 
+                                    <?php } else { ?>
+                                        <div class="form-group ">
+                                            <label >CV Link</label>
+                                            <input type="text" name="cvProfile" class="form-control inputFocus" placeholder="CV Link">
+                                        </div> 
+                                    <?php }
+                                ?>
                             
                             </div>
                                  
@@ -84,5 +94,5 @@
 
             </form> 
         </div>
-    </div>
-</div>  
+    <!-- </div>
+</div>   -->

@@ -86,4 +86,15 @@ class ManagementController extends BaseController
         $this->load->view("layouts/manager", "management/manage-job/manage-job", $data);
 
     }
+
+    public function renderChangePassword()
+    {
+        $data["title"] = "ChangePassword";
+        $this->load->view("layouts/manager", "account/changePassword", $data);
+    }
+    public function renderEditProfile()
+    {
+        $data["title"] = "EditProfile";
+        $this->load->view("layouts/manager", "account/editProfile", $data);
+    }
 }

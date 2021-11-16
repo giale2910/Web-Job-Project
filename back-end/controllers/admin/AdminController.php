@@ -25,4 +25,10 @@ class AdminController extends BaseController
         ];
         $this->load->view("layouts/admin", "admin/manage-user/manage-user", $data);
     }
+    public function renderChangePassword()
+    {
+        $data["title"] = "ChangePassword";
+        $this->load->view("layouts/admin", "account/changePassword", $data);
+    }
+
 }

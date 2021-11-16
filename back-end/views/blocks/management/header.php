@@ -1,5 +1,6 @@
 <header class="main-header header-2 fixed-header" style="z-index:9;">
-    <div class="container-fluid">
+    <!-- <div class="container-fluid"> -->
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand logo pad-0" href="index.html">
                 <img src="img/logos/black-logo.png" alt="logo">
@@ -46,8 +47,8 @@
                                     Hi, John
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" data-toggle="modal" href="#changePasswordModal"> <i class="iconNav flaticon-pencil"></i>Edit Profile</a>
-                                    <a class="dropdown-item" data-toggle="modal" href="#editProfileModal"> <i class="iconNav flaticon-lock"></i>Change password</a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#editProfileModal" > <i class="iconNav flaticon-pencil"></i>Edit Profile</a>
+                                    <a class="dropdown-item" data-toggle="modal" href="#changePasswordModal"> <i class="iconNav flaticon-lock"></i>Change password</a>
                                     <a class="dropdown-item" href="logout"> <i class="iconNav flaticon-logout"></i>Logout</a>
                                 </div>
                             </div>

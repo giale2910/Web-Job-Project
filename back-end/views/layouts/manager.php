@@ -46,8 +46,19 @@
     
 
      <!--  account modal-->
-    <?php include 'views/account/editProfile.php' ?>
-    <?php include 'views/account/changePassword.php' ?>
+    <div class="modal fade" id="editProfileModal" role="dialog">
+        <div class="modal-dialog  modal-dialog-centered modal-lg">
+            <?php include 'views/account/editProfile.php' ?>
+        </div>
+    </div> 
+
+    <div class="modal fade" id="changePasswordModal" role="dialog">
+        <div class="modal-dialog  modal-dialog-centered">
+            <?php include 'views/account/changePassword.php' ?>
+        </div>
+    </div> 
+
+    
 
     <div class="dashboard">
         <div class="container-fluid">

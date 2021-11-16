@@ -25,7 +25,7 @@
                 <th class="ds-none"></th>
                 <th class="hdn">Contact</th>
                 <th>CV</th>
-                <th>Actions</th>
+                <th>Status</th>
             </tr>
             </thead>
             <tbody>
@@ -48,11 +48,10 @@
                 </td>
 
                 <td>
-                    <a href="https://i.topcv.vn/giale?ref=4782604"><img src="../../../public/images/cv1.png" style="width:35px; height:35px;"></a>
+                    <a href="https://i.topcv.vn/giale?ref=4782604" target="_blank"><img src="../../../public/images/cv1.png" style="width:35px; height:35px;"></a>
                 </td>
                 <td class="actions">
-                    <!-- <a href="#"><i class="delete fa fa-trash-o"></i></a> -->
-                    <button href="#" class="apply-button">Deactive</a>
+                    <button href="#" style="border-radius: 50px; font-size: 13px; font-weight: 600; background-color:red">Deactive</a>
                 </td>
             </tr>
             </tbody>

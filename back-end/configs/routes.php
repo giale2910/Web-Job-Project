@@ -35,6 +35,15 @@ $routes = array(
         "handler" => "management/management/renderPostJobManagement",
         "roles" => ["all"]
     ),
+    "management/changePassword" => array(
+        "handler" => "management/management/renderChangePassword",
+        "roles" => ["all"]
+    ),
+    "management/editProfile"=> array(
+        "handler" => "management/management/renderEditProfile",
+        "roles" => ["all"]
+    ),
+
     // ADMIN
     "admin" => array(
         "handler" => "admin/admin/renderManagerManagement",
@@ -48,6 +57,10 @@ $routes = array(
         "handler" => "admin/admin/renderUserManagement",
         "roles" => ["all"]
     ),
+    "admin/changePassword" => array(
+        "handler" => "admin/admin/renderChangePassword",
+        "roles" => ["all"]
+    ),
     // SIGN IN - SIGN UP
     "login" => array(
         "handler" => "user/renderLoginForm",
@@ -57,6 +70,8 @@ $routes = array(
         "handler" => "user/renderRegisterForm",
         "roles" => ["all"]
     ),
+   
+    
     /* 2. API path (GET / POST function to the respective controller, private path) */
     "user/register" => array(
         "handler" => "user/register",

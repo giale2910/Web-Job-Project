@@ -1,10 +1,10 @@
-<div class="modal fade" id="changePasswordModal" role="dialog">
-    <div class="modal-dialog  modal-dialog-centered">
+<!-- <div class="modal fade" id="changePasswordModal" role="dialog">
+    <div class="modal-dialog  modal-dialog-centered"> -->
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header ">
                 <h2 class="modal-title">Change Password</h2>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
             </div>
             <form action="user/change-password" method="POST">
                 
@@ -25,6 +25,6 @@
                 </div>
             </form> 
         </div>
-    </div>
-</div>  
+    <!-- </div>
+</div>   -->
 

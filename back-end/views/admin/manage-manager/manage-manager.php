@@ -50,21 +50,15 @@
 
                 <td>
                     <ul >
-                        <li><a href="https://www.facebook.com/bkquocte"><img src="../../../public/images/fblogo.png" style="width:25px; height:25px;border-radius:25px"></a></li>
-                        <li><a href="https://oisp.hcmut.edu.vn/"><img src="../../../public/images/weblink1.png" style="width:25px; height:25px;border-radius:25px"></a></li>  
+                        <li><a href="https://www.facebook.com/bkquocte" target="_blank"><img src="../../../public/images/fblogo.png" style="width:25px; height:25px;border-radius:25px"></a></li>
+                        <li><a href="https://oisp.hcmut.edu.vn/" target="_blank"><img src="../../../public/images/weblink1.png" style="width:25px; height:25px;border-radius:25px"></a></li>  
                     </ul>
                 </td>
-                <td >
-          
-                    <button href="#" class="apply-button">Active</a>
-            
-                    
-            
-                   
+                <td >      
+                    <button href="#" style="border-radius: 50px; font-size: 13px; font-weight: 600; background-color:greenyellow">Active</a>
                 </td>
             </tr>
-   
-      
+
             </tbody>
         </table>
     </div>

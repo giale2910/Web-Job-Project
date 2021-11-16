@@ -1,5 +1,5 @@
 <header class="main-header header-2 fixed-header" style="z-index:9;">
-    <div class="container-fluid">
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand logo pad-0" href="index.html">
                 <img src="img/logos/black-logo.png" alt="logo">
