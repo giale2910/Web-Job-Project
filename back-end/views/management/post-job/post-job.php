@@ -44,11 +44,10 @@
                     <div class="form-group">
                         <label>Job Category</label>
                         <select class="selectpicker search-fields" name="job-category">
-                            <option>Job Category</option>
-                            <option>Accounting / Finance</option>
-                            <option>Restaurant / Food Service</option>
-                            <option>Counseling</option>
-                            <option>Health Care</option>
+                            <?php foreach ($categoryList as $category) { ?>
+                                <option><?php echo $category["category"];?></option>
+                            <?php } ?>
+
                         </select>
                     </div>
                 </div>
