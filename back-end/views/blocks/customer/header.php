@@ -20,7 +20,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="management/dashboard" id="navbarDropdownMenuLink2">
+                        <a class="nav-link dropdown-toggle" href="management/post-job" id="navbarDropdownMenuLink2">
                             Management
                         </a>
                     </li>

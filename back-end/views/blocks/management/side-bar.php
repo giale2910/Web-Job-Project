@@ -3,7 +3,6 @@
         <div class="dashboard-inner">
             <h4>Main</h4>
             <ul>
-                <li><a href="dashboard"><i class="flaticon-dashboard"></i>Dashboard</a></li>
                 <li class="active"><a href="post-job"><i class="flaticon-plus"></i>Post a New Job</a></li>
                 <li><a href="manage-job"><i class="flaticon-work"></i>Manage Jobs</a></li>
             </ul>
