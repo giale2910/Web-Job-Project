@@ -19,15 +19,15 @@ $routes = array(
     ),
     "management" => array(
         "handler" => "management/management/renderDashboardManagement",
-        "roles" => ["all"]
+        "roles" => ["manager"]
     ),
     "management/dashboard" => array(
         "handler" => "management/management/renderDashboardManagement",
-        "roles" => ["all"]
+        "roles" => ["manager"]
     ),
     "management/post-job" => array(
         "handler" => "management/management/renderPostJobManagement",
-        "roles" => ["all"]
+        "roles" => ["manager"]
     ),
     "login" => array(
         "handler" => "user/renderLoginForm",
@@ -50,5 +50,9 @@ $routes = array(
         "handler" => "user/logout",
         "roles" => ["all"]
     ),
+    "management/job/post" => array(
+        "handler" => "customer/job/post",
+        "roles" => ["manager", "admin"]
+    )
     
 );

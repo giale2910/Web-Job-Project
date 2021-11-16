@@ -126,9 +126,9 @@
                             </a>
                             <div id="options-content" class="collapse">
                                 <div class="numinput">
-                                    <input type="number" id="minsal" name="minsal" min="0">
+                                    <input type="text" id="minsal" name="minsal" min="0" pattern="[0-9]+">
                                     -
-                                    <input type="number" id="maxsal" name="maxsal" min="0">
+                                    <input type="text" id="maxsal" name="maxsal" min="0" pattern="[0-9]+">
                                     $
                                 </div>
                                 <br>
@@ -166,6 +166,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-xl-8 col-lg-8 col-md-12">
                 <!-- Option bar start -->
                 <div class="option-bar d-none d-xl-block d-lg-block d-md-block d-sm-block">
@@ -219,78 +220,6 @@
                     </div>
                 </div>
             <?php } ?>
-                <!-- hard-coded job list
-                <div class="job-box">
-                    <div class="company-logo">
-                        <img src="http://placehold.it/90x90" alt="logo">
-                    </div>
-                    <div class="description">
-                        <div class="float-left">
-                            <h5 class="title"><a href="job-detail">Restaurant General Manager</a></h5>
-                            <div class="candidate-listing-footer">
-                                <ul>
-                                    <li><i class="flaticon-work"></i> Hotel</li>
-                                    <li><i class="flaticon-pin"></i> New York City</li>
-                                    <li><i class="flaticon-time"></i> Full Time</li>
-                                </ul>
-                                <h6>Deadline: Jan 31, 2019</h6>
-                            </div>
-                        </div>
-                        <div class="div-right">
-                            <a href="#" class="apply-button">Apply Now</a>
-                            <a href="#"><i class="flaticon-heart favourite"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 col-lg-8 col-md-12">
-                        <!-- Option bar start -->
-                        <div class="option-bar d-none d-xl-block d-lg-block d-md-block d-sm-block">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-7 col-sm-7">
-                                    <div class="sorting-options2">
-                                        <span class="sort">Sort by:</span>
-                                        <select class="selectpicker search-fields" name="default-order">
-                                            <option>Relevance</option>
-                                            <option>Newest</option>
-                                            <option>Oldest</option>
-                                            <option>Random</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-5 col-sm-5">
-                                    <div class="sorting-options">
-                                        <a href="#" class="change-view-btn active-view-btn"><i class="fa fa-th-list"></i></a>
-                                        <a href="#" class="change-view-btn"><i class="fa fa-th-large"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- job box start -->
-                        <?php foreach ($jobList as $job) { ?> 
-                            <div class="job-box">
-                                <div class="company-logo">
-                                    <img src="http://placehold.it/90x90" alt="logo">
-                                </div>
-                                <div class="description">
-                                    <div class="float-left">
-                                        <h5 class="title">
-                                            <a href="/job-detail?id=<?php echo $job["id"];?>"><?php echo $job["title"];?></a>
-                                        </h5>
-                                        <div class="candidate-listing-footer">
-                                            <ul>
-                                                <li><i class="flaticon-work"></i> <?php echo $job["company"];?></li>
-                                                <li><i class="flaticon-pin"></i> <?php echo $job["city"];?></li>
-                                                <li><i class="flaticon-time"></i> <?php echo $job["job_type"];?></li>
-                                            </ul>
-                                            <h6>Deadline: <?php echo dateFormat($job["deadline"]);?></h6>
-                                        </div>
-                                    </div>
-                                    <div class="div-right">
-                                        <a href="#" class="apply-button">Apply Now</a>
-                                        <a href="#"><i class="flaticon-heart favourite"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
                         <!-- Page navigation start -->
                         <div class="pagination-box hidden-mb-45 text-center">
                             <nav aria-label="Page navigation example">

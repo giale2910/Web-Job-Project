@@ -67,7 +67,7 @@ function create_database(PDO $conn, $database, string $version) {
             `date_posted` DATE NOT NULL,
             `deadline` DATE NOT NULL,
             `salary` BIGINT,
-            `job_type` ENUM('Full time', 'Part time', 'Temporary', 'To be discussed'),
+            `job_type` ENUM('Full time', 'Part time', 'Freelance', 'Temporary'),
             `gender` ENUM('Male', 'Female', 'Others', 'Any'),
             `qualification` VARCHAR(30),
             `min_experience` INTEGER,
