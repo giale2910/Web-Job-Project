@@ -39,22 +39,33 @@
     <link rel="stylesheet" type="text/css" href="/public/css/imported/ie10-viewport-bug-workaround.css">
 
     <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
+    <?php include SITE_PATH . "views/blocks/management/header.php" ?>
 </head>
 
 <body>
-    <?php include SITE_PATH . "views/blocks/admin/header.php" ?>
+    
 
-    <!--  account modal-->
+     <!--  account modal-->
+    <div class="modal fade" id="editProfileModal" role="dialog">
+        <div class="modal-dialog  modal-dialog-centered modal-lg">
+            <?php include 'views/account/editProfile.php' ?>
+        </div>
+    </div> 
+
     <div class="modal fade" id="changePasswordModal" role="dialog">
         <div class="modal-dialog  modal-dialog-centered">
             <?php include 'views/account/changePassword.php' ?>
         </div>
     </div> 
 
+    
+
     <div class="dashboard">
         <div class="container-fluid">
             <div class="row">
-                <?php include SITE_PATH . "views/blocks/admin/side-bar.php" ?>
+                <?php include SITE_PATH . "views/blocks/management/side-bar.php" ?>
+
+               
                 <div class="col-lg-9 col-md-12 col-sm-12 col-pad">
                     <div class="content-area5 dashboard-content">
                         <?php include $subview ?>

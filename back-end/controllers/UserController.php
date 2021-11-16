@@ -54,4 +54,12 @@ class UserController extends BaseController
         session_destroy();
         header("Location: /");
     }
+    public function changePassword()
+    { 
+        
+    }
+    public function editProfile()
+    { 
+        
+    }
 }

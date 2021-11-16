@@ -49,6 +49,18 @@
 <body>
 
     <?php include $subview ?>
+    <div class="modal fade" id="editProfileModal" role="dialog">
+        <div class="modal-dialog  modal-dialog-centered modal-lg">
+            <?php include 'views/account/editProfile.php' ?>
+        </div>
+    </div> 
+
+    <div class="modal fade" id="changePasswordModal" role="dialog">
+        <div class="modal-dialog  modal-dialog-centered">
+            <?php include 'views/account/changePassword.php' ?>
+        </div>
+    </div> 
+
 
     <script src="/public/js/imported/jquery-2.2.0.min.js"></script>
     <script src="/public/js/imported/popper.min.js"></script>
