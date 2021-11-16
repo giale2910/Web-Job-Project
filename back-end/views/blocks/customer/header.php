@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav header-ml">
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="home" id="navbarDropdownMenuLink">
+                        <a  class="nav-link dropdown-toggle" href="home" id="navbarDropdownMenuLink">
                             Home
                         </a>
                     </li>
