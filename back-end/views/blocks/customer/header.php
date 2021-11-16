@@ -10,15 +10,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav header-ml">
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="home" id="navbarDropdownMenuLink">
+                        <a  class="nav-link dropdown-toggle" href="home" id="navbarDropdownMenuLink">
                             Home
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="management" id="navbarDropdownMenuLink2">
-                            Management
+                        <a class="nav-link " href="admin/manage-manager" id="navbarDropdownMenuLink2">
+                            Admin
                         </a>
                     </li>
+                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="management/post-job" id="navbarDropdownMenuLink2">
+                                Management
+                            </a>
+                        </li>
+                    <?php } ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="job-listing" id="navbarDropdownMenuLink10">
                             Jobs
@@ -62,21 +69,49 @@
                             </div>
                         </div>
                     </li>
+                    <li class="d-lg-none d-xl-none nav-item dropdown">
+                        <a class="nav-link " href="fav-job" id="navbarDropdownMenuLink10">Favorite List</a>
+                    </li>
+                    <li class=" d-lg-none d-xl-none nav-item dropdown">
+                        <a class="nav-link" href="#editProfileModal" id="navbarDropdownMenuLink10">Edit Profile</a>
+                    </li>
+                    <li class="d-lg-none d-xl-none nav-item dropdown">
+                        <a class="nav-link " href="#changePasswordModal" id="navbarDropdownMenuLink10">Change password</a>
+                    </li>
+                    <li class="d-lg-none d-xl-none nav-item dropdown">
+                        <a class="nav-link " href="logout" id="navbarDropdownMenuLink10">Log out</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
-                        <a class="nav-link" href="logout">
-                            <i class="flaticon-logout"></i>Sign Out
-                        </a>
-                    <?php } else { ?>
-                        <a class="nav-link" href="login">
-                            <i class="flaticon-login"></i>Sign In
-                        </a>
-                    <?php } ?>
-                    </li>
-                    <li class="nav-item">
-                        <a href="employer-dashboard-post-job.html" class="nav-link link-color"><i class="flaticon-plus"></i> Post a Job</a>
+                        <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
+                            <!-- <a class="nav-link" href="logout">
+                                <i class="flaticon-logout"></i>Sign Out
+                            </a> -->
+                            <div class="navbar-buttons ml-auto d-none d-xl-block d-lg-block">
+                                <ul>
+                                    <li>
+                                        <div class="dropdown btns">
+                                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                                <img src="../../../public/images/ava.png" alt="avatar">
+                                                Hi, John
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="fav-job"> <i class="iconNav flaticon-heart"></i>Favorite List</a>
+                                                <a class="dropdown-item"  data-toggle="modal" href="#editProfileModal"> <i class="iconNav flaticon-pencil"></i>Edit Profile</a>
+                                                <a class="dropdown-item" data-toggle="modal" href="#changePasswordModal"> <i class="iconNav flaticon-lock"></i>Change password</a>
+                                                <a class="dropdown-item" href="logout"> <i class="iconNav flaticon-logout"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                            
+                                </ul>
+                            </div>
+                        <?php } else { ?>
+                            <a class="nav-link" href="login">
+                                <i class="flaticon-login"></i>Sign In
+                            </a>
+                        <?php } ?>
                     </li>
                 </ul>
             </div>

@@ -269,3 +269,29 @@
     font-size: 13px;
     color: #777;
 }
+
+/*  */
+.iconNav {
+    margin-right: 10px;
+}
+
+.btn{
+    margin: 10px 5px 20px 0px;
+    background-color: #376BFF;
+    border-radius: 10px;
+    transition: all .3s ease 0s;
+    color: white;
+    cursor: pointer;
+
+    
+}
+.wrapper-login-form .login-form button:hover {
+    filter:brightness(150%);
+}
+.form-group .inputFocus:focus {
+    border-color: lightblue;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px lightblue;
+}
+
+
+

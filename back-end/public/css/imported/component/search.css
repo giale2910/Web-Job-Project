@@ -104,6 +104,7 @@
 
 .search-fields button {
     border-radius: 1px;
+    margin: 0px;
     box-shadow: none;
     border: none;
     background: #fff !important;

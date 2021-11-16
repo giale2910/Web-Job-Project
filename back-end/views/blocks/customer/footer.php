@@ -96,7 +96,7 @@
     </div>
 </footer>
 
-<div class="sub-footer">
+<!-- <div class="sub-footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8">
@@ -113,4 +113,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

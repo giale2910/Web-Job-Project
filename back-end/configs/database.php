@@ -3,7 +3,7 @@ $database["host"] = "localhost";
 $database["port"] = 3306;
 $database["databasename"] = "job_finding";
 $database["username"] = "root";
-$database["password"] = "leavemealone";
+$database["password"]="";
 $database["version"] = "1.2.4";
 $database["admins"] = array(
     array(

@@ -9,8 +9,7 @@ class JobController extends BaseController
         $this->load->model("category");
     }
 
-    public function renderJobListing()
-    {
+    public function renderJobListing() {
         $data["title"] = "JobListing";
         $data["cssFiles"] = [
             "/public/css/imported/bootstrap.min.css",
@@ -78,8 +77,7 @@ class JobController extends BaseController
         $this->load->view("layouts/customer", "customer/job/job-listing", $data);
     }
 
-    public function renderJobDetail()
-    {
+    public function renderJobDetail() {
         $data["title"] = "JobDetail";
         $data["cssFiles"] = [
             "/public/css/imported/bootstrap.min.css",
@@ -140,15 +138,20 @@ class JobController extends BaseController
         if ($_GET["sort"]) $searchTerm .= " ORDER BY " . $_GET["sort"];
         debugAlert("Search term:" . $searchTerm);
         $jobs = $this->job->getJobView($searchTerm);
-        return $jobs;
     }
 
-    public function getCategoryList(){
+    public function renderFavJob() {
+        $data["title"] = "Favorite Job";
+        $data["jobList"] = $this->getJobView();
+        $this->load->view("layouts/customer", "customer/job/fav-job", $data);
+    }
+
+    public function getCategoryList() {
         $categories = $this->category->getCategoryList();
         return $categories;
     }
 
-    public function getJobDetail($id){
+    public function getJobDetail($id) {
         $result["overview"] = $this->job->getJobOverview($id);
         $result["experience"] = $this->job->getJobExperience($id);
         $result["responsibility"] = $this->job->getJobResponsibility($id);
