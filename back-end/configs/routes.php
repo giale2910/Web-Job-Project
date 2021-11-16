@@ -73,6 +73,10 @@ $routes = array(
    
     
     /* 2. API path (GET / POST function to the respective controller, private path) */
+    "management/job/addJob" => array(
+        "handler" => "management/management/renderCreatePostJobManagement",
+        "roles" => ["all"]
+    ),
     "user/register" => array(
         "handler" => "user/register",
         "roles" => ["all"]

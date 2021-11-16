@@ -5,6 +5,7 @@ class ManagementController extends BaseController
     {
         parent::__construct();
         $this->load->model("category");
+        $this->load->model("job");
 
     }
 
@@ -52,6 +53,18 @@ class ManagementController extends BaseController
     public function getCategoryList(){
         $categories = $this->category->getCategoryList();
         return $categories;
+    }
+    
+    public function renderCreatePostJobManagement()
+    {
+        $product = $_POST;
+        echo '<script>';
+        echo 'console.log('. json_encode( $product ) .')';
+        echo '</script>';
+        echo $_SESSION["user_id"];
+        echo $this->job->insertNewJobs($product);
+        // header("Location: /");
+
     }
 
     public function renderDashboardManagement()
