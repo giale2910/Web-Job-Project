@@ -31,8 +31,8 @@
                                     <option>Job Type</option>
                                     <option>Full time</option>
                                     <option>Part time</option>
-                                    <option>Freelance</option>
                                     <option>Temporary</option>
+                                    <option>To be discussed</option>
                                 </select>
                             </div>
                         </div>
@@ -40,22 +40,34 @@
                             <div class="form-group">
                                 <label>Job Category</label>
                                 <select class="selectpicker search-fields" name="job-category">
-                                <?php foreach ($categoryList as $category) { ?>
-                                <option><?php echo $category["category"];?></option>
-                            <?php } ?>
+                                    <?php foreach ($categoryList as $category) { ?>
+                                        <option> <?php echo $category["category"];?> </option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>Location</label>
-                                <input type="text" class="input-text" name="your name" placeholder="Location">
+                                <label>Company</label>
+                                <input type="text" class="input-text" name="your name" placeholder="Company">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>Salary</label>
-                                <input type="text" class="input-text" name="your name" placeholder="USD">
+                                <label>Contact Email</label>
+                                <input type="email" class="input-text" name="your name" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Deadline</label>
+                                <input type="date" class="input-text" name="your name" placeholder="Deadline">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Qualification</label>
+                                <input type="text" class="input-text" name="your name" placeholder="Qualification">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -65,56 +77,34 @@
                                     <option>Gender</option>
                                     <option>Male</option>
                                     <option>Female</option>
+                                    <option>Other</option>
+                                    <option>Any</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <div class="form-group">
-                                    <label>Country</label>
-                                    <select class="selectpicker search-fields" name="Country">
-                                        <option>Country</option>
-                                        <option>Usa</option>
-                                        <option>Bangladesh</option>
-                                        <option>Indea</option>
-                                        <option>Canada</option>
-                                    </select>
-                                </div>
+                                <label>Min Salary</label>
+                                <input type="number" class="input-text" name="your name" placeholder="USD">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <div class="form-group">
-                                    <label>City</label>
-                                    <select class="selectpicker search-fields" name="City">
-                                        <option>City</option>
-                                        <option>Dhaka</option>
-                                        <option>Dubai</option>
-                                        <option>Mumbai</option>
-                                        <option>Califonia</option>
-                                    </select>
-                                </div>
+                                <label>Max Salary</label>
+                                <input type="text" class="input-text" name="your name" placeholder="USD">
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Min Experience</label>
+                                <input type="number" class="input-text" name="your name" placeholder="Years">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>Qualification</label>
-                                <select class="selectpicker search-fields" name="Qualification">
-                                    <option>Qualification</option>
-                                    <option>Matriculation</option>
-                                    <option>Gradute</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Experience</label>
-                                <select class="selectpicker search-fields" name="Experience">
-                                    <option>Experience</option>
-                                    <option>1 Year</option>
-                                    <option>2 Year</option>
-                                    <option>3 Year</option>
-                                </select>
+                                <label>Max Experience</label>
+                                <input type="number" class="input-text" name="your name" placeholder="Years">
                             </div>
                         </div>
                         <div class="col-lg-12">
