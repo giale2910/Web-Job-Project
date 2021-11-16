@@ -24,15 +24,15 @@ $routes = array(
     ),
     // MANAGER
     "management" => array(
-        "handler" => "management/management/renderDashboardManagement",
-        "roles" => ["all"]
-    ),
-    "management/dashboard" => array(
-        "handler" => "management/management/renderDashboardManagement",
+        "handler" => "management/management/renderPostJobManagement",
         "roles" => ["all"]
     ),
     "management/post-job" => array(
         "handler" => "management/management/renderPostJobManagement",
+        "roles" => ["all"]
+    ),
+    "management/manage-job" => array(
+        "handler" => "management/management/renderManageJobManagement",
         "roles" => ["all"]
     ),
     "management/changePassword" => array(

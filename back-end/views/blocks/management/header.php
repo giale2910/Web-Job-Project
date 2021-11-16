@@ -16,18 +16,9 @@
                     <li class="nav-item dropdown active">
                         <a href="post-job" class="nav-link">Post a Job</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a href="employer-dashboard-manage-candidate.html" class="nav-link">Manage Candidate</a>
-                    </li> -->
                     <li class="nav-item dropdown">
                         <a href="manage-job" class="nav-link">Manage Jobs</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a href="employer-dashboard-messages.html" class="nav-link">Messages</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="employer-dashboard-transaction.html" class="nav-link">Transaction</a>
-                    </li> -->
                     <li class="nav-item dropdown">
                         <a data-toggle="modal" href="#changePasswordModal"  class="nav-link">Change Password</a>
                     </li>

@@ -212,6 +212,187 @@ ul {
     box-shadow: none;
 }
 
+/** Btn **/
+.btn-sm {
+    cursor: pointer;
+    padding: 7px 12px;
+    letter-spacing: 1px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .5s;
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+}
+
+.btn-sm:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-md {
+    cursor: pointer;
+    padding: 13px 26px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    transition: .5s;
+    border-radius: 2px;
+    border: none;
+}
+
+.btn-md:hover {
+    color: #fff;
+}
+
+button:focus {
+    outline: 0 auto -webkit-focus-ring-color;
+}
+
+.btn-block i{
+    color: #fff;
+}
+
+.pricing-btn {
+    padding: 7px 25px 5px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.bomd {
+    padding: 13px 26px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .5s;
+    border-radius: 2px;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.btn-sm {
+    padding: 7px 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.btn-md {
+    cursor: pointer;
+    padding: 13px 30px 11px 30px;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.btn-lg {
+    cursor: pointer;
+    padding: 14px 32px 10px 32px;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.btn:focus, .btn:active, .btn:focus {
+    box-shadow: none !important;
+    outline: none;
+}
+
+.btn-theme {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.btn-theme:hover {
+    color: #FFF;
+}
+
+.btn-white-lg-outline {
+    color: #FFF;
+    background: transparent;
+    border: solid 2px #FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 30px;
+    font-size: 12px;
+}
+
+.btn-white-lg-outline:hover {
+    color: #FFF;
+}
+
+.btn-theme-sm-outline {
+    color: #FFF;
+    border: solid 2px #FFF;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 18px;
+    font-size: 12px;
+}
+
+.btn-theme-sm-outline:hover {
+    color: #FFF;
+    padding: 5px 18px;
+}
+
+.btn-round {
+    border-radius: 30px;
+}
+
+.browse-all{
+    cursor: pointer;
+    padding: 18px 32px 14px 32px;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    border-radius: 50px;
+    font-weight: 500;
+    background: #fff;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    color: #525252;
+    display: inline-block;
+}
+
+/** Navbar buttons start **/
+.navbar-buttons img{
+    width: 45px;
+    border-radius: 50px;
+    margin: 20px 15px 20px 0;
+}
+
+.navbar-buttons{
+    float: right;
+    text-align: right;
+}
+
+.navbar-buttons ul li{
+    float: left;
+    margin-left: 35px;
+}
+
+.navbar-buttons .btn-md{
+    border-radius: 50px;
+}
+
+.header-2{
+    padding: 0 15px;
+}
+
 /** Border buttons colors **/
 .border-btn-sm {
     cursor: pointer;

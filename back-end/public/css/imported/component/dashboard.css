@@ -1,0 +1,144 @@
+/** Dashboard nav start **/
+.dashboard{
+    position: relative;
+}
+
+.fixed-header{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background: #fff;
+}
+
+.dashboard-nav {
+    background-color: #2a2a2a;
+    display: block;
+    height: 100%;
+}
+
+.dashboard-nav ul {
+    border-bottom: 1px solid #343a40;
+    border-top: 1px solid #343a40;
+}
+
+.dashboard-nav ul li {
+    border-left: 3px solid transparent;
+    line-height: 25px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.dashboard-nav ul li a {
+    color: #c5c5c5;
+    display: block;
+    padding: 11px 27px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.dashboard-nav ul li a i {
+    padding-right: 8px;
+    width: 20px;
+}
+
+.dashboard-content {
+    padding: 30px 30px 0;
+}
+
+.dashboard-header {
+    margin-bottom: 20px;
+}
+
+.dashboard-header .breadcrumb-nav {
+    right: 15px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    float: right;
+}
+
+.dashboard-header .breadcrumb-nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 0 0 15px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.dashboard-header h4{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.dashboard-list {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.dashboard-list h3 {
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+    font-size: 17px;
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+.dashboard-message {
+    float: left;
+    padding: 25px 25px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+.dashboard-list h4 {
+    padding: 15px 25px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.responsive-table {
+    padding: 20px;
+    font-weight: 500;
+}
+
+.dashboard-nav ul li span.nav-tag {
+    font-family: open sans;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 20px;
+    color: #fff;
+    padding: 0 7px;
+    text-align: center;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin-left: 5px;
+}
+
+.dashboard-list .comment-content {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.sub-banner-2{
+    margin: 0 15px 30px;
+    font-size: 15px;
+}
+
+.dashboard-nav h4 {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #c5c5c5!important;
+    padding: 15px 30px 15px;
+}

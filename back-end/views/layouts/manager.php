@@ -24,8 +24,11 @@
     <link rel="stylesheet" type="text/css"  href="/public/css/imported/slick.css">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/header.css?version=4">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/header.css?version=5">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/public.css?version=4">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/footer.css?version=2">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/custom-animation.css?version=2">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/component/dashboard.css?version=2">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
 
     <!-- Favicon icon -->
