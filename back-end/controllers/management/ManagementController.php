@@ -69,9 +69,7 @@ class ManagementController extends BaseController
             "/public/css/imported/component/custom-animation.css",
             "/public/css/imported/component/dashboard.css",
             // Body
-            "/public/css/imported/component/submit-property.css",
-            "/public/css/imported/component/search.css",
-            "/public/css/imported/component/bootstrap-select.css",
+            "/public/css/imported/component/job-info.css",
         ];
         $data["jsFiles"] = [
             

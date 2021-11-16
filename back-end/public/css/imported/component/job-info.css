@@ -1,0 +1,86 @@
+/** Job info start **/
+.job-info table thead tr th:first-child {
+    padding-left: 20px;
+}
+
+.job-info table thead tr th:last-child{
+    padding-right: 20px;
+}
+
+.job-info table thead tr th {
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: solid 1px #dcdada;
+    padding: 20px 20px 20px 0;
+    vertical-align: middle;
+    color: #4d4d4d;
+}
+
+.job-info table tbody tr .actions i{
+    margin-left: 10px;
+}
+
+.job-info table tbody tr td.image {
+    width: 120px;
+    padding-left: 20px;
+}
+.job-info table tbody tr td {
+    border-top: none;
+    border-bottom: 1px solid #f3f3f3;
+    padding: 20px 20px 20px 0;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.job-info table tbody tr td.image img {
+    border-radius: 3px;
+}
+
+.job-info table h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.job-info ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.job-info ul li {
+    float: left;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.job-info ul li:last-child{
+    margin: 0;
+}
+
+.job-info ul li i {
+    margin-right: 5px;
+}
+
+.job-info .table{
+    margin-bottom: 0;
+}
+
+ .t-right{
+     text-align: right;
+ }
+
+
+.job-info-2 table tbody tr td.image{
+    display: none;
+}
+
+.job-info-2 .ds-none{
+    display: none;
+}
+
+.job-info-2 .p-left-20{
+    padding-left: 20px;
+}
