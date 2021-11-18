@@ -8,6 +8,7 @@ class HomeController extends BaseController
 
     public function renderHome()
     {
+        $data = parent::baseRenderData();
         echo "home";
     }
     public function home1()

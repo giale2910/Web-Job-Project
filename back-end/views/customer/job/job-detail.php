@@ -1,16 +1,13 @@
 <?php 
     $jobOverview = $jobDetail["overview"];
-    $minSalary = $jobOverview["min_salary"];
-    $maxSalary = $jobOverview["max_salary"];
+    $salary = $jobOverview["salary"];
     $minExperience = $jobOverview["min_experience"];
     $maxExperience = $jobOverview["max_experience"];
-    $salaryDisplay = "£$minSalary - £$maxSalary";
+    if ($salary==-1) $salaryDisplay = "To be negotiated";
+    else $salaryDisplay = "£$salary";
     $experienceDisplay = "";
     if ($minExperience==-1) $experienceDisplay = "None";
-    else {
-        if ($maxExperience==-1) $experienceDisplay = "$minExperience+ year(s)";
-        else $experienceDisplay = "$minExperience - $maxExperience year(s)";
-    }
+    else $experienceDisplay = "$minExperience+ year(s)";
 ?>
 
 <!DOCTYPE html>
@@ -181,7 +178,24 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
                         </div>
+=======
+                        </form>
+                    </div>
+                    <!-- Job overview start -->
+                    <div class="job-overview widget">
+                        <h3 class="sidebar-title">Job Overview</h3>
+                        <div class="s-border"></div>
+                        <ul>
+                            <li><i class="flaticon-money"></i><h5>Expected Salary</h5><span><?php echo $salaryDisplay;?></span></li>
+                            <li><i class="flaticon-pin"></i><h5>Location</h5><span><?php echo $jobOverview["city"];?></span></li>
+                            <li><i class="flaticon-woman"></i><h5>Gender</h5><span><?php echo $jobOverview["gender"];?></span></li>
+                            <li><i class="flaticon-work"></i><h5>Job Type</h5><span><?php echo $jobOverview["job_type"];?></span></li>
+                            <li><i class="flaticon-honor"></i><h5>Qualification</h5><span><?php echo $jobOverview["qualification"];?></span></li>
+                            <li><i class="flaticon-notepad"></i><h5>Experience</h5><span><?php echo $experienceDisplay;?></span></li>
+                        </ul>
+>>>>>>> 7d46534 (Update db and job query)
                     </div>
                     
                     <div class="col-lg-4 col-md-12">

@@ -94,7 +94,7 @@
                                         <div class="dropdown btns">
                                             <a class="dropdown-toggle" data-toggle="dropdown">
                                                 <img src="../../../public/images/ava.png" alt="avatar">
-                                                Hi, John
+                                                Hi, <?= $userInfo["first_name"] ?>
                                             </a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="fav-job"> <i class="iconNav flaticon-heart"></i>Favorite List</a>

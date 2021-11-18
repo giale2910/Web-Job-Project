@@ -9,6 +9,7 @@ class UserController extends BaseController
 
     public function renderLoginForm()
     {
+        $data = parent::baseRenderData();
         $data["title"] = "Login";
         $data["cssFiles"] = [
             "css/customer/commons/breadcum.css",
@@ -19,6 +20,7 @@ class UserController extends BaseController
 
     public function renderRegisterForm()
     {
+        $data = parent::baseRenderData();
         $data["title"] = "Login";
         $data["cssFiles"] = [
             "css/customer/commons/breadcum.css",
@@ -48,18 +50,39 @@ class UserController extends BaseController
         }
         header("Location: /");
     }
+
     public function logout()
     {
         $_SESSION["logged"] = false;
         session_destroy();
         header("Location: /");
     }
+
     public function changePassword()
-    { 
-        
+    {
+        debugAlert("Changing password");
+        if ($_POST["newPwd"] === $_POST["confirmPwd"]){
+            $user = $this->user->findUserById($_SESSION["user_id"]);
+            if ($user && password_verify($_POST["currentPwd"], $user["password"])) {
+                $_POST["id"] = $_SESSION["user_id"];
+                $this->user->changePassword($_POST);
+                backendAlert("Password changed successfully!");
+            }
+            else {
+                backendAlert("User validation error! Please try again.");
+            }
+        }
+        else {
+            backendAlert("New password and confirmed password must match!");
+        }
     }
+
     public function editProfile()
     { 
-        
+        debugAlert("Editing profile");
+        debugAlert($_POST);
+        $_POST["id"] = $_SESSION["user_id"];
+        $this->user->editProfile($_POST);
+        backendAlert("User profile edited successfully!");
     }
 }

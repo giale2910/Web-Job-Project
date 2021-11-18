@@ -1,7 +1,6 @@
 <?php 
-    // include SITE_PATH . "controllers/customer/JobController.php" ;
-    // $jobController = new JobController();
-    // $categoryList = $jobController -> getCategoryList();
+debugAlert("Info::");
+debugAlert($userInfo);
 ?>
 
 <!-- <div class="modal fade" id="editProfileModal" role="dialog" >
@@ -12,7 +11,7 @@
                 <h2 class="modal-title">Edit Profile</h2>
                 <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
             </div>
-            <form action="user/edit-profile" method="POST"> 
+            <form action="<?=$base_dir?>/user/edit-profile" method="POST"> 
                 <div class="modal-body  row " >
                     <div class="col-lg-3 col-md-3" >
                         <div class="edit-profile-photo">
@@ -20,7 +19,7 @@
                             <div class="change-photo-btn">
                                 <div class="photoUpload">
                                     <span><i class="fa fa-upload"></i></span>
-                                    <input type="file" class="upload">
+                                    <input type="file" accept="image/*" class="upload">
                                 </div>
                             </div>
                         </div>
@@ -30,48 +29,37 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6">      
                                 <div class="form-group ">
-                                    <label >Name</label>
-                                    <input type="text" name="nameProfile" class="form-control inputFocus" placeholder="Name">
+                                    <label>First Name</label>
+                                    <input type="text" name="first_name" value="<?= $userInfo["first_name"]?>" class="form-control inputFocus" placeholder="Name">
                                 </div>
-                                <div class="form-group">
-                                        <label >Category</label>
-                                        <select class="form-control inputFocus"name="categoryProfile" id="categoryProfile" placeholder="Category">
-                                            <option>Category</option>
-                                            <?php foreach ($categoryList as $category) { ?>
-                                                <option><?php echo $category["category"];?></option>
-                                            <?php } ?>
-                                        </select>       
-                                </div>  
                                 <div class="form-group ">
-                                    <label >Email</label>
-                                    <input type="email" name="emailProfile" class="form-control inputFocus" placeholder="Email">
+                                    <label>Last Name</label>
+                                    <input type="text" name="last_name" value="<?= $userInfo["last_name"]?>" class="form-control inputFocus" placeholder="Name">
+                                </div>
+                                <div class="form-group ">
+                                    <label>Email</label>
+                                    <input type="email" name="emailProfile" value="<?= $userInfo["email"]?>" class="form-control inputFocus" placeholder="Email">
                                 </div>  
                             </div>
 
                             <div class="col-lg-6 col-md-6">      
                                 <div class="form-group ">
                                     <label >Phone</label>
-                                    <input type="text" name="phoneProfile" class="form-control inputFocus" placeholder="Phone">
+                                    <input type="text" name="phone" value="<?= $userInfo["phone"]?>" pattern="[0-9]*" class="form-control inputFocus" placeholder="Phone">
                                 </div>
                                 
                                 <?php
-                                    $role = 'user';
+                                    $role = $_SESSION["role"];
                                     if ($role == 'manager') { ?>
                                         <div class="form-group ">
-                                            <label >Facebook Link</label>
-                                            <input type="text" name="fbProfile" class="form-control inputFocus" placeholder="Facebook Link">
-                                        </div> 
-                                        <div class="form-group ">
                                             <label >Web Link</label>
-                                            <input type="text" name="webProfile" class="form-control inputFocus" placeholder="Web Link">
-                                        </div> 
                                     <?php } else { ?>
                                         <div class="form-group ">
                                             <label >CV Link</label>
-                                            <input type="text" name="cvProfile" class="form-control inputFocus" placeholder="CV Link">
-                                        </div> 
                                     <?php }
-                                ?>
+                                ?>    
+                                        <input type="text" name="profile_link" class="form-control inputFocus" placeholder="Profile Link" value="<?= $userInfo["link"]?>">
+                                        </div> 
                             
                             </div>
                                  
@@ -79,18 +67,17 @@
 
                         <div class="form-group ">
                             <label >Address</label>
-                            <input type="text" name="addressProfile" class="form-control inputFocus" placeholder="Address">
+                            <input type="text" name="address" class="form-control inputFocus" placeholder="Address" value="<?= $userInfo["address"]?>">
                         </div> 
                          
                         <div class="form-group">
-                            <label >About us</label>
-                            <textarea class="form-control inputFocus" name="aboutProfile" rows="3"></textarea>
+                            <label >About</label>
+                            <textarea class="form-control inputFocus" name="about" rows="3" value="<?= $userInfo["about"]?>"></textarea>
                         </div>
 
                     </div>                 
                 </div>       
-                <button type="submit" class="btn pull-right " data-dismiss="modal" >Submit</button>
-
+                <button type="submit" class="btn pull-right" >Submit</button>
 
             </form> 
         </div>

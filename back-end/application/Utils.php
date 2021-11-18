@@ -5,7 +5,14 @@ for front-end/public debug
 this will pop an alert box on screen
 */
 function debugAlert($msg) {
-    echo "<script>alert('$msg');</script>";
+    $output = $msg;
+    if (is_array($output)) $output = implode(',', $output);
+    $output = addslashes($output);
+    echo "<script>console.log('Debug Msg: $output');</script>";
+}
+
+function backendAlert($msg, $redirectPath="/") {
+    echo "<script>alert('$msg');document.location='$redirectPath';</script>";
 }
 
 /*

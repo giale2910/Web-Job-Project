@@ -24,12 +24,16 @@ $routes = array(
     ),
     // MANAGER
     "management" => array(
+        "handler" => "management/management/renderDashboardManagement",
+        "roles" => ["manager"]
+    ),
+    "management/dashboard" => array(
         "handler" => "management/management/renderPostJobManagement",
-        "roles" => ["all"]
+        "roles" => ["manager"]
     ),
     "management/post-job" => array(
         "handler" => "management/management/renderPostJobManagement",
-        "roles" => ["all"]
+        "roles" => ["manager"]
     ),
     "management/update-job" => array(
         "handler" => "management/management/renderUpdateJobManagement",
@@ -78,7 +82,7 @@ $routes = array(
     
     /* 2. API path (GET / POST function to the respective controller, private path) */
     "management/job/addJob" => array(
-        "handler" => "management/management/renderCreatePostJobManagement",
+        "handler" => "management/management/postJob",
         "roles" => ["all"]
     ),
     "user/register" => array(
@@ -93,6 +97,10 @@ $routes = array(
         "handler" => "user/logout",
         "roles" => ["all"]
     ),
+    "management/job/post" => array(
+        "handler" => "customer/job/post",
+        "roles" => ["manager", "admin"]
+    ),
     "user/change-password" => array(
         "handler" => "user/changePassword",
         "roles" => ["all"]
@@ -103,3 +111,5 @@ $routes = array(
     ),
     
 );
+
+$base_dir = "http://localhost:".$_SERVER['SERVER_PORT'];

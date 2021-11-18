@@ -8,6 +8,7 @@ class AdminController extends BaseController
 
     public function renderManagerManagement()
     {
+        $data = parent::baseRenderData();
         $data["title"] = "ManageManager";
   
         $data["jsFiles"] = [
@@ -18,6 +19,7 @@ class AdminController extends BaseController
 
     public function renderUserManagement()
     {
+        $data = parent::baseRenderData();
         $data["title"] = "ManageUser";
        
         $data["jsFiles"] = [
@@ -27,6 +29,7 @@ class AdminController extends BaseController
     }
     public function renderChangePassword()
     {
+        $data = parent::baseRenderData();
         $data["title"] = "ChangePassword";
         $this->load->view("layouts/admin", "account/changePassword", $data);
     }

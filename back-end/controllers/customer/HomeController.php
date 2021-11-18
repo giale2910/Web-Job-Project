@@ -8,6 +8,7 @@ class HomeController extends BaseController
 
     public function renderHomePage()
     {
+        $data = parent::baseRenderData();
         $data["title"] = "Home";
         $data["cssFiles"] = [
             // "css/customer/imported/bootstrap.min.css",

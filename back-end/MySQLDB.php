@@ -39,7 +39,11 @@ function create_database(PDO $conn, $database, string $version) {
     `password` VARCHAR(60) NOT NULL,
     `role` VARCHAR(15) NOT NULL,
     `first_name` VARCHAR(50),
-    `last_name` VARCHAR(50)
+    `last_name` VARCHAR(50),
+    `phone` VARCHAR(12),
+    `profile_link` VARCHAR(255),
+    `address` VARCHAR(255),
+    `about` TEXT
     )
     ";
     sql_execute($conn, $sql, " - 'User' table create");
@@ -66,13 +70,11 @@ function create_database(PDO $conn, $database, string $version) {
             `category_id` INTEGER NOT NULL,
             `date_posted` DATE NOT NULL,
             `deadline` DATE NOT NULL,
-            `min_salary` BIGINT,
-            `max_salary` BIGINT,
+            `salary` BIGINT,
             `job_type` ENUM('Full time', 'Part time', 'Temporary', 'To be discussed'),
             `gender` ENUM('Male', 'Female', 'Others', 'Any'),
             `qualification` VARCHAR(30),
             `min_experience` INTEGER,
-            `max_experience` INTEGER,
             `contact_email` VARCHAR(50),
             `description` TEXT,
             CONSTRAINT `FK_manager` FOREIGN KEY (`manager_id`) REFERENCES `User`(`id`) ON DELETE CASCADE,
@@ -128,9 +130,9 @@ function create_database(PDO $conn, $database, string $version) {
         (5, 'Industrial Labour'),
         (6, 'Servicing')
         ",
-        "INSERT INTO Job(id, title, company, manager_id, location_id, category_id, date_posted, deadline, min_salary, max_salary, job_type, gender, qualification, min_experience, max_experience, contact_email, description) VALUES 
-        (1, 'A.I Replacement Lecturer', 'HCM University of Technology', 2, 2, 1, '2021-08-18', '2022-01-01', 200, 500, 'Full time', 'Any', 'Kindergarten', -1, -1, 'oisp@hcmut.edu.vn', 'Please replace the current A.I. lecturer ASAP - this is a call for help.'),
-        (2, 'Hair dresser', '30Shine', 3, 3, 6, '2021-09-11', '2021-11-11', 120, 240, 'Part time', 'Any', 'High school', 2, -1, 'abc@yahoo.com', 'Cut your hair and your self confidence')
+        "INSERT INTO Job(id, title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description) VALUES 
+        (1, 'A.I Replacement Lecturer', 'HCM University of Technology', 2, 2, 1, '2021-08-18', '2022-01-01', 350, 'Full time', 'Any', 'Kindergarten', -1, 'oisp@hcmut.edu.vn', 'Please replace the current A.I. lecturer ASAP - this is a call for help.'),
+        (2, 'Hair dresser', '30Shine', 3, 3, 6, '2021-09-11', '2021-11-11', 160, 'Part time', 'Any', 'High school', 2, 'abc@yahoo.com', 'Cut your hair and your self confidence')
         ",
         "INSERT INTO JobExperience(job_id, experience_text) VALUES
         (1, 'Able to develop an e-learning and exam website without bugs.'),

@@ -12,7 +12,7 @@ abstract class BaseModel
 
     
     /* 
-    for general sql fetch
+    * for general sql fetch
     */
     function sqlFetchAll($sql, $args=NULL){
         $stmt = $this->conn->prepare($sql);
@@ -20,6 +20,32 @@ abstract class BaseModel
         $stmt->execute($args);
         $rows = $stmt->fetchAll();
         return $rows;
+    }
+
+    /*
+    * $terms: array of table fields (like "name", "password", "dob")
+    * $numTerms: numerical fields that do not need formatting (BIGINT, INTEGER, FLOAT, DECIMAL,...)
+    * $termContainer: array of dictionary (basically POST value) of the terms
+    * $preSql: table representation - like "User(name, password, dob)"
+    */
+    function postAndGetId($terms, $numTerms, $termContainer, $preSql) {
+        $tableName = explode("(", $preSql)[0];
+        $termValues = array();
+        foreach ($terms as $term) {
+            $value = $termContainer[$term];
+            if (!in_array($term, $numTerms)) {
+                $value = "'".$value."'";
+            }
+            $termValues[] = $value;
+        }
+        $sql = 
+        "INSERT INTO " . $preSql . " VALUES (" . implode(",", $termValues) . ")";
+        debugAlert("Insert command:");
+        debugAlert($sql);
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $lastId = $this->sqlFetchAll("SELECT id FROM $tableName ORDER BY id DESC LIMIT 1")[0]["id"];
+        return $lastId;
     }
 
 }
