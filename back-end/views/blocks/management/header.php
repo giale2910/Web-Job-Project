@@ -35,7 +35,7 @@
                             <div class="dropdown btns">
                                 <a class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="../../../public/images/ava.png" alt="avatar">
-                                    Hi, John
+                                    Hi, <?= $userInfo["first_name"] ?>
                                 </a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" data-toggle="modal" href="#editProfileModal" > <i class="iconNav flaticon-pencil"></i>Edit Profile</a>

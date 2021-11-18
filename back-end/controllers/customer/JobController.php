@@ -9,7 +9,9 @@ class JobController extends BaseController
         $this->load->model("category");
     }
 
-    public function renderJobListing() {
+    public function renderJobListing()
+    {
+        $data = parent::baseRenderData();
         $data["title"] = "JobListing";
         $data["cssFiles"] = [
             "/public/css/imported/bootstrap.min.css",
@@ -77,7 +79,9 @@ class JobController extends BaseController
         $this->load->view("layouts/customer", "customer/job/job-listing", $data);
     }
 
-    public function renderJobDetail() {
+    public function renderJobDetail()
+    {
+        $data = parent::baseRenderData();
         $data["title"] = "JobDetail";
         $data["cssFiles"] = [
             "/public/css/imported/bootstrap.min.css",
@@ -138,9 +142,12 @@ class JobController extends BaseController
         if ($_GET["sort"]) $searchTerm .= " ORDER BY " . $_GET["sort"];
         debugAlert("Search term:" . $searchTerm);
         $jobs = $this->job->getJobView($searchTerm);
+        return $jobs;
     }
 
-    public function renderFavJob() {
+    public function renderFavJob()
+    {
+        $data = parent::baseRenderData();
         $data["title"] = "Favorite Job";
         $data["jobList"] = $this->getJobView();
         $this->load->view("layouts/customer", "customer/job/fav-job", $data);

@@ -15,13 +15,13 @@
                     </div>
                     <div class="form-group">
                         <label for="pwd">New password:</label>
-                        <input type="password" class="form-control inputFocus" name="newPwd" id="newPwd" placeholder="New password">
+                        <input type="password" class="form-control inputFocus" name="newPwd" id="newPwd" placeholder="New password" autocomplete="new-password">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Confirm new password:</label>
-                        <input type="password" class="form-control inputFocus"name="cofirmPwd"  id="confirmPwd" placeholder="Confirm new password">
+                        <input type="password" class="form-control inputFocus" name="confirmPwd" id="confirmPwd" placeholder="Confirm new password" autocomplete="new-password">
                     </div>
-                    <button type="submit" class="btn pull-right " data-dismiss="modal" >Submit</button>
+                    <button type="submit" class="btn pull-right">Submit</button>
                 </div>
             </form> 
         </div>
