@@ -4,11 +4,14 @@ class ManagementController extends BaseController
     public function __construct()
     {
         parent::__construct();
+        $this->load->model("user");
         $this->load->model("category");
         $this->load->model("job");
     }
 
-    public function renderPostJobManagement() {
+    public function renderPostJobManagement()
+    {
+        $data = parent::baseRenderData();
         $data["title"] = "ManagementPostJob";
         $data["cssFiles"] = [
             "/public/css/imported/bootstrap.min.css",
@@ -53,20 +56,24 @@ class ManagementController extends BaseController
         return $categories;
     }
     
-    public function renderCreatePostJobManagement()
+    public function postJob()
     {
         $product = $_POST;
+        $product["id"] = $_SESSION["user_id"];
+        $product["manager_id"] = $_SESSION["user_id"];
+        $product["date_posted"] = date("Y-m-d");
+        if (!$product["salary"]) $product["salary"]=0;
+        if (!$product["min_experience"]) $product["min_experience"]=-1;
         echo '<script>';
         echo 'console.log('. json_encode( $product ) .')';
         echo '</script>';
-        echo $_SESSION["user_id"];
-        echo $this->job->insertNewJobs($product);
-        // header("Location: /");
-
+        $this->job->insertNewJob($product);
+        backendAlert("Job posted successfully!");
     }
 
     public function renderDashboardManagement()
     {
+        $data = parent::baseRenderData();
         $data["title"] = "ManagementDashboard";
         $data["cssFiles"] = [
             "/public/css/imported/bootstrap.min.css",
@@ -104,7 +111,9 @@ class ManagementController extends BaseController
 
     }
 
-    public function renderUpdateJobManagement() {
+    public function renderUpdateJobManagement()
+    {
+        $data = parent::baseRenderData();
         $data["title"] = "ManagementUpdateJob";
         $data["cssFiles"] = [
             "/public/css/imported/bootstrap.min.css",
@@ -142,7 +151,9 @@ class ManagementController extends BaseController
 
     }
 
-    public function renderManageJobManagement() {
+    public function renderManageJobManagement()
+    {
+        $data = parent::baseRenderData();
         $data["title"] = "ManagementManageJob";
         $data["cssFiles"] = [
             "/public/css/imported/bootstrap.min.css",
@@ -177,13 +188,18 @@ class ManagementController extends BaseController
 
     }
 
-    public function renderChangePassword() {
+    public function renderChangePassword()
+    {
+        $data = parent::baseRenderData();
         $data["title"] = "ChangePassword";
         $this->load->view("layouts/manager", "account/changePassword", $data);
     }
 
-    public function renderEditProfile() {
+    public function renderEditProfile()
+    {
+        $data = parent::baseRenderData();
         $data["title"] = "EditProfile";
+        $data["userInfo"] = $this->userInfo;
         $this->load->view("layouts/manager", "account/editProfile", $data);
     }
 

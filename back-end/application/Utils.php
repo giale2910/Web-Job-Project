@@ -11,6 +11,10 @@ function debugAlert($msg) {
     echo "<script>console.log('Debug Msg: $output');</script>";
 }
 
+function backendAlert($msg, $redirectPath="/") {
+    echo "<script>alert('$msg');document.location='$redirectPath';</script>";
+}
+
 /*
 sql date format: yyyy-mm-dd
 intended date format: Mon dd,yyyy

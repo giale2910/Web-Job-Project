@@ -82,7 +82,7 @@ $routes = array(
     
     /* 2. API path (GET / POST function to the respective controller, private path) */
     "management/job/addJob" => array(
-        "handler" => "management/management/renderCreatePostJobManagement",
+        "handler" => "management/management/postJob",
         "roles" => ["all"]
     ),
     "user/register" => array(
@@ -111,3 +111,5 @@ $routes = array(
     ),
     
 );
+
+$base_dir = "http://localhost:".$_SERVER['SERVER_PORT'];

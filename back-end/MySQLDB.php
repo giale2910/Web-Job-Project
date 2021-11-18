@@ -39,7 +39,11 @@ function create_database(PDO $conn, $database, string $version) {
     `password` VARCHAR(60) NOT NULL,
     `role` VARCHAR(15) NOT NULL,
     `first_name` VARCHAR(50),
-    `last_name` VARCHAR(50)
+    `last_name` VARCHAR(50),
+    `phone` VARCHAR(12),
+    `profile_link` VARCHAR(255),
+    `address` VARCHAR(255),
+    `about` TEXT
     )
     ";
     sql_execute($conn, $sql, " - 'User' table create");
