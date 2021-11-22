@@ -131,10 +131,10 @@ class JobController extends BaseController
         $category = isset($_GET["categories"]) ? $_GET["categories"] : 0;
         if ($category && strpos($category, "All")===false)
             $filter[] = "category = '" . $category . "'";
-        if (isset($_GET["minexp"])) $filter[] = "(min_experience = -1 OR min_experience >= ".$_GET["minexp"] . ")";
-        if (isset($_GET["maxexp"])) $filter[] = "(min_experience = -1 OR min_experience <= ".$_GET["maxexp"] . ")";
-        if (isset($_GET["minsal"])) $filter[] = "(salary = -1 OR salary >= ".$_GET["minsal"] . ")";
-        if (isset($_GET["maxsal"])) $filter[] = "(salary = -1 OR salary <= ".$_GET["maxsal"] . ")";
+        if (isset($_GET["minexp"]) && $_GET["minexp"] >=0) $filter[] = "(min_experience = -1 OR min_experience >= ".$_GET["minexp"] . ")";
+        if (isset($_GET["maxexp"]) && $_GET["maxexp"] >= 0) $filter[] = "(min_experience = -1 OR min_experience <= ".$_GET["maxexp"] . ")";
+        if (isset($_GET["minsal"]) && $_GET["minsal"] >=0) $filter[] = "(salary = -1 OR salary >= ".$_GET["minsal"] . ")";
+        if (isset($_GET["maxsal"]) && $_GET["maxsal"] >=0) $filter[] = "(salary = -1 OR salary <= ".$_GET["maxsal"] . ")";
 
         if (isset($_GET["job-type"])) $filter[] = "job_type = '" . $_GET["job-type"] . "'";
 
