@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_WARNING); 
 abstract class BaseController
 {
 
@@ -14,10 +15,10 @@ abstract class BaseController
 	}
 
 	public function baseRenderData(){
+		global $data;
 		if(isset($_SESSION["user_id"]))
+
 			$data["userInfo"] = $this->user->findUserById($_SESSION["user_id"]);
-		else
-			$data["userInfo"] = null;
 		return $data;
 	}
 
