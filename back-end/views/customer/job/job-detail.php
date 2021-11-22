@@ -2,7 +2,6 @@
     $jobOverview = $jobDetail["overview"];
     $salary = $jobOverview["salary"];
     $minExperience = $jobOverview["min_experience"];
-    $maxExperience = $jobOverview["max_experience"];
     if ($salary==-1) $salaryDisplay = "To be negotiated";
     else $salaryDisplay = "£$salary";
     $experienceDisplay = "";
@@ -13,12 +12,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/banner.css?version=3">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/banner.css?version=6">
         <!-- Body -->
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-box.css?version=3">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/amenities.css?version=3">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-detail.css?version=3">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/sidebar-right.css?version=4">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-box.css?version=6">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/amenities.css?version=6">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-detail.css?version=6">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/sidebar-right.css?version=6">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/map.css?version=6">
     </head>
     <body>
         <div class="sub-banner bg-color-full">

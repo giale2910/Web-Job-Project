@@ -44,35 +44,7 @@ class JobController extends BaseController
 
         ];
         $data["jsFiles"] = [
-            "/public/js/imported/ie-emulation-modes-warning.js",
-            "/public/js/imported/jquery-2.2.0.min.js",
-            "/public/js/imported/popper.min.js",
-            "/public/js/imported/bootstrap.min.js",
-            "/public/js/imported/bootstrap-submenu.js",
-            "/public/js/imported/rangeslider.js",
-            "/public/js/imported/jquery.mb.YTPlayer.js",
-            "/public/js/imported/bootstrap-select.min.js",
-            "/public/js/imported/jquery.easing.1.3.js",
-            "/public/js/imported/jquery.scrollUp.js",
-            "/public/js/imported/jquery.mCustomScrollbar.concat.min.js",
-            "/public/js/imported/leaflet.js",
-            "/public/js/imported/leaflet-providers.js",
-            "/public/js/imported/leaflet.markercluster.js",
-            "/public/js/imported/moment.min.js",
-            "/public/js/imported/daterangepicker.min.js",
-            "/public/js/imported/dropzone.js",
-            "/public/js/imported/slick.min.js",
-            "/public/js/imported/jquery.filterizr.js",
-            "/public/js/imported/jquery.magnific-popup.min.js",
-            "/public/js/imported/jquery.countdown.js",
-            "/public/js/imported/maps.js",
-            "/public/js/imported/app.js",
-            // Body
-            "/public/css/imported/component/banner.css",
-            "/public/css/imported/component/job-box.css",
-            "/public/css/imported/component/amenities.css",
-            "/public/css/imported/component/job-detail.css",
-            "/public/css/imported/component/sidebar-right.css"
+
         ];
         $data["jobList"] = $this->getJobView();
         $data["categoryList"] = $this->getCategoryList();
@@ -104,6 +76,13 @@ class JobController extends BaseController
             "/public/css/imported/component/public.css",
             "/public/css/imported/component/footer.css",
             "/public/css/imported/component/custom-animation.css",
+            // Body
+            "/public/css/imported/component/banner.css",
+            "/public/css/imported/component/job-box.css",
+            "/public/css/imported/component/amenities.css",
+            "/public/css/imported/component/job-detail.css",
+            "/public/css/imported/component/sidebar-right.css",
+            "/public/css/imported/component/map.css"
         ];
         $data["jsFiles"] = [
             
