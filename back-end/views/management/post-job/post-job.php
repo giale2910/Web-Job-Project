@@ -92,6 +92,12 @@
                                 <input type="number" id="min_experience" class="input-text" name="min_experience" placeholder="Years">
                             </div>
                         </div>
+                        <!-- <div class="location mb-50">
+                            <div class="map">
+                                <h3 class="heading-2">Location</h3>
+                                <div id="map" class="contact-map"></div>
+                            </div>
+                        </div> -->
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Job Description</label>

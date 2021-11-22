@@ -88,14 +88,8 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>Min Salary</label>
-                                <input type="number" class="input-text" name="your name" value="<?php echo $jobOverview["min_salary"];?>">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Max Salary</label>
-                                <input type="text" class="input-text" name="your name" value="<?php echo $jobOverview["max_salary"];?>">
+                                <label>Salary</label>
+                                <input type="number" class="input-text" name="your name" value="<?php echo $jobOverview["salary"];?>">
                             </div>
                         </div>
                         
@@ -105,16 +99,10 @@
                                 <input type="number" class="input-text" name="your name" value="<?php echo $jobOverview["min_experience"];?>">
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Max Experience</label>
-                                <input type="number" class="input-text" name="your name" value="<?php echo $jobOverview["max_experience"];?>">
-                            </div>
-                        </div>
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Job Description</label>
-                                <textarea class="input-text" name="message" value="<?php echo $jobOverview["description"];?>"></textarea>
+                                <textarea class="input-text" name="message"> <?php echo $jobOverview["description"];?> </textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">

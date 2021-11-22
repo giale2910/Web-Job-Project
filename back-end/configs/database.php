@@ -3,10 +3,10 @@ $database["host"] = "localhost";
 $database["port"] = 3306;
 $database["databasename"] = "job_finding";
 $database["username"] = "root";
-$database["password"]="root";
-//$database["password"]="";
 
-$database["version"] = "1.1.5";
+$database["password"]="";
+$database["version"] = "1.1.10";
+
 $database["admins"] = array(
     array(
         "email" => "admin@mail.com",
