@@ -1,21 +1,4 @@
-<!-- 
-<div class="container">
-    <div class="breadcum">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="fas fa-home"></i>
-                    Home
-                </a>
-            </li>
-            <li class="active">
-                <a href="#">
-                    Account
-                </a>
-            </li>
-        </ul>
-    </div>
-</div> -->
+
 <div class="container">
     <div class="wrapper-login-form">
         <div class="title-form">
@@ -40,9 +23,7 @@
                     <button type="submit">
                         Sign in
                     </button>
-                    <!-- <a class="" href="#">
-                        <p>Forgot your password?</p>
-                    </a> -->
+                
                 </div>
 
             </form>
