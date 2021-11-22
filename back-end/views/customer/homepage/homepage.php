@@ -10,16 +10,6 @@
 </div> -->
 <!-- Banner start   bg-color-full-->
 <div class=" " id="banner">
-    <!-- <div id="bannerCarousole" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="imgplaceholder carousel-item banner-max-width banner-max-height active">
-                <img class="d-block w-100 h-100" src="/public/images/G1.png" alt="banner"> 
-                
-                 <div class="carousel-caption banner-slider-inner d-flex text-center"></div> 
-            </div>
-
-        </div>
-    </div> -->
              <div class="imgplaceholder">
                  <img class="" src="/public/images/bg4.png" alt="banner"> 
                 <div class="text">
@@ -32,54 +22,9 @@
                     </a>
                 </button>
                 </div>
-                
-                
-                <!-- <div class="carousel-caption banner-slider-inner d-flex text-center"></div> -->
+              
             </div>
-    <div class="banner-inner ">
-        <div class="container">
-            
-            <!-- <div class="text-center">
-                <h3  class="b-text text">Find your job</h3>
-                <p class="text">Get your dream job and </p>
-                <div class="inline-search-area ml-auto mr-auto none-768">
-                    <div class="search-boxs ">
-                        <div class="search-col ">
-                            <input type="text" name="search" class="form-control box has-icon b-radius" placeholder="Job title, Keywords or company name">
-                        </div>
-                        <div class="search-col ">
-                            <select class="selectpicker search-fields" name="location">
-                                <option>Ho Chi Minh</option>
-                                <option>Ha Noi</option>
-                                <option>Da Nang</option>
-                                <option>Canada</option>
-                                <option>London</option>
-                            </select>
-                        </div>
-                        <div class="find">
-                            <button class="btn button-theme btn-search btn-block b-radius">
-                                <i class="fa fa-search"></i><strong>Find Job</strong>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                  <div class="banner-counter-box none-768">
-                    <div class="counter-box">
-                        <h1 class="counter">2967</h1>
-                        <p>Jobs Posted</p>
-                    </div>
-                    <div class="counter-box">
-                        <h1 class="counter">167</h1>
-                        <p>Companies</p>
-                    </div>
-                    <div class="counter-box">
-                        <h1 class="counter">150</h1>
-                        <p>Candidates</p>
-                    </div>
-                </div>  -->
-        </div>
-    </div>
+   
 </div>
 </div>
 <!-- Banner end -->
@@ -192,91 +137,6 @@
 </div>
 <!-- Counters end -->
 
-<!-- Testimonial start -->
-<!-- <div class="testimonial">
-    <div class="container">
-        <div class="main-title">
-            <h1>What Our Users Say</h1>
-        </div>
-        <div class="slick-slider-area">
-            <div class="row slick-carousel" data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                <div class="slick-slide-item">
-                    <div class="testimonial-inner">
-                        <div class="content-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-                        </div>
-                        <div class="media">
-                            <a href="#">
-                                <img src="http://placehold.it/50x50" alt="testimonial-avatar" class="img-fluid">
-                            </a>
-                            <div class="media-body align-self-center">
-                                <h5>
-                                    Eliane Perei
-                                </h5>
-                                <h6>Web Developer</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="testimonial-inner">
-                        <div class="content-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-                        </div>
-                        <div class="media">
-                            <a href="#">
-                                <img src="http://placehold.it/50x50" alt="testimonial-avatar" class="img-fluid">
-                            </a>
-                            <div class="media-body align-self-center">
-                                <h5>
-                                    Maria Blank
-                                </h5>
-                                <h6>Office Manager</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="testimonial-inner">
-                        <div class="content-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-                        </div>
-                        <div class="media">
-                            <a href="#">
-                                <img src="http://placehold.it/50x50" alt="testimonial-avatar" class="img-fluid">
-                            </a>
-                            <div class="media-body align-self-center">
-                                <h5>
-                                    Karen Paran
-                                </h5>
-                                <h6>Support Manager</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="testimonial-inner">
-                        <div class="content-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-                        </div>
-                        <div class="media">
-                            <a href="#">
-                                <img src="http://placehold.it/50x50" alt="testimonial-avatar" class="img-fluid">
-                            </a>
-                            <div class="media-body align-self-center">
-                                <h5>
-                                    John Pitarshon
-                                </h5>
-                                <h6>Creative Director</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- Testimonial end -->
 
 <!-- Partners strat -->
 <div class="partners content-area-15 bg-grea">

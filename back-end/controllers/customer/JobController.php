@@ -1,4 +1,5 @@
 <?php
+
 class JobController extends BaseController
 {
     public function __construct()
@@ -11,6 +12,7 @@ class JobController extends BaseController
 
     public function renderJobListing()
     {
+        
         $data = parent::baseRenderData();
         $data["title"] = "JobListing";
         $data["cssFiles"] = [
@@ -84,15 +86,20 @@ class JobController extends BaseController
             "/public/css/imported/component/sidebar-right.css",
             "/public/css/imported/component/map.css"
         ];
-        $data["jsFiles"] = [
-            
-        ];
+        $data["jsFiles"] = [];
         $data["jobDetail"] = $this->getJobDetail($_GET["id"]);
         $this->load->view("layouts/customer", "customer/job/job-detail", $data);
     }
 
-    public function getJobView(){
+    public function getJobView()
+    {
+        global $categories;
+        global $location;
+        global $category;
+        global $page;
+
         $filter = array();
+
         $page = isset($_GET["page"]) ? ($_GET["page"])*10 : 0 ;
         if (isset($_GET["search"])) $filter[] = "title LIKE '%".$_GET["search"]."%'";
         $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
@@ -103,10 +110,10 @@ class JobController extends BaseController
         $category = isset($_GET["categories"]) ? $_GET["categories"] : 0;
         if ($category && strpos($category, "All")===false)
             $filter[] = "category = '" . $category . "'";
-        if (isset($_GET["minexp"])) $filter[] = "(min_experience = -1 OR min_experience >= ".$_GET["minexp"] . ")";
-        if (isset($_GET["maxexp"])) $filter[] = "(min_experience = -1 OR min_experience <= ".$_GET["maxexp"] . ")";
-        if (isset($_GET["minsal"])) $filter[] = "(salary = -1 OR salary >= ".$_GET["minsal"] . ")";
-        if (isset($_GET["maxsal"])) $filter[] = "(salary = -1 OR salary <= ".$_GET["maxsal"] . ")";
+        if (isset($_GET["minexp"]) && $_GET["minexp"] >=0) $filter[] = "(min_experience = -1 OR min_experience >= ".$_GET["minexp"] . ")";
+        if (isset($_GET["maxexp"]) && $_GET["maxexp"] >= 0) $filter[] = "(min_experience = -1 OR min_experience <= ".$_GET["maxexp"] . ")";
+        if (isset($_GET["minsal"]) && $_GET["minsal"] >=0) $filter[] = "(salary = -1 OR salary >= ".$_GET["minsal"] . ")";
+        if (isset($_GET["maxsal"]) && $_GET["maxsal"] >=0) $filter[] = "(salary = -1 OR salary <= ".$_GET["maxsal"] . ")";
 
         if (isset($_GET["job-type"])) $filter[] = "job_type = '" . $_GET["job-type"] . "'";
 
@@ -116,9 +123,11 @@ class JobController extends BaseController
         if (isset($_GET["graduate"]) && $_GET["graduate"]==="on") $quals[] = "'Graduate'";
         if (count($quals)!==0) $filter[] = "qualification IN (" . implode(",", $quals) . ")";
 
-        $searchTerm = (count($filter)===0) ? "" : "WHERE ".implode(" AND ", $filter);
+        $searchTerm = (count($filter) === 0) ? "" : "WHERE " . implode(" AND ", $filter);
         $searchTerm .= " LIMIT 10 OFFSET " . $page;
+
         if (isset($_GET["sort"])) $searchTerm .= " ORDER BY " . $_GET["sort"];
+
         debugAlert("Search term:" . $searchTerm);
         $jobs = $this->job->getJobView($searchTerm);
         return $jobs;
@@ -132,19 +141,22 @@ class JobController extends BaseController
         $this->load->view("layouts/customer", "customer/job/fav-job", $data);
     }
 
-    public function getCategoryList() {
+    public function getCategoryList()
+    {
         $categories = $this->category->getCategoryList();
         return $categories;
     }
 
-    public function getJobDetail($id) {
+    public function getJobDetail($id)
+    {
         $result["overview"] = $this->job->getJobOverview($id);
         $result["experience"] = $this->job->getJobExperience($id);
         $result["responsibility"] = $this->job->getJobResponsibility($id);
         return $result;
     }
 
-    public function post(){
+    public function post()
+    {
         /*
         TODO [front-end]: 
         Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)
