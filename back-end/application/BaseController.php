@@ -14,7 +14,10 @@ abstract class BaseController
 	}
 
 	public function baseRenderData(){
-		$data["userInfo"] = $this->user->findUserById($_SESSION["user_id"]);
+		if(isset($_SESSION["user_id"]))
+			$data["userInfo"] = $this->user->findUserById($_SESSION["user_id"]);
+		else
+			$data["userInfo"] = null;
 		return $data;
 	}
 
