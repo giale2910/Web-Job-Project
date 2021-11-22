@@ -39,7 +39,7 @@
                                         </div>
                                     </td>
                                     <td class="hdn"> <?php echo dateFormat($job["deadline"]);?> </td>
-                                    <td> <?php echo $job["min_salary"];?> - <?php echo $job["max_salary"];?> </td>
+                                    <td> <?php echo $job["salary"];?> </td>
                                     <td class="actions">
                                         <a href="/management/update-job?id=<?php echo $job["id"];?>"><i class="fa fa-pencil"></i></a>
                                         <a href="#"><i class="delete fa fa-trash-o"></i></a>
