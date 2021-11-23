@@ -9,7 +9,7 @@ class JobModel extends BaseModel
     {
         
         $sql = 
-        "SELECT Job.id, title, company, deadline, salary, job_type, city  
+        "SELECT Job.id, title, company, deadline, salary, job_type, city , contact_email 
             FROM Job JOIN Location ON Job.`location_id`=Location.`id`
                 JOIN Category ON Job.`category_id`=Category.`id`
         ";
@@ -134,7 +134,7 @@ class JobModel extends BaseModel
     public function getUserFavoriteJobs(){
         $user_id = $_SESSION["user_id"];
         $sql = "
-            SELECT job_id, user_id, Job.`id`, title, company, deadline, salary, job_type, city 
+            SELECT job_id, user_id, Job.`id`, title, company, deadline, salary, job_type, city , contact_email 
             FROM FavoriteJob JOIN (Job JOIN Location ON Job.`location_id`=Location.`id`) 
                 ON FavoriteJob.`job_id`=Job.`id`
             WHERE user_id=$user_id";
