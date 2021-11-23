@@ -29,11 +29,8 @@
     <link rel="stylesheet" type="text/css" href="/public/css/imported/component/public.css">
     <link rel="stylesheet" type="text/css" href="/public/css/imported/component/footer.css">
     <link rel="stylesheet" type="text/css" href="/public/css/imported/component/custom-animation.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css?version=1231">
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css?version=1231"> -->
     <link rel="stylesheet" type="text/css" href="/public/css/imported/homepage.css?version=123416">  
-
-
-
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" >
