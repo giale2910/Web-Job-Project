@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/banner.css?version=3">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/banner.css?version=4">
         <!-- Right body css -->
         <link rel="stylesheet" type="text/css" href="/public/css/imported/component/sidebar-right.css">
         <link rel="stylesheet" type="text/css" href="/public/css/imported/component/search.css">
