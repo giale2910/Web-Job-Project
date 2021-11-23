@@ -2,7 +2,6 @@
     $jobOverview = $jobDetail["overview"];
     $salary = $jobOverview["salary"];
     $minExperience = $jobOverview["min_experience"];
-    $maxExperience = $jobOverview["max_experience"];
     if ($salary==-1) $salaryDisplay = "To be negotiated";
     else $salaryDisplay = "£$salary";
     $experienceDisplay = "";
@@ -13,12 +12,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/banner.css?version=3">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/banner.css?version=6">
         <!-- Body -->
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-box.css?version=3">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/amenities.css?version=3">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-detail.css?version=3">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/sidebar-right.css?version=4">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-box.css?version=6">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/amenities.css?version=6">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-detail.css?version=6">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/sidebar-right.css?version=6">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/map.css?version=6">
     </head>
     <body>
         <div class="sub-banner bg-color-full">
@@ -178,24 +178,7 @@
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
                         </div>
-=======
-                        </form>
-                    </div>
-                    <!-- Job overview start -->
-                    <div class="job-overview widget">
-                        <h3 class="sidebar-title">Job Overview</h3>
-                        <div class="s-border"></div>
-                        <ul>
-                            <li><i class="flaticon-money"></i><h5>Expected Salary</h5><span><?php echo $salaryDisplay;?></span></li>
-                            <li><i class="flaticon-pin"></i><h5>Location</h5><span><?php echo $jobOverview["city"];?></span></li>
-                            <li><i class="flaticon-woman"></i><h5>Gender</h5><span><?php echo $jobOverview["gender"];?></span></li>
-                            <li><i class="flaticon-work"></i><h5>Job Type</h5><span><?php echo $jobOverview["job_type"];?></span></li>
-                            <li><i class="flaticon-honor"></i><h5>Qualification</h5><span><?php echo $jobOverview["qualification"];?></span></li>
-                            <li><i class="flaticon-notepad"></i><h5>Experience</h5><span><?php echo $experienceDisplay;?></span></li>
-                        </ul>
->>>>>>> 7d46534 (Update db and job query)
                     </div>
                     
                     <div class="col-lg-4 col-md-12">

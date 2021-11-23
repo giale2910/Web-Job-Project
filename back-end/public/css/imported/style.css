@@ -7675,6 +7675,11 @@ employer-box-2{
     bakground-color:white;
     
 }
+.imgplaceholder .text .btn:hover{
+    width:40%;
+    bakground-color:black;
+    filter:brightness(120%);
+}
 .imgplaceholder .text .btn i{
     width:40%;
     font-color:black;

@@ -6,8 +6,9 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="/public/css/imported/component/search.css?version=3"> 
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/submit-property.css?version=2">
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/bootstrap-select.css?version=2">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/submit-property.css?version=3">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/bootstrap-select.css?version=3">
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/map.css?version=3">
     </head>
 
     <body>
@@ -88,14 +89,8 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <label>Min Salary</label>
-                                <input type="number" class="input-text" name="your name" value="<?php echo $jobOverview["min_salary"];?>">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Max Salary</label>
-                                <input type="text" class="input-text" name="your name" value="<?php echo $jobOverview["max_salary"];?>">
+                                <label>Salary</label>
+                                <input type="number" class="input-text" name="your name" value="<?php echo $jobOverview["salary"];?>">
                             </div>
                         </div>
                         
@@ -105,16 +100,21 @@
                                 <input type="number" class="input-text" name="your name" value="<?php echo $jobOverview["min_experience"];?>">
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="form-group">
-                                <label>Max Experience</label>
-                                <input type="number" class="input-text" name="your name" value="<?php echo $jobOverview["max_experience"];?>">
+
+                        <div class="location col-lg-12 mb-20">
+                            <div class="map">
+                                <label> Location </label>
+                                <input type="text" id="locationName" class="input-text mb-20" name="locationName" placeholder="Location Name">
+                                <input type="text" id="lng" class="input-text mb-20" name="lng">
+                                <input type="text" id="lat" class="input-text mb-20" name="lat">
+                                <div id="map" class="contact-map"></div>
                             </div>
                         </div>
+
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Job Description</label>
-                                <textarea class="input-text" name="message" value="<?php echo $jobOverview["description"];?>"></textarea>
+                                <textarea class="input-text" name="message"> <?php echo $jobOverview["description"];?> </textarea>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -125,5 +125,78 @@
 
             </form>
         </div>
+
+        <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3f46sTEdAZCfXqmYwuXsHBrABWue7T2c"></script>
+
+        <script>
+            function LoadMap(propertes) {
+                const defaultLocation = {lat: 10.8144067, lng: 106.7106083};
+                var mapOptions = {
+                    center: new google.maps.LatLng(defaultLocation.lat, defaultLocation.lng),
+                    zoom: 15,
+                    scrollwheel: false,
+                    styles: [
+                        {
+                            featureType: "administrative",
+                            elementType: "labels",
+                            stylers: [
+                                {visibility: "off"}
+                            ]
+                        },
+                        {
+                            featureType: "water",
+                            elementType: "labels",
+                            stylers: [
+                                {visibility: "off"}
+                            ]
+                        },
+                        {
+                            featureType: 'poi.business',
+                            stylers: [{visibility: 'off'}]
+                        },
+                        {
+                            featureType: 'transit',
+                            elementType: 'labels.icon',
+                            stylers: [{visibility: 'off'}]
+                        },
+                    ]
+                };
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                var lng = document.getElementById("lng");
+                var lat = document.getElementById("lat");
+                lng.value = defaultLocation.lng;
+                lat.value = defaultLocation.lat;
+                var myLatlng = new google.maps.LatLng(defaultLocation.lat, defaultLocation.lng);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map
+                });
+                var infoWindow = new google.maps.InfoWindow();
+                (function () {
+                    google.maps.event.addListener(map,'click',function(event) {
+                        marker.setMap(null);
+                        marker = new google.maps.Marker({
+                            position: event.latLng,
+                            map: map
+                        });
+                        infoWindow.setContent("" +
+                            "<div class='map-properties contact-map-content'>" +
+                            "<div class='map-content'>" +
+                            "<p class='address'>20-21 Kathal St. Tampa City, FL</p>" +
+                            "<ul class='map-properties-list'> " +
+                            "<li><i class='flaticon-phone'></i>  +0477 8556 552</li> " +
+                            "<li><i class='flaticon-phone'></i>  info@themevessel.com</li> " +
+                            "<li><a href='index.html'><i class='fa fa-globe'></i>  http://www.example.com</li></a> " +
+                            "</ul>" +
+                            "</div>" +
+                            "</div>");
+                        infoWindow.open(map,marker);
+                        lng.value = event.latLng.lng();
+                        lat.value = event.latLng.lat();
+                    });
+                })();
+            }
+            LoadMap();
+        </script>
     </body>
 </html>
