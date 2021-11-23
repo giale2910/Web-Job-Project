@@ -1,11 +1,10 @@
-<?php $tab = end(explode("/", $_SERVER["REQUEST_URI"])); ?>
 <div class="col-lg-3 col-md-12 col-sm-12 col-pad">
     <div class="dashboard-nav d-none d-xl-block d-lg-block">
         <div class="dashboard-inner">
             <h4>Main</h4>
             <ul>
-                <li <?php if ($tab==="manage-manager") echo "class=\"active\""; ?>><a href="manage-manager"><i class="flaticon-dashboard"></i>Manage Managers</a></li>
-                <li <?php if ($tab==="manage-user") echo "class=\"active\""; ?>><a href="manage-user"><i class="flaticon-pencil"></i>Manage Users</a></li>      
+                <li><a href="manage-manager"><i class="flaticon-dashboard"></i>Manage Managers</a></li>
+                <li><a href="manage-user"><i class="flaticon-pencil"></i>Manage Users</a></li>      
             </ul>
             <h4>Account</h4>
             <ul>
