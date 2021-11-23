@@ -14,7 +14,7 @@
                  <img class="" src="/public/images/bg4.png" alt="banner"> 
                 <div class="text">
                 <h3  class="">Find your job</h3>
-                <p class="">Get your dream job and upgrade your carrer</p>
+                <p class="">Get your dream job and upgrade your carrerss</p>
                 
                 <button class="btn ">
                     <a href="job-listing">

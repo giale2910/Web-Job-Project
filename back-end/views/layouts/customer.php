@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>JOBB - Job Board HTML Template</title>
+    <title>JOBB - Job Board </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
