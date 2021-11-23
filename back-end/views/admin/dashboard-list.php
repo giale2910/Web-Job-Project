@@ -34,8 +34,8 @@
                     <a href="<?= $user["profile_link"]?>" target="_blank"><img src="../../../public/images/cv1.png" style="width:35px; height:35px;"></a>
                 <?php } else { ?>
                     <ul >
-                        <li><a href="<?= $user["profile_link"]?>" target="_blank"><img src="../../../public/images/fblogo.png" style="width:25px; height:25px;border-radius:25px"></a></li>
-                        <li><a href="<?= $user["web_link"]?>" target="_blank"><img src="../../../public/images/weblink1.png" style="width:25px; height:25px;border-radius:25px"></a></li>  
+                        <!-- <li><a href="<?= $user["profile_link"]?>" target="_blank"><img src="../../../public/images/fblogo.png" style="width:25px; height:25px;border-radius:25px"></a></li> -->
+                        <li><a href="<?= $user["profile_link"]?>" target="_blank"><img src="../../../public/images/weblink1.png" style="width:25px; height:25px;border-radius:25px"></a></li>  
                     </ul>
                 <?php } ?>
                 </td>

@@ -21,7 +21,7 @@
                         <label for="pwd">Confirm new password:</label>
                         <input type="password" class="form-control inputFocus" name="confirmPwd" id="confirmPwd" placeholder="Confirm new password" autocomplete="new-password">
                     </div>
-                    <button type="submit" class="btn pull-right">Submit</button>
+                    <button type="submit" class="btn pull-right" style="background-color:orange;color:black;border-radius:5px;">Submit</button>
                 </div>
             </form> 
         </div>

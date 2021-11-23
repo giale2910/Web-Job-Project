@@ -44,7 +44,12 @@
     <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
     <?php include SITE_PATH . "views/blocks/management/header.php" ?>
 </head>
-
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
 <body>
     
 

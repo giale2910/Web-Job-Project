@@ -114,11 +114,11 @@ function create_database(PDO $conn, $database, string $version) {
         $user_querized = function ($record, $role){
             extract($record);
             $pw_hash = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
-            return "('$email','$pw_hash','$role','$first_name','$last_name')";
+            return "('$email','$pw_hash','$role','$first_name','$last_name','$profile_link','$phone','$address')";
         };
 
         $query = implode(",", array_map($user_querized, $values, array_fill(0, count($values), $role)));
-        $sql = "INSERT INTO User(email,password,role,first_name,last_name) VALUES " . $query;
+        $sql = "INSERT INTO User(email,password,role,first_name,last_name,profile_link,phone,address) VALUES " . $query;
         sql_execute($conn, $sql, " - $role insert");
     }
     insert_user($conn, $admins, "admin");

@@ -41,9 +41,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link rel="stylesheet" type="text/css" href="/public/css/imported/ie10-viewport-bug-workaround.css">
 
-
-    
-
     <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
 </head>
 

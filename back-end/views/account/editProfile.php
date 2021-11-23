@@ -14,7 +14,7 @@ debugAlert($userInfo);
             <form action="<?=$base_dir?>/user/edit-profile" method="POST"> 
                 <div class="modal-body  row " >
                     <div class="col-lg-3 col-md-3" >
-                        <div class="edit-profile-photo">
+                        <!-- <div class="edit-profile-photo">
                             <img src="http://placehold.it/198x165" alt="company-logo" class="img-fluid">
                             <div class="change-photo-btn">
                                 <div class="photoUpload">
@@ -22,6 +22,12 @@ debugAlert($userInfo);
                                     <input type="file" accept="image/*" class="upload">
                                 </div>
                             </div>
+                        </div> -->
+                        <div >
+                            <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                            <p><img id="output" width="100%"  style="border-radius: 10px;" src="../../public/images/default-ava.jpeg"/></p>
+                            <p style="display:flex;justify-content:center;"><label for="file" style="padding:0px 10px;cursor: pointer;border-radius: 50px; font-size: 13px; font-weight: 600; background-color:lightgray;">Upload Image</label></p>
+                           
                         </div>
 
                     </div>
@@ -38,7 +44,7 @@ debugAlert($userInfo);
                                 </div>
                                 <div class="form-group ">
                                     <label>Email</label>
-                                    <input type="email" name="emailProfile" value="<?= $userInfo["email"]?>" class="form-control inputFocus" placeholder="Email">
+                                    <input type="email" name="email" value="<?= $userInfo["email"]?>" class="form-control inputFocus" placeholder="Email">
                                 </div>  
                             </div>
 
@@ -58,7 +64,7 @@ debugAlert($userInfo);
                                             <label >CV Link</label>
                                     <?php }
                                 ?>    
-                                        <input type="text" name="profile_link" class="form-control inputFocus" placeholder="Profile Link" value="<?= $userInfo["link"]?>">
+                                        <input type="text" name="profile_link" class="form-control inputFocus" placeholder="Profile Link" value="<?= $userInfo["profile_link"]?>">
                                         </div> 
                             
                             </div>
@@ -77,7 +83,7 @@ debugAlert($userInfo);
 
                     </div>                 
                 </div>       
-                <button type="submit" class="btn pull-right" >Submit</button>
+                <button type="submit" class="btn pull-right" style="background-color:orange;color:black;border-radius:5px;">Submit</button>
 
             </form> 
         </div>

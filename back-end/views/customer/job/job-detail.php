@@ -21,7 +21,7 @@
         <link rel="stylesheet" type="text/css" href="/public/css/imported/component/map.css?version=6">
     </head>
     <body>
-        <div class="sub-banner bg-color-full">
+        <div class="sub-banner ">
             <div class="container">
                 <div class="breadcrumb-area">
                     <h1>Job Detail</h1>

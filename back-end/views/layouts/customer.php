@@ -48,7 +48,12 @@
 
     <?php include SITE_PATH . "views/blocks/customer/header.php" ?>
 </head>
-
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
 <body>
 
     <?php include $subview ?>

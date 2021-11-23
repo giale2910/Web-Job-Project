@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="div-right">
-                <a href="mailto: <?= $job["contact-email"]?>" class="apply-button">Apply Now</a>
+                <a href="mailto: <?= $job["contact_email"]?>" class="apply-button">Apply Now</a>
                 <a id="<?= $job["id"]?>" onclick="addFavorite(this.id)">
                     <i id="icon-<?= $job["id"]?>" class="flaticon-heart favourite" >
                     </i>
