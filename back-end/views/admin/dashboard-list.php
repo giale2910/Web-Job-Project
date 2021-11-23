@@ -67,11 +67,11 @@
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState==4 && this.status==200) {
-                if (state === 'Active') {
-                    document.getElementById(uid).style.backgroundColor = "red";
+                if (state === 'Deactive') {
+                    document.getElementById(uid).style.backgroundColor = "greenyellow";
                     document.getElementById(uid).innerHTML = "Active";
                 } else {
-                    document.getElementById(uid).style.backgroundColor = "greenyellow";
+                    document.getElementById(uid).style.backgroundColor = "red";
                     document.getElementById(uid).innerHTML = "Deactive";
                 }
             }

@@ -55,19 +55,19 @@ $routes = array(
     // ADMIN
     "admin" => array(
         "handler" => "admin/admin/renderManagerManagement",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     ),
     "admin/manage-manager" => array(
         "handler" => "admin/admin/renderManagerManagement",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     ),
     "admin/manage-user" => array(
         "handler" => "admin/admin/renderUserManagement",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     ),
     "admin/changePassword" => array(
         "handler" => "admin/admin/renderChangePassword",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     ),
     // SIGN IN - SIGN UP
     "login" => array(
@@ -123,7 +123,7 @@ $routes = array(
     ),
     "admin/user/switch-active" => array(
         "handler" => "user/switchActive",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     )
     
 );
