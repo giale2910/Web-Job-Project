@@ -14,11 +14,14 @@
                             Home
                         </a>
                     </li>
+                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true && isset($_SESSION["role"]) == 'Admin') { ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link " href="admin/manage-manager" id="navbarDropdownMenuLink2">
                             Admin
                         </a>
                     </li>
+                    <?php } ?>
+
                     <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="management/post-job" id="navbarDropdownMenuLink2">
