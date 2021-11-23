@@ -13,7 +13,6 @@ class JobModel extends BaseModel
             FROM Job JOIN Location ON Job.`location_id`=Location.`id`
                 JOIN Category ON Job.`category_id`=Category.`id`
         ";
-        //if ($searchTerm) $sql .= " WHERE Job.title LIKE '%$searchTerm%'";
         if ($searchTerm) $sql .= $searchTerm;
         return $this->sqlFetchAll($sql);
     }
@@ -21,7 +20,7 @@ class JobModel extends BaseModel
     public function getJobByUserId($id)
     {
         $sql = 
-        "SELECT Job.id, title, company, deadline, min_salary, max_salary, job_type, city  
+        "SELECT Job.id, title, company, deadline, salary, job_type, city  
             FROM Job JOIN Location ON Job.`location_id`=Location.`id` WHERE Job.`manager_id`=:id
         ";
         return $this->sqlFetchAll($sql, array("id"=>$id));
@@ -116,5 +115,30 @@ class JobModel extends BaseModel
         return $stmt->execute(array(
             "id" => $id
         ));
+    }
+
+    public function addFavoriteJob($info){
+        $job_id = $info["job-id"];
+        $user_id = $_SESSION["user_id"];
+        $stmt = $this->conn->prepare("INSERT INTO FavoriteJob(job_id, user_id) VALUES ($job_id, $user_id)");
+        return $stmt->execute();
+    }
+
+    public function removeFavoriteJob($info){
+        $job_id = $info["job-id"];
+        $user_id = $_SESSION["user_id"];
+        $stmt = $this->conn->prepare("DELETE FROM FavoriteJob WHERE `job_id`=$job_id AND `user_id`=$user_id");
+        return $stmt->execute();
+    }
+
+    public function getUserFavoriteJobs(){
+        $user_id = $_SESSION["user_id"];
+        $sql = "
+            SELECT job_id, user_id, Job.`id`, title, company, deadline, salary, job_type, city 
+            FROM FavoriteJob JOIN (Job JOIN Location ON Job.`location_id`=Location.`id`) 
+                ON FavoriteJob.`job_id`=Job.`id`
+            WHERE user_id=$user_id";
+        debugAlert($sql);
+        return $this->sqlFetchAll($sql);
     }
 }

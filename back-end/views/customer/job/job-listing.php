@@ -24,6 +24,7 @@
             </div>
         </div>
 
+<?php debugAlert($favoriteJobs); ?>
 <div class="job-listing-section content-area">
     <div class="container">
         <div class="row">
@@ -193,53 +194,15 @@
                         </div>
                     </form>
                 </div>
-                <!-- job box start -->
-            <?php foreach ($jobList as $job) { ?> 
-                <div class="job-box">
-                    <div class="company-logo">
-                        <img src="http://placehold.it/90x90" alt="logo">
-                    </div>
-                    <div class="description">
-                        <div class="float-left">
-                            <h5 class="title">
-                                <a href="/job-detail?id=<?php echo $job["id"];?>"><?php echo $job["title"];?></a>
-                            </h5>
-                            <div class="candidate-listing-footer">
-                                <ul>
-                                    <li><i class="flaticon-work"></i> <?php echo $job["company"];?></li>
-                                    <li><i class="flaticon-pin"></i> <?php echo $job["city"];?></li>
-                                    <li><i class="flaticon-time"></i> <?php echo $job["job_type"];?></li>
-                                </ul>
-                                <h6>Deadline: <?php echo dateFormat($job["deadline"]);?></h6>
-                            </div>
-                        </div>
-                        <div class="div-right">
-                            <a href="#" class="apply-button">Apply Now</a>
-                            <a href="#"><i class="flaticon-heart favourite"></i></a>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-                        <!-- Page navigation start -->
-                        <div class="pagination-box hidden-mb-45 text-center">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">Prev</a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                
+                    <?php include("job-item.php"); ?>
+                        
+                    
                     </div>
                 </div>
             </div>
         </div>
     </body>
+
 </html>
 
