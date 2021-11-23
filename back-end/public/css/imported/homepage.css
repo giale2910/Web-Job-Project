@@ -165,7 +165,7 @@
 }
 .imgplaceholder .text .btn{
     width:40%;
-    bakground-color:white;
+    background-color:white;
     
 }
 .imgplaceholder .text .btn:hover{
@@ -208,7 +208,7 @@
     }
     .imgplaceholder .text .btn{
         width:60%;
-        bakground-color:white;
+        background-color:white;
         
     }
     .imgplaceholder .text h3{
@@ -250,7 +250,7 @@
      .btn{
         width:60%;
         min-width:60%;
-        bakground-color:white;
+        background-color:white;
         
     }
     .imgplaceholder .text h3{
@@ -297,7 +297,7 @@
      .btn{
         width:60%;
         min-width:60%;
-        bakground-color:white;
+        background-color:white;
         
     }
     .imgplaceholder .text h3{
@@ -341,7 +341,7 @@
     }
     .imgplaceholder .text .btn{
         width:40%;
-        bakground-color:white;
+        background-color:white;
         
     }
     .imgplaceholder .text h3{
@@ -406,7 +406,7 @@
     line-height: 20px;
     font-size: 14px;
     font-weight: 500;
-    color: #515151;
+    color: white;
     letter-spacing: 1px;
     font-family: 'Raleway', sans-serif;
 }
@@ -506,4 +506,9 @@
 
 .dm-2{
     width: 200px;
+}
+
+.btn{
+    background-color:white;
+
 }

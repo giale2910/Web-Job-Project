@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>JOBB - Job Board HTML Template</title>
+    <title>JOBB - Job Board </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
@@ -29,10 +29,8 @@
     <link rel="stylesheet" type="text/css" href="/public/css/imported/component/public.css">
     <link rel="stylesheet" type="text/css" href="/public/css/imported/component/footer.css">
     <link rel="stylesheet" type="text/css" href="/public/css/imported/component/custom-animation.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css?version=1231">
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/homepage.css?version=123416">  
-
-
+    <!-- <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css?version=12311"> -->
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/homepage.css?version=1235">  
 
 
     <!-- Favicon icon -->
