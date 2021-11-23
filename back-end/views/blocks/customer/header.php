@@ -34,44 +34,7 @@
                             Jobs
                         </a>
                     </li>
-                    <li class="nav-item dropdown megamenu-li">
-                        <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> More </a>
-                        <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
-                            <div class="megamenu-area">
-                                <div class="row sobuz">
-                                    <div class="col-sm-4 col-md-4 col-lg-4">
-                                        <div class="megamenu-section">
-                                            <h6 class="megamenu-title">Pages</h6>
-                                            <a class="dropdown-item" href="about.html">About Us</a>
-                                            <a class="dropdown-item" href="pricing-plan.html">Pricing Plan</a>
-                                            <a class="dropdown-item" href="terms-and-condition.html">Terms And Condition</a>
-                                            <a class="dropdown-item" href="how-it-work.html">How It Work</a>
-                                            <a class="dropdown-item" href="invoices.html">Invoice</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 col-md-4 col-lg-4">
-                                        <div class="megamenu-section">
-                                            <h6 class="megamenu-title">Pages</h6>
-                                            <a class="dropdown-item" href="contact.html">Contact Us</a>
-                                            <a class="dropdown-item" href="gallery.html">Gallery</a>
-                                            <a class="dropdown-item" href="typography.html">Typography</a>
-                                            <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                            <a class="dropdown-item" href="faq.html">Faq</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 col-md-4 col-lg-4">
-                                        <div class="megamenu-section">
-                                            <h6 class="megamenu-title">Pages</h6>
-                                            <a class="dropdown-item" href="icon.html">Icons</a>
-                                            <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                                            <a class="dropdown-item" href="login.html">Login</a>
-                                            <a class="dropdown-item" href="404.html">Error Page</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    
                     <li class="d-lg-none d-xl-none nav-item dropdown">
                         <a class="nav-link " href="fav-job" id="navbarDropdownMenuLink10">Favorite List</a>
                     </li>
