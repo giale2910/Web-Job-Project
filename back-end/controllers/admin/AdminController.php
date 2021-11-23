@@ -15,6 +15,9 @@ class AdminController extends BaseController
             
         ];
         $data["users"] = $this->user->getAllManagers();
+        echo '<script>';
+        echo 'console.log('. json_encode( $data["users"] ) .')';
+        echo '</script>';
         $this->load->view("layouts/admin", "admin/manage-manager", $data);
     }
 
@@ -27,6 +30,9 @@ class AdminController extends BaseController
             
         ];
         $data["users"] = $this->user->getAllUsers();
+        echo '<script>';
+        echo 'console.log('. json_encode( $data["users"] ) .')';
+        echo '</script>';
         $this->load->view("layouts/admin", "admin/manage-user", $data);
     }
     public function renderChangePassword()

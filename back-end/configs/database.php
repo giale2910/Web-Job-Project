@@ -4,7 +4,7 @@ $database["port"] = 3306;
 $database["databasename"] = "job_finding";
 $database["username"] = "root";
 $database["password"]="";
-$database["version"] = "1.1.12";
+$database["version"] = "1.1.14";
 
 $database["admins"] = array(
     array(
@@ -34,5 +34,11 @@ $database["customers"] = array(
         "password" => "1011101",
         "first_name" => "A",
         "last_name" => "B"
+    ),
+    array(
+        "email" => "user2@hcmut.edu.vn",
+        "password" => "1212",
+        "first_name" => "C",
+        "last_name" => "D"
     )
 );

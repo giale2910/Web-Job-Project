@@ -50,8 +50,9 @@
 </div>
 <script>
     window.onload = function(){
+    let button_id;
     <?php foreach ($users as $user) { ?>
-        let button_id = "a-<?=$user["id"]?>";
+        button_id = "a-<?=$user["id"]?>";
         <?php if ($user["status"]==="Active") {?>
             document.getElementById(button_id).innerHTML = 'Active';
             document.getElementById(button_id).style.backgroundColor = 'greenyellow';
