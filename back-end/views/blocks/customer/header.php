@@ -14,7 +14,7 @@
                             Home
                         </a>
                     </li>
-                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true && isset($_SESSION["role"]) == 'Admin') { ?>
+                    <?php if (isset($_SESSION["logged"]) && ($_SESSION["logged"] === true) && isset($_SESSION["role"]) &&  $_SESSION["role"] == 'admin') { ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link " href="admin/manage-manager" id="navbarDropdownMenuLink2">
                             Admin
@@ -22,7 +22,7 @@
                     </li>
                     <?php } ?>
 
-                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true) { ?>
+                    <?php if (isset($_SESSION["logged"]) && $_SESSION["logged"] === true && isset($_SESSION["role"]) &&  $_SESSION["role"] == 'manager') { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="management/post-job" id="navbarDropdownMenuLink2">
                                 Management
