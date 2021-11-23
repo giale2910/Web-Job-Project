@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-info.css?version=1"> 
+        <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-info.css?version=2"> 
     </head>
     <body>
         <div class="dashboard-content">

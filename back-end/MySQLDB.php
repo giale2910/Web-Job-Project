@@ -41,9 +41,11 @@ function create_database(PDO $conn, $database, string $version) {
     `first_name` VARCHAR(50),
     `last_name` VARCHAR(50),
     `phone` VARCHAR(12),
-    `profile_link` VARCHAR(255),
+    `profile_link` VARCHAR(255) DEFAULT '#',
+    `web_link` VARCHAR(255) DEFAULT '#',
     `address` VARCHAR(255),
-    `about` TEXT
+    `about` TEXT,
+    `status` ENUM('Active', 'Deactive') DEFAULT 'Active'
     )
     ";
     sql_execute($conn, $sql, " - 'User' table create");
@@ -93,6 +95,13 @@ function create_database(PDO $conn, $database, string $version) {
             `job_id` INTEGER NOT NULL,
             `responsibility_text` TEXT,
             CONSTRAINT `FK_JobR` FOREIGN KEY(`job_id`) REFERENCES `Job`(`id`) ON DELETE CASCADE
+        )",
+        "CREATE TABLE FavoriteJob (
+            `job_id` INTEGER NOT NULL,
+            `user_id` INTEGER NOT NULL,
+            CONSTRAINT `PK_JobUser` PRIMARY KEY(`job_id`, `user_id`),
+            CONSTRAINT `FK_FavJob` FOREIGN KEY(`job_id`) REFERENCES `Job`(`id`) ON DELETE CASCADE,
+            CONSTRAINT `FK_FavCus` FOREIGN KEY(`user_id`) REFERENCES `User`(`id`) ON DELETE CASCADE
         )"
     );
 
@@ -154,6 +163,11 @@ function create_database(PDO $conn, $database, string $version) {
         (2, 'Have sound knowledge of commercial activities.'),
         (2, 'Build next-generation web applications with a focus on the client side.'),
         (2, 'The applicants should have experience in the following areas.')
+        ",
+        "INSERT INTO FavoriteJob(job_id, user_id) VALUES
+        (1, 3),
+        (2, 2),
+        (2, 3)
         "
     );
     foreach ($sqls as $sql) {

@@ -14,7 +14,8 @@ class AdminController extends BaseController
         $data["jsFiles"] = [
             
         ];
-        $this->load->view("layouts/admin", "admin/manage-manager/manage-manager", $data);
+        $data["users"] = $this->user->getAllManagers();
+        $this->load->view("layouts/admin", "admin/manage-manager", $data);
     }
 
     public function renderUserManagement()
@@ -25,7 +26,8 @@ class AdminController extends BaseController
         $data["jsFiles"] = [
             
         ];
-        $this->load->view("layouts/admin", "admin/manage-user/manage-user", $data);
+        $data["users"] = $this->user->getAllUsers();
+        $this->load->view("layouts/admin", "admin/manage-user", $data);
     }
     public function renderChangePassword()
     {

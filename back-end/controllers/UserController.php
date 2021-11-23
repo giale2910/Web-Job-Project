@@ -85,4 +85,9 @@ class UserController extends BaseController
         $this->user->editProfile($_POST);
         backendAlert("User profile edited successfully!");
     }
+
+    public function switchActive()
+    {
+        $this->user->switchActive($_POST);
+    }
 }

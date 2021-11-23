@@ -49,7 +49,9 @@ class JobController extends BaseController
 
         ];
         $data["jobList"] = $this->getJobView();
+        $data["page"] = isset($_GET["page"]) ? ($_GET["page"]) : 0;
         $data["categoryList"] = $this->getCategoryList();
+        $data["favoriteIds"] = $this->getFavorite();
         $this->load->view("layouts/customer", "customer/job/job-listing", $data);
     }
 
@@ -91,53 +93,14 @@ class JobController extends BaseController
         $this->load->view("layouts/customer", "customer/job/job-detail", $data);
     }
 
-    public function getJobView()
-    {
-        global $categories;
-        global $location;
-        global $category;
-        global $page;
-
-        $filter = array();
-
-        $page = isset($_GET["page"]) ? ($_GET["page"])*10 : 0 ;
-        if (isset($_GET["search"])) $filter[] = "title LIKE '%".$_GET["search"]."%'";
-        $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
-        if ($location && strpos($location, "All")===false)
-            $filter[] = "city = '".$_GET["Location"] . "'";
-        // Make this multiple choice if needed
-        // if ($_GET["categories"]) $filter[] = "category IN (".implode(",", $_GET["categories"]).")";
-        $category = isset($_GET["categories"]) ? $_GET["categories"] : 0;
-        if ($category && strpos($category, "All")===false)
-            $filter[] = "category = '" . $category . "'";
-        if (isset($_GET["minexp"]) && $_GET["minexp"] >=0) $filter[] = "(min_experience = -1 OR min_experience >= ".$_GET["minexp"] . ")";
-        if (isset($_GET["maxexp"]) && $_GET["maxexp"] >= 0) $filter[] = "(min_experience = -1 OR min_experience <= ".$_GET["maxexp"] . ")";
-        if (isset($_GET["minsal"]) && $_GET["minsal"] >=0) $filter[] = "(salary = -1 OR salary >= ".$_GET["minsal"] . ")";
-        if (isset($_GET["maxsal"]) && $_GET["maxsal"] >=0) $filter[] = "(salary = -1 OR salary <= ".$_GET["maxsal"] . ")";
-
-        if (isset($_GET["job-type"])) $filter[] = "job_type = '" . $_GET["job-type"] . "'";
-
-        $quals = array();
-        if (isset($_GET["high-school"]) &&  $_GET["high-school"]==="on")  $quals[] = "'High School'";
-        if (isset($_GET["undergraduate"]) && $_GET["undergraduate"]==="on") $quals[] = "'Undergraduate'";
-        if (isset($_GET["graduate"]) && $_GET["graduate"]==="on") $quals[] = "'Graduate'";
-        if (count($quals)!==0) $filter[] = "qualification IN (" . implode(",", $quals) . ")";
-
-        $searchTerm = (count($filter) === 0) ? "" : "WHERE " . implode(" AND ", $filter);
-        $searchTerm .= " LIMIT 10 OFFSET " . $page;
-
-        if (isset($_GET["sort"])) $searchTerm .= " ORDER BY " . $_GET["sort"];
-
-        debugAlert("Search term:" . $searchTerm);
-        $jobs = $this->job->getJobView($searchTerm);
-        return $jobs;
-    }
-
     public function renderFavJob()
     {
         $data = parent::baseRenderData();
         $data["title"] = "Favorite Job";
-        $data["jobList"] = $this->getJobView();
+        $data["jobList"] = $this->job->getUserFavoriteJobs();
+        $data["favoriteIds"] = $this->getFavorite();
+        $data["page"] = isset($_GET["page"]) ? ($_GET["page"]) : 0;
+        debugAlert($data["jobList"]);
         $this->load->view("layouts/customer", "customer/job/fav-job", $data);
     }
 
@@ -167,5 +130,68 @@ class JobController extends BaseController
         $_POST["deadline"] = substr($_POST["deadline"], 0, 10);
         $this->job->postJob($_POST);
         echo "<script>alert('Job added!'); document.location='/management';</script>";
+    }
+
+    public function addFavorite()
+    {
+        if (!isset($_SESSION["user_id"])) return null;
+        $this->job->addFavoriteJob($_POST);
+    }
+
+    public function removeFavorite()
+    {
+        if (!isset($_SESSION["user_id"])) return null;
+        $this->job->removeFavoriteJob($_POST);
+    }
+
+    public function getFavorite()
+    {
+        if (!isset($_SESSION["user_id"])) return array();
+        $favoriteJobs = $this->job->getUserFavoriteJobs();
+        $favoriteIds = array_map(fn($row):string => $row["job_id"], $favoriteJobs);
+        return $favoriteIds;
+    }
+
+    public function getJobView(){
+        global $categories;
+        global $location;
+        global $category;
+        global $page;
+
+        $filter = array();
+        debugAlert($_GET["minsal"]);
+        debugAlert($_GET["maxsal"]);
+
+        $page = isset($_GET["page"]) ? ($_GET["page"]) : 0 ;
+        if (isset($_GET["search"])) $filter[] = "title LIKE '%".$_GET["search"]."%'";
+        $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
+        if ($location && strpos($location, "All")===false)
+            $filter[] = "city = '".$_GET["Location"] . "'";
+        // Make this multiple choice if needed
+        // if ($_GET["categories"]) $filter[] = "category IN (".implode(",", $_GET["categories"]).")";
+        $category = isset($_GET["categories"]) ? $_GET["categories"] : 0;
+        if ($category && strpos($category, "All")===false)
+            $filter[] = "category = '" . $category . "'";
+        if (isset($_GET["minexp"]) && $_GET["minexp"] > 0) $filter[] = "(min_experience = -1 OR min_experience >= ".$_GET["minexp"] . ")";
+        if (isset($_GET["maxexp"]) && $_GET["maxexp"] > 0) $filter[] = "(min_experience = -1 OR min_experience <= ".$_GET["maxexp"] . ")";
+        if (isset($_GET["minsal"]) && $_GET["minsal"] > 0) $filter[] = "(salary = -1 OR salary >= ".$_GET["minsal"] . ")";
+        if (isset($_GET["maxsal"]) && $_GET["maxsal"] > 0) $filter[] = "(salary = -1 OR salary <= ".$_GET["maxsal"] . ")";
+
+        if (isset($_GET["job-type"])) $filter[] = "job_type = '" . $_GET["job-type"] . "'";
+
+        $quals = array();
+        if (isset($_GET["high-school"]) &&  $_GET["high-school"]==="on")  $quals[] = "'High School'";
+        if (isset($_GET["undergraduate"]) && $_GET["undergraduate"]==="on") $quals[] = "'Undergraduate'";
+        if (isset($_GET["graduate"]) && $_GET["graduate"]==="on") $quals[] = "'Graduate'";
+        if (count($quals)!==0) $filter[] = "qualification IN (" . implode(",", $quals) . ")";
+
+        $searchTerm = (count($filter) === 0) ? "" : "WHERE " . implode(" AND ", $filter);
+        $searchTerm .= " LIMIT 10 OFFSET " . $page*10;
+
+        if (isset($_GET["sort"])) $searchTerm .= " ORDER BY " . $_GET["sort"];
+
+        debugAlert("Search term:" . $searchTerm);
+        $jobs = $this->job->getJobView($searchTerm);
+        return $jobs;
     }
 }

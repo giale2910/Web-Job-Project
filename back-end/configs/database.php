@@ -4,8 +4,8 @@ $database["port"] = 3306;
 $database["databasename"] = "job_finding";
 $database["username"] = "root";
 
-$database["password"]="";
-$database["version"] = "1.1.11";
+$database["password"]="root";
+$database["version"] = "1.1.12";
 
 $database["admins"] = array(
     array(

@@ -55,19 +55,19 @@ $routes = array(
     // ADMIN
     "admin" => array(
         "handler" => "admin/admin/renderManagerManagement",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     ),
     "admin/manage-manager" => array(
         "handler" => "admin/admin/renderManagerManagement",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     ),
     "admin/manage-user" => array(
         "handler" => "admin/admin/renderUserManagement",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     ),
     "admin/changePassword" => array(
         "handler" => "admin/admin/renderChangePassword",
-        "roles" => ["all"]
+        "roles" => ["admin"]
     ),
     // SIGN IN - SIGN UP
     "login" => array(
@@ -101,6 +101,18 @@ $routes = array(
         "handler" => "customer/job/post",
         "roles" => ["manager", "admin"]
     ),
+    "job/add-favorite" => array(
+        "handler" => "customer/job/addFavorite",
+        "roles" => ["all"]
+    ),
+    "job/remove-favorite" => array(
+        "handler" => "customer/job/removeFavorite",
+        "roles" => ["all"]
+    ),
+    "job/get-favorite" => array(
+        "handler" => "customer/job/getFavorite",
+        "roles" => ["all"]
+    ),
     "user/change-password" => array(
         "handler" => "user/changePassword",
         "roles" => ["all"]
@@ -109,6 +121,10 @@ $routes = array(
         "handler" => "user/editProfile",
         "roles" => ["all"]
     ),
+    "admin/user/switch-active" => array(
+        "handler" => "user/switchActive",
+        "roles" => ["admin"]
+    )
     
 );
 

@@ -15,6 +15,23 @@ function backendAlert($msg, $redirectPath="/") {
     echo "<script>alert('$msg');document.location='$redirectPath';</script>";
 }
 
+// https://stackoverflow.com/questions/6899097/how-to-add-a-parameter-to-the-url
+function urlUpdate($name, $value){
+    $href = $_SERVER['REQUEST_URI'];
+    $regex = '/[&\\?]' . $name . "=/";
+    if(preg_match($regex, $href)) {
+        $regex = '/([&\\?])'.$name.'=[\\d]+/';
+        $link = preg_replace($regex, '${1}' . $name . '=' . $value, $href);
+    } else {
+        if(strpos($href, '?')!=false) {
+            $link = $href . "&" . $name . "=" . $value;
+        } else {
+            $link = $href . "?" . $name . "=" . $value;
+        }
+    }
+    echo $link;
+}
+
 /*
 sql date format: yyyy-mm-dd
 intended date format: Mon dd,yyyy
