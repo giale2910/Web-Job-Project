@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/public/css/imported/component/job-box.css">
     </head>
     <body>
-        <div class="sub-banner bg-color-full">
+        <div class="sub-banner ">
             <div class="container">
                 <div class="breadcrumb-area">
                     <h1>Job Listing</h1>
