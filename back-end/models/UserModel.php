@@ -14,7 +14,7 @@ class UserModel extends BaseModel
     }
     public function getAllUsers()
     {
-        return $this->sqlFetchAll("SELECT * FROM User WHERE role IN ('manager', 'customer')");
+        return $this->sqlFetchAll("SELECT * FROM User WHERE role = 'customer'");
     }
     public function getAllManagers()
     {
@@ -50,6 +50,14 @@ class UserModel extends BaseModel
         foreach($fields as $field) $values[] = "$field='".$info[$field]."'";
         $sql = "UPDATE User SET " . implode(",", $values) . " WHERE id=".$info["id"];
         debugAlert($sql);
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+    }
+    public function switchActive($info)
+    {
+        $id = $info["uid"];
+        $new = ($info["current"]==="Active")?"Deactive":"Active";
+        $sql = "UPDATE User SET status = '$new' WHERE id = $id";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
     }
