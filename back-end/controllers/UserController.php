@@ -82,7 +82,18 @@ class UserController extends BaseController
         debugAlert("Editing profile");
         debugAlert($_POST);
         $_POST["id"] = $_SESSION["user_id"];
+
+        $_POST["image"] = $_FILES["image"]["name"];
         $this->user->editProfile($_POST);
+
+        // $target = "images/" .basename($_FILES["image"]["name"]);
+        $target = "public/images/uploadImage/" .basename($_FILES["image"]["name"]);
+        if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){ 
+            debugAlert('success');
+        }else{
+            debugAlert('fail');
+        }
+        
         backendAlert("User profile edited successfully!");
     }
 

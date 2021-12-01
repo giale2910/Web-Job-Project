@@ -113,18 +113,48 @@ $routes = array(
         "handler" => "customer/job/getFavorite",
         "roles" => ["all"]
     ),
-    "user/change-password" => array(
-        "handler" => "user/changePassword",
-        "roles" => ["all"]
-    ),
-    "user/edit-profile" => array(
-        "handler" => "user/editProfile",
-        "roles" => ["all"]
-    ),
+    // "user/change-password" => array(
+    //     "handler" => "user/changePassword",
+    //     "roles" => ["all"]
+    // ),
+    // "user/edit-profile" => array(
+    //     "handler" => "user/editProfile",
+    //     "roles" => ["all"]
+    // ),
     "admin/user/switch-active" => array(
         "handler" => "user/switchActive",
         "roles" => ["admin"]
-    )
+    ),
+
+    //
+    "change-password" => array(
+        "handler" => "user/changePassword",
+        "roles" => ["all"]
+    ),
+    "edit-profile" => array(
+        "handler" => "user/editProfile",
+        "roles" => ["all"]
+    ),
+    "admin/change-password" => array(
+        "handler" => "user/changePassword",
+        "roles" => ["all"]
+    ),
+    "admin/logout" => array(
+        "handler" => "user/logout",
+        "roles" => ["all"]
+    ),
+    "management/edit-profile" => array(
+        "handler" => "user/editProfile",
+        "roles" => ["all"]
+    ),
+    "management/change-password" => array(
+        "handler" => "user/changePassword",
+        "roles" => ["all"]
+    ), 
+    "management/logout" => array(
+        "handler" => "user/logout",
+        "roles" => ["all"]
+    ),
     
 );
 

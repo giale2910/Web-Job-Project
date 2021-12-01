@@ -201,7 +201,7 @@ class ManagementController extends BaseController
     {
         $data = parent::baseRenderData();
         $data["title"] = "EditProfile";
-        $data["userInfo"] = $this->userInfo;
+        // $data["userInfo"] = $this->userInfo;
         $this->load->view("layouts/manager", "account/editProfile", $data);
     }
 

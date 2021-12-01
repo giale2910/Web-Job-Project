@@ -14,7 +14,8 @@
         <?php foreach($users as $user) { ?>
             <tr class="responsive-table">
                 <td class="image">
-                    <a href="#"><img alt="user-photo" src="http://placehold.it/80x80" class="img-fluid"></a>
+                    <!-- <a href="#"><img alt="user-photo" src="http://placehold.it/80x80" class="img-fluid"></a> -->
+                    <a href="#"><img alt="user-photo" src="<?php if($user["image"] !== null){ ?> ../../public/images/uploadImage/<?= $user["image"]?> <?php }else{ ?>  ../../public/images/ava1.png <?php }?> " class="img-fluid"  style="border-radius:100px" ></a>
                 </td>
                 <td>
                     <div class="inner">

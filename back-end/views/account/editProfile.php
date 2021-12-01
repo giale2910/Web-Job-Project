@@ -11,7 +11,8 @@ debugAlert($userInfo);
                 <h2 class="modal-title">Edit Profile</h2>
                 <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
             </div>
-            <form action="<?=$base_dir?>/user/edit-profile" method="POST"> 
+            <!-- <form action="<?=$base_dir?>/user/edit-profile" method="POST">  -->
+            <form  enctype="multipart/form-data" action="edit-profile" method="POST" > 
                 <div class="modal-body  row " >
                     <div class="col-lg-3 col-md-3" >
                         <!-- <div class="edit-profile-photo">
@@ -25,7 +26,11 @@ debugAlert($userInfo);
                         </div> -->
                         <div >
                             <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-                            <p><img id="output" width="100%"  style="border-radius: 10px;" src="../../public/images/default-ava.jpeg"/></p>
+                            <!-- <p><img id="output" width="100%"  style="border-radius: 10px;" src="../../public/images/default-ava.jpeg"/></p> -->
+                            <p><img id="output" width="100%"  style="border-radius: 10px;" 
+                                src="<?php if($userInfo["image"] !== null){ ?> ../../public/images/uploadImage/<?= $userInfo["image"]?> <?php }else{ ?>  ../../public/images/default-ava.jpeg <?php }?> "/>
+                            </p>
+                            
                             <p style="display:flex;justify-content:center;"><label for="file" style="padding:0px 10px;cursor: pointer;border-radius: 50px; font-size: 13px; font-weight: 600; background-color:lightgray;">Upload Image</label></p>
                            
                         </div>

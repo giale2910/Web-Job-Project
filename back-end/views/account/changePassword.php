@@ -6,8 +6,9 @@
                 <h2 class="modal-title">Change Password</h2>
                 <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
             </div>
-            <form action="/user/change-password" method="POST">
-                
+            <!-- <form action="/user/change-password" method="POST"> -->
+            <form  onsubmit="return validate(this);" action="change-password" method="POST" >
+
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="email">Current password:</label>
