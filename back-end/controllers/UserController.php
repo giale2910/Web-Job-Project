@@ -37,6 +37,7 @@ class UserController extends BaseController
         }else{
             if ($_POST["password"] == $_POST['rePassword']) {
                 unset($_POST["rePassword"]);
+              
                 $this->user->register($_POST);
                 // header("Location: /");
                 header("Location: /login");

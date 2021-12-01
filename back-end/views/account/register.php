@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group">
                     <input type="text" name="lastName" id="last-name" placeholder="Last Name">
-                </div>
+                </div> 
                 <div class="form-group">
                     <input required type="email" name="email" id="email" placeholder="Email">
                 </div>
@@ -40,6 +40,13 @@
                 <div class="form-group">
                     <input  type="password" name="rePassword" id="re-password" placeholder="Confirm Password">
                 </div>
+                <div  class="radio">
+                      <input type="radio" name="role" value="customer" checked>
+                      <label for="customer">Job seeker</label>
+                      <input type="radio" name="role" value="manager">
+                      <label for="manager">Company</label>
+                </div>
+             
                 <div id="rePwdError" style="color:#FF0000;font-size:14px;margin-bottom:30px;margin-top:-5px;"></div>
 
                 <div class="_row">

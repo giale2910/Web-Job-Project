@@ -7,7 +7,7 @@ class UserModel extends BaseModel
     }
     public function register($registerInfo)
     {
-        $registerInfo["role"] = "customer";
+        // $registerInfo["role"] = "customer";
         $registerInfo["password"] = password_hash($registerInfo["password"], PASSWORD_BCRYPT, array('cost' => 12));
         $stmt = $this->conn->prepare('INSERT INTO User(email,password,role,first_name,last_name) values(:email,:password,:role,:firstName,:lastName)');
         return $stmt->execute($registerInfo);
