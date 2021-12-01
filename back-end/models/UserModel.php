@@ -12,13 +12,19 @@ class UserModel extends BaseModel
         $stmt = $this->conn->prepare('INSERT INTO User(email,password,role,first_name,last_name) values(:email,:password,:role,:firstName,:lastName)');
         return $stmt->execute($registerInfo);
     }
-    public function getAllUsers()
+    public function getAllUsers($searchTerm=NULL)
     {
-        return $this->sqlFetchAll("SELECT * FROM User WHERE role = 'customer'");
+        // return $this->sqlFetchAll("SELECT * FROM User WHERE role = 'customer'");
+        $sql = "SELECT * FROM User ";
+        if ($searchTerm) $sql .= $searchTerm ;
+
+        return $this->sqlFetchAll($sql);
     }
-    public function getAllManagers()
+    public function getAllManagers($searchTerm=NULL)
     {
-        return $this->sqlFetchAll("SELECT * FROM User WHERE role = 'manager'");
+        $sql = "SELECT * FROM User ";
+        if ($searchTerm) $sql .= $searchTerm;
+        return $this->sqlFetchAll($sql);
     }
     public function findUserByEmail($email)
     {

@@ -17,6 +17,7 @@ class JobSeekerCompanyController extends BaseController
         $data["title"] = "JobListing"; 
         $data["companyList"] = $this->getAllManagers();
         $data["categoryList"] = $this->getCategoryList();
+        $data["page"] = isset($_GET["page"]) ? ($_GET["page"]) : 0;
         $this->load->view("layouts/customer", "customer/company/company", $data);
     }
     public function renderJobseekerListing()
@@ -26,17 +27,13 @@ class JobSeekerCompanyController extends BaseController
         $data["title"] = "JobListing"; 
         $data["jobseekerList"] = $this->getAllUsers();
         $data["categoryList"] = $this->getCategoryList();
+        $data["page"] = isset($_GET["page"]) ? ($_GET["page"]) : 0;
         $this->load->view("layouts/customer", "customer/job-seeker/job-seeker", $data);
     }
     public function renderCompanyJob()
     {
         $data = parent::baseRenderData();
         $data["page"] = isset($_GET["page"]) ? ($_GET["page"]) : 0;
-        // $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
-        // if ($location && strpos($location, "All")===false)
-        //     $filter[] = "city = '".$_GET["Location"] . "'";
-
-
         $data["jobList"] = $this->getCompanyJob($_GET["id"]);
         $data["favoriteIds"] = $this->getFavorite();
         $this->load->view("layouts/customer", "customer/company/company-job", $data);
@@ -70,7 +67,7 @@ class JobSeekerCompanyController extends BaseController
 
         $page = isset($_GET["page"]) ? ($_GET["page"])*10 : 0 ;
 
-        if (isset($_GET["search"])) $filter[] = "first_name LIKE '%".$_GET["search"]."%'";
+        if (isset($_GET["search"])) $filter[] = "CONCAT(first_name,last_name) LIKE '%".$_GET["search"]."%'";
         $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
         if ($location && strpos($location, "All")===false)
             $filter[] = "city = '".$_GET["Location"] . "'";
@@ -80,12 +77,14 @@ class JobSeekerCompanyController extends BaseController
             $filter[] = "category = '" . $category . "'";
         
 
-        $searchTerm = (count($filter) === 0) ? "" : "WHERE " . implode(" AND ", $filter);
+        $searchTerm = (count($filter) === 0) ? "WHERE role = 'customer' " : "WHERE " . implode(" AND ", $filter) . " AND role = 'customer'";
         // $searchTerm .= " LIMIT 10 OFFSET " . $page;
 
         if (isset($_GET["sort"])) $searchTerm .= " ORDER BY " . $_GET["sort"];
+        
 
         debugAlert("Search term:" . $searchTerm);
+
         $user = $this->user->getAllUsers($searchTerm);
         return $user;
     }
@@ -100,7 +99,7 @@ class JobSeekerCompanyController extends BaseController
 
         $page = isset($_GET["page"]) ? ($_GET["page"])*10 : 0 ;
 
-        if (isset($_GET["search"])) $filter[] = "address LIKE '%".$_GET["search"]."%'";
+        if (isset($_GET["search"])) $filter[] = "first_name LIKE '%".$_GET["search"]."%'" ;
         $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
         if ($location && strpos($location, "All")===false)
             $filter[] = "city = '".$_GET["Location"] . "'";
@@ -109,11 +108,12 @@ class JobSeekerCompanyController extends BaseController
         if ($category && strpos($category, "All")===false)
             $filter[] = "category = '" . $category . "'";
         
+        $searchTerm = (count($filter) === 0) ? "WHERE role = 'manager' " : "WHERE " . implode(" AND ", $filter) . " AND role = 'manager'";
 
-        $searchTerm = (count($filter) === 0) ? "" : "WHERE " . implode(" AND ", $filter);
-        // $searchTerm .= " LIMIT 10 OFFSET " . $page;
+        $searchTerm .= " LIMIT 10 OFFSET " . $page;
 
         if (isset($_GET["sort"])) $searchTerm .= " ORDER BY " . $_GET["sort"];
+        
 
         debugAlert("Search term:" . $searchTerm);
         $manager = $this->user->getAllManagers($searchTerm);

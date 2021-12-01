@@ -27,27 +27,29 @@ $database["managers"] = array(
         "profile_link" =>"https://oisp.hcmut.edu.vn/",
         "phone" => "0938919001",
         "address" => "246 Ly Thuong Kiet Q.5",
-        "image" =>'ava1.png'
+        "image" =>'com0.png'
     ),
     array(
         "email" => "manager2@gmail.com",
         "password" => "monkey",
-        "first_name" => "Brad-Jonas",
-        "last_name" => "Hardick",
+        "first_name" => "Shoppe",
+        "last_name" => "",
+        // "first_name" => "Brad-Jonas",
+        // "last_name" => "Hardick",
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>'ava1.png'
+        "image" =>'com10.png'
     ),
     array(
         "email" => "manager3@gmail.com",
         "password" => "monkey",
-        "first_name" => "Brad",
-        "last_name" => "Hardick",
+        "first_name" => "Lacoste",
+        "last_name" => "",
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>'ava1.png'
+        "image" =>'com11.jpeg'
     ),
     array(
         "email" => "facebook@gmail.com",

@@ -115,14 +115,14 @@
                         <div class="div-right">
                             <!-- <a  href = "mailto: phuonggiale13@gmail.com" class="apply-button">Email to Apply</a> -->
                             <!-- <a href="#"><i class="flaticon-heart favourite"></i></a> -->
-                            <a href="<?php echo $user["profile_link"];?>" target="_blank"><img class="favourite" src="../../../public/images/cv1.png" style="width:30px; height:30px;border-radius:30px; border: solid 1px #fff;"></a>
+                            <a href="<?php echo $company["profile_link"];?>" target="_blank"><img class="favourite" src="../../../public/images/cv1.png" style="width:30px; height:30px;border-radius:30px; border: solid 1px #fff;"></a>
 
                         </div>
                     </div>
                 </div>
             <?php } ?>
                         <!-- Page navigation start -->
-                        <div class="pagination-box hidden-mb-45 text-center">
+                        <!-- <div class="pagination-box hidden-mb-45 text-center">
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination">
                                     <li class="page-item">
@@ -136,7 +136,23 @@
                                     </li>
                                 </ul>
                             </nav>
+                        </div> -->
+                        <div class="pagination-box hidden-mb-45 text-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                <?php if ($page != 0) {?> 
+                                    <li class="page-item">
+                                        <a class="page-link" href="<?php urlUpdate("page", $page-1);?>">Prev</a></li> 
+                                <?php } ?>
+                                    <li class="page-item"><a class="page-link active" href="#"><?= $page?></a></li>
+                                    <li class="page-item">
+                                        <a id="custom-text" class="page-link" href="<?php urlUpdate("page", $page+1);?>">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
+
+
                     </div>
                 </div>
             </div>

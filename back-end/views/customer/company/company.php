@@ -123,8 +123,8 @@
                     </div>
                 </div>
             <?php } ?>
-                        <!-- Page navigation start -->
-                        <div class="pagination-box hidden-mb-45 text-center">
+             <!-- Page navigation start -->
+             <!-- <div class="pagination-box hidden-mb-45 text-center">
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination">
                                     <li class="page-item">
@@ -138,7 +138,22 @@
                                     </li>
                                 </ul>
                             </nav>
+                        </div> -->
+                        <div class="pagination-box hidden-mb-45 text-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                <?php if ($page != 0) {?> 
+                                    <li class="page-item">
+                                        <a class="page-link" href="<?php urlUpdate("page", $page-1);?>">Prev</a></li> 
+                                <?php } ?>
+                                    <li class="page-item"><a class="page-link active" href="#"><?= $page?></a></li>
+                                    <li class="page-item">
+                                        <a id="custom-text" class="page-link" href="<?php urlUpdate("page", $page+1);?>">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
+
                     </div>
                 </div>
             </div>
