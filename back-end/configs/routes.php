@@ -165,6 +165,10 @@ $routes = array(
         "handler" => "customer/jobseekercompany/renderJobseekerListing",
         "roles" => ["all"]
     ),
+    "company-job" => array(
+        "handler" => "customer/jobseekercompany/renderCompanyJob",
+        "roles" => ["all"]
+    ),
     
 );
 

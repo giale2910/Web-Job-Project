@@ -100,7 +100,7 @@ class JobController extends BaseController
         $data["jobList"] = $this->job->getUserFavoriteJobs();
         $data["favoriteIds"] = $this->getFavorite();
         $data["page"] = isset($_GET["page"]) ? ($_GET["page"]) : 0;
-        debugAlert($data["jobList"]);
+        // debugAlert($data["jobList"]);
         $this->load->view("layouts/customer", "customer/job/fav-job", $data);
     }
 

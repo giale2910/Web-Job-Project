@@ -35,7 +35,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="col-lg-12">
-                    <?php include("job-item.php") ?>
+                    
+                
+                    <?php include SITE_PATH . "views/customer/job/job-item.php" ; ?>
+                    
+
                 </div>
             </div>
         </div>

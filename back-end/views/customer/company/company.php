@@ -114,7 +114,8 @@
                             </div>
                         </div>
                         <div class="div-right">
-                            <a  href = "mailto: phuonggiale13@gmail.com" class="apply-button">Company Job</a>
+                            <!-- <a href="/job-detail?id=<?php echo $job["id"];?>"><?php echo $job["title"];?></a> -->
+                            <a  href = "/company-job?id=<?php echo $company["id"];?>" class="apply-button">Company Job</a>
                             <!-- <a href="#"><i class="flaticon-heart favourite"></i></a> -->
                             <a href="<?php echo $company["profile_link"];?>" target="_blank"><img class="favourite" src="../../../public/images/weblink1.png" style="width:25px; height:25px;border-radius:25px"></a>
 

@@ -47,6 +47,21 @@ class JobModel extends BaseModel
         "SELECT experience_text FROM JobExperience WHERE job_id=:id";
         return $this->sqlFetchAll($sql, array("id"=>$id));
     }
+    public function getCompanyJob($id)
+    {
+
+        $sql = 
+        "SELECT Job.id, title, company, deadline, salary, job_type, city , contact_email ,image, email, first_name
+            FROM Job JOIN Location ON Job.`location_id`=Location.`id`
+                JOIN Category ON Job.`category_id`=Category.`id`
+                JOIN User ON Job.`manager_id`=User.`id`
+                WHERE manager_id=$id
+        ";
+        debugAlert($sql);
+        return $this->sqlFetchAll($sql);
+       
+    }
+    
 
     public function getJobResponsibility($id)
     {

@@ -6,7 +6,7 @@ class JobSeekerCompanyController extends BaseController
     {
         parent::__construct();
         $this->load->model("user");
-        // $this->load->model("job");
+        $this->load->model("job");
         $this->load->model("category");
     }
 
@@ -28,13 +28,37 @@ class JobSeekerCompanyController extends BaseController
         $data["categoryList"] = $this->getCategoryList();
         $this->load->view("layouts/customer", "customer/job-seeker/job-seeker", $data);
     }
+    public function renderCompanyJob()
+    {
+        $data = parent::baseRenderData();
+        $data["page"] = isset($_GET["page"]) ? ($_GET["page"]) : 0;
+        // $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
+        // if ($location && strpos($location, "All")===false)
+        //     $filter[] = "city = '".$_GET["Location"] . "'";
 
+
+        $data["jobList"] = $this->getCompanyJob($_GET["id"]);
+        $data["favoriteIds"] = $this->getFavorite();
+        $this->load->view("layouts/customer", "customer/company/company-job", $data);
+    }
+    public function getFavorite()
+    {
+        if (!isset($_SESSION["user_id"])) return array();
+        $favoriteJobs = $this->job->getUserFavoriteJobs();
+        $favoriteIds = array_map(fn($row):string => $row["job_id"], $favoriteJobs);
+        return $favoriteIds;
+    }
     public function getCategoryList()
     {
         $categories = $this->category->getCategoryList();
         return $categories;
     }
-
+    public function getCompanyJob($id)
+    {
+        $jobs = $this->job->getCompanyJob($id);
+        return $jobs;
+    }
+  
     public function getAllUsers()
     {
         global $categories;
