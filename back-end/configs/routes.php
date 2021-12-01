@@ -156,6 +156,15 @@ $routes = array(
         "handler" => "user/logout",
         "roles" => ["all"]
     ),
+    //company + jobSeeker
+    "company" => array(
+        "handler" => "customer/jobseekercompany/renderCompanyListing",
+        "roles" => ["all"]
+    ),
+    "job-seeker" => array(
+        "handler" => "customer/jobseekercompany/renderJobseekerListing",
+        "roles" => ["all"]
+    ),
     
 );
 

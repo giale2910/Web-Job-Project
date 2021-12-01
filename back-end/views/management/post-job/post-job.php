@@ -46,18 +46,18 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
                                 <label>Company</label>
                                 <input type="text" required class="input-text" id="company" name="company" placeholder="Company">
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        </div> -->
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
                                 <label>Contact Email</label>
                                 <input type="email" class="input-text" id="contact" name="contact" placeholder="Email">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
                                 <label>Deadline</label>

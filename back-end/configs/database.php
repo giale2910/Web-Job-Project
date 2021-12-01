@@ -131,7 +131,7 @@ $database["managers"] = array(
         "image" =>"com7.png"
     ),
     array(
-        "email" => "30shine9@gmail.com",
+        "email" => "yola@gmail.com",
         "password" => "monkey",
         "first_name" => "Yola",
         "last_name" => "",

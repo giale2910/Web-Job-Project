@@ -41,13 +41,15 @@
                         <!-- job box 2 start -->
                         <div class="job-box-2">
                             <div class="company-logo">
-                                <img src="http://placehold.it/80x80" alt="avatar">
+                                <!-- <img src="http://placehold.it/80x80" alt="avatar"> -->
+                                <img src="../../../public/images/uploadImage/<?php echo $jobOverview["image"];?>" alt="avatar"style="border: 1px solid lightgray">
                             </div>
                             <div class="description">
                                 <h5 class="title"><a href="#"><?php echo $jobOverview["title"];?></a></h5>
                                 <div class="candidate-listing-footer">
                                     <ul>
-                                        <li><i class="flaticon-work"></i><?php echo $jobOverview["company"];?></li>
+                                        <!-- <li><i class="flaticon-work"></i><?php echo $jobOverview["company"];?></li> -->
+                                        <li><i class="flaticon-work"></i><?php echo $jobOverview["first_name"];?></li>
                                         <li><i class="flaticon-pin"></i> <?php echo $jobOverview["city"];?></li>
                                         <li><i class="flaticon-time"></i> <?php echo $jobOverview["job_type"];?></li>
                                     </ul>

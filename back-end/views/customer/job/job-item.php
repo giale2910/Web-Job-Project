@@ -13,7 +13,9 @@
                 </h5>
                 <div class="candidate-listing-footer">
                     <ul>
-                        <li><i class="flaticon-work"></i> <?php echo $job["company"];?></li>
+                        <!-- <li><i class="flaticon-work"></i> <?php echo $job["company"];?></li> -->
+
+                        <li><i class="flaticon-work"></i> <?php echo $job["first_name"];?></li>
                         <li><i class="flaticon-pin"></i> <?php echo $job["city"];?></li>
                         <li><i class="flaticon-time"></i> <?php echo $job["job_type"];?></li>
                     </ul>
@@ -21,7 +23,8 @@
                 </div>
             </div>
             <div class="div-right">
-                <a href="mailto: <?= $job["contact_email"]?>" class="apply-button">Apply Now</a>
+                <!-- <a href="mailto: <?= $job["contact_email"]?>" class="apply-button">Apply Now</a> -->
+                <a href="mailto: <?= $job["email"]?>" class="apply-button">Apply Now</a>
                 <a id="<?= $job["id"]?>" onclick="addFavorite(this.id)">
                     <i id="icon-<?= $job["id"]?>" class="flaticon-heart favourite" >
                     </i>

@@ -67,7 +67,7 @@ function create_database(PDO $conn, $database, string $version) {
         "CREATE TABLE Job (
             `id` INTEGER AUTO_INCREMENT PRIMARY KEY,
             `title` VARCHAR(40) NOT NULL,
-            `company` VARCHAR(40) NOT NULL,
+            `company` VARCHAR(40) ,
             `manager_id` INTEGER NOT NULL,
             `location_id` INTEGER,
             `category_id` INTEGER NOT NULL,

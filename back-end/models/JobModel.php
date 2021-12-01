@@ -9,7 +9,7 @@ class JobModel extends BaseModel
     {
         
         $sql = 
-        "SELECT Job.id, title, company, deadline, salary, job_type, city , contact_email ,image
+        "SELECT Job.id, title, company, deadline, salary, job_type, city , contact_email ,image, email, first_name
             FROM Job JOIN Location ON Job.`location_id`=Location.`id`
                 JOIN Category ON Job.`category_id`=Category.`id`
                 JOIN User ON Job.`manager_id`=User.`id`
@@ -33,8 +33,9 @@ class JobModel extends BaseModel
         "SELECT Job.id, title, company, deadline, 
             salary, job_type, gender, 
             qualification,  min_experience, 
-            contact_email, description, lat, lng, name, city
+            contact_email, description, lat, lng, name, city, image, email, first_name
             FROM Job JOIN Location ON Job.`location_id`=Location.`id` 
+            JOIN User ON Job.`manager_id`=User.`id`
             WHERE Job.`id`=:id
         ";
         return $this->sqlFetchAll($sql, array("id"=>$id))[0];
@@ -74,11 +75,17 @@ class JobModel extends BaseModel
         );
 
         $info["location_id"] = $newLocationId;
+        // $newJobId = $this->postAndGetId(
+        //     array("title", "company", "manager_id", "location_id", "category_id", "date_posted", "deadline", "salary", "job_type", "gender", "qualification", "min_experience", "contact_email", "description"),
+        //     array("manager_id", "location_id", "category_id", "salary", "min_experience"),
+        //     $info,
+        //     "Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)"
+        // );
         $newJobId = $this->postAndGetId(
-            array("title", "company", "manager_id", "location_id", "category_id", "date_posted", "deadline", "salary", "job_type", "gender", "qualification", "min_experience", "contact_email", "description"),
+            array("title",  "manager_id", "location_id", "category_id", "date_posted", "deadline", "salary", "job_type", "gender", "qualification", "min_experience",  "description"),
             array("manager_id", "location_id", "category_id", "salary", "min_experience"),
             $info,
-            "Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)"
+            "Job(title,  manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, description)"
         );
         
         if ($info["experience"] && count($info["experience"])>0){
@@ -135,9 +142,10 @@ class JobModel extends BaseModel
     public function getUserFavoriteJobs(){
         $user_id = $_SESSION["user_id"];
         $sql = "
-            SELECT job_id, user_id, Job.`id`, title, company, deadline, salary, job_type, city , contact_email 
+            SELECT job_id, user_id, Job.`id`, title, company, deadline, salary, job_type, city , contact_email , image, first_name, email
             FROM FavoriteJob JOIN (Job JOIN Location ON Job.`location_id`=Location.`id`) 
                 ON FavoriteJob.`job_id`=Job.`id`
+                JOIN User ON Job.`manager_id`=User.`id`
             WHERE user_id=$user_id";
         debugAlert($sql);
         return $this->sqlFetchAll($sql);
