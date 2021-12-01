@@ -24,7 +24,7 @@
             </div>
         </div>
 
-<?php debugAlert($favoriteJobs); ?>
+<!-- <?php debugAlert($favoriteJobs); ?> -->
 <div class="job-listing-section content-area">
     <div class="container">
         <div class="row">

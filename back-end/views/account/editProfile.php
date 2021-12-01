@@ -28,7 +28,7 @@ debugAlert($userInfo);
                             <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
                             <!-- <p><img id="output" width="100%"  style="border-radius: 10px;" src="../../public/images/default-ava.jpeg"/></p> -->
                             <p><img id="output" width="100%"  style="border-radius: 10px;" 
-                                src="<?php if($userInfo["image"] !== null){ ?> ../../public/images/uploadImage/<?= $userInfo["image"]?> <?php }else{ ?>  ../../public/images/default-ava.jpeg <?php }?> "/>
+                                src="<?php if($userInfo["image"] !== ''){ ?> ../../public/images/uploadImage/<?= $userInfo["image"]?> <?php }else{ ?>  ../../public/images/default-ava.jpeg <?php }?> "/>
                             </p>
                             
                             <p style="display:flex;justify-content:center;"><label for="file" style="padding:0px 10px;cursor: pointer;border-radius: 50px; font-size: 13px; font-weight: 600; background-color:lightgray;">Upload Image</label></p>

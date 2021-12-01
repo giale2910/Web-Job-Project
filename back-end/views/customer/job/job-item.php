@@ -34,7 +34,7 @@
 <div class="pagination-box hidden-mb-45 text-center">
     <nav aria-label="Page navigation example">
         <ul class="pagination">
-        <?php if ($page != 1) {?> 
+        <?php if ($page != 0) {?> 
             <li class="page-item">
                 <a class="page-link" href="<?php urlUpdate("page", $page-1);?>">Prev</a></li> 
         <?php } ?>

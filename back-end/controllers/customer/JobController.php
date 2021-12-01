@@ -159,8 +159,8 @@ class JobController extends BaseController
         global $page;
 
         $filter = array();
-        debugAlert($_GET["minsal"]);
-        debugAlert($_GET["maxsal"]);
+        // debugAlert($_GET["minsal"]);
+        // debugAlert($_GET["maxsal"]);
 
         $page = isset($_GET["page"]) ? ($_GET["page"]) : 0 ;
         if (isset($_GET["search"])) $filter[] = "title LIKE '%".$_GET["search"]."%'";
