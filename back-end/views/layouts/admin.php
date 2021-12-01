@@ -39,6 +39,9 @@
     <link rel="stylesheet" type="text/css" href="/public/css/imported/ie10-viewport-bug-workaround.css">
 
     <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
+
+    <!-- valid form -->
+    <script  src="/public/js/validateForm.js"></script>
 </head>
 
 <body>

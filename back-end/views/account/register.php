@@ -22,7 +22,7 @@
             <p>Please fill in to create your account</p>
         </div>
         <div class="register-form">
-            <form action="user/register" method="POST">
+            <form  onsubmit="return validateRegsiter(this);" action="user/register" method="POST">
                 <div class="form-group">
                     <input type="text" name="firstName" id="first-name" placeholder="First Name">
                 </div>
@@ -30,14 +30,18 @@
                     <input type="text" name="lastName" id="last-name" placeholder="Last Name">
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input required type="email" name="email" id="email" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input  type="password" name="password" id="password" placeholder="Password">
                 </div>
+                <div id="pwdError" style="color:#FF0000;font-size:14px;margin-bottom:25px;margin-top:-10px;"></div>
+
                 <div class="form-group">
-                    <input type="password" name="rePassword" id="re-password" placeholder="Confirm Password">
+                    <input  type="password" name="rePassword" id="re-password" placeholder="Confirm Password">
                 </div>
+                <div id="rePwdError" style="color:#FF0000;font-size:14px;margin-bottom:30px;margin-top:-5px;"></div>
+
                 <div class="_row">
                     <button type="submit">
                         Register

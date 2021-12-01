@@ -2,7 +2,7 @@
     <!-- <div class="container-fluid"> -->
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
                 <img width=50 height=50 src="https://www.internship.edu.vn/wp-content/uploads/Logo-OISP-260x260-1-200x200.png" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
                             <div class="dropdown btns">
                                 <a class="dropdown-toggle" data-toggle="dropdown">
                                     <!-- <img src="../../../public/images/ava.png" alt="avatar"> -->
-                                    <img src="<?php if($userInfo["image"] !== ''){ ?> ../../public/images/uploadImage/<?= $userInfo["image"]?> <?php }else{ ?>  ../../public/images/ava.png <?php }?>" style="height:50px;width:50px;border-radius:50px;"alt="avatar">
+                                    <img src="<?php if($userInfo["image"] !== null){ ?> ../../public/images/uploadImage/<?= $userInfo["image"]?> <?php }else{ ?>  ../../public/images/ava.png <?php }?>" style="height:50px;width:50px;border-radius:50px;"alt="avatar">
 
                                     Hi, <?= $userInfo["first_name"] ?>
                                 </a>

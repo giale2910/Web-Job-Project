@@ -15,6 +15,7 @@ $database["admins"] = array(
         "profile_link" =>"https://oisp.hcmut.edu.vn/",
         "phone" => "",
         "address" => "",
+        "image" =>'ava1.png'
     )
 );
 $database["managers"] = array(
@@ -25,7 +26,8 @@ $database["managers"] = array(
         "last_name" => "",
         "profile_link" =>"https://oisp.hcmut.edu.vn/",
         "phone" => "0938919001",
-        "address" => "246 Ly Thuong Kiet Q.5"
+        "address" => "246 Ly Thuong Kiet Q.5",
+        "image" =>'ava1.png'
     ),
     array(
         "email" => "manager2@gmail.com",
@@ -34,7 +36,8 @@ $database["managers"] = array(
         "last_name" => "Hardick",
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
         "phone" => "0938919001",
-        "address" => "TPHCM"
+        "address" => "TPHCM",
+        "image" =>'ava1.png'
     ),
     array(
         "email" => "manager3@gmail.com",
@@ -44,6 +47,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
+        "image" =>'ava1.png'
     ),
     array(
         "email" => "manager4@gmail.com",
@@ -53,7 +57,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.facebook.com/facebookapp",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com1.png"
+        "image" =>"com1.png",
     ),
     array(
         "email" => "manager5@gmail.com",
@@ -63,7 +67,8 @@ $database["managers"] = array(
         "profile_link" =>"https://www.vng.com.vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com4.png"
+        "image" =>"com4.png",
+        
     ),
     array(
         "email" => "manager6@gmail.com",
@@ -116,6 +121,7 @@ $database["customers"] = array(
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
         "phone" => "0938919001",
         "address" => "TPHCM",
+        "image" =>'ava1.png'
     ),
     array(
         "email" => "user1@hcmut.edu.vn",

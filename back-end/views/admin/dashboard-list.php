@@ -15,7 +15,7 @@
             <tr class="responsive-table">
                 <td class="image">
                     <!-- <a href="#"><img alt="user-photo" src="http://placehold.it/80x80" class="img-fluid"></a> -->
-                    <a href="#"><img alt="user-photo" src="<?php if($user["image"] !== ''){ ?> ../../public/images/uploadImage/<?= $user["image"]?> <?php }else{ ?>  ../../public/images/ava1.png <?php }?> "   style="border-radius:100px;border: 1px solid lightgray; width: 85px;height: 85px; object-fit: cover; " ></a>
+                    <a href="#"><img alt="user-photo" src="<?php if($user["image"] !== null){ ?> ../../public/images/uploadImage/<?= $user["image"]?> <?php }else{ ?>  ../../public/images/ava1.png <?php }?> "   style="border-radius:100px;border: 1px solid lightgray; width: 85px;height: 85px; object-fit: cover; " ></a>
                 </td>
                 <td>
                     <div class="inner">

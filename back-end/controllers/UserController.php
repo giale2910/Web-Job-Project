@@ -31,11 +31,17 @@ class UserController extends BaseController
 
     public function register()
     {
-        if ($_POST["password"] == $_POST['rePassword']) {
-            unset($_POST["rePassword"]);
-            $this->user->register($_POST);
-            header("Location: /");
-        }
+        $user = $this->user->findUserByEmail($_POST["email"]);
+        if ($user){
+            backendAlert("Email account exists !!! Please re-enter another email account !!!",'/login');
+        }else{
+            if ($_POST["password"] == $_POST['rePassword']) {
+                unset($_POST["rePassword"]);
+                $this->user->register($_POST);
+                // header("Location: /");
+                header("Location: /login");
+            }
+        }  
     }
     public function login()
     {
@@ -46,9 +52,13 @@ class UserController extends BaseController
                 $_SESSION["role"] = $user["role"];
                 $_SESSION["logged"] = true;
                 header("Location: /");
+            }else{
+                
+                backendAlert("Incorrect password !!!",'/login');
             }
         }
-        header("Location: /");
+        // header("Location: /"); 
+        backendAlert("Account does not exist !!!",'/login');
     }
 
     public function logout()
@@ -69,7 +79,8 @@ class UserController extends BaseController
                 backendAlert("Password changed successfully!");
             }
             else {
-                backendAlert("User validation error! Please try again.");
+                // backendAlert("User validation error! Please try again.");
+                backendAlert("Current password is incorrect !!");
             }
         }
         else {
