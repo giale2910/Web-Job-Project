@@ -1,7 +1,7 @@
 
 <!-- job box start -->
 <?php foreach ($jobList as $job) { ?> 
-    <div class="job-box">
+    <div class="job-box" style="margin-bottom:20px;">
         <div class="company-logo">
             <img src="http://placehold.it/90x90" alt="logo">
         </div>

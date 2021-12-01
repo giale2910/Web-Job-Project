@@ -46,6 +46,9 @@
 
     <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
 
+    <!-- valid form -->
+    <script  src="/public/js/validateForm.js"></script>
+
     <?php include SITE_PATH . "views/blocks/customer/header.php" ?>
 </head>
 <script>

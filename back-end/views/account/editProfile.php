@@ -49,14 +49,14 @@ debugAlert($userInfo);
                                 </div>
                                 <div class="form-group ">
                                     <label>Email</label>
-                                    <input type="email" name="email" value="<?= $userInfo["email"]?>" class="form-control inputFocus" placeholder="Email">
+                                    <input required type="email" name="email" value="<?= $userInfo["email"]?>" class="form-control inputFocus" placeholder="Email">
                                 </div>  
                             </div>
 
                             <div class="col-lg-6 col-md-6">      
                                 <div class="form-group ">
                                     <label >Phone</label>
-                                    <input type="text" name="phone" value="<?= $userInfo["phone"]?>" pattern="[0-9]*" class="form-control inputFocus" placeholder="Phone">
+                                    <input type="tel" name="phone" value="<?= $userInfo["phone"]?>" pattern="[0-9]*" class="form-control inputFocus" placeholder="Phone">
                                 </div>
                                 
                                 <?php

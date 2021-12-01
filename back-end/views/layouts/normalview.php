@@ -42,11 +42,15 @@
     <link rel="stylesheet" type="text/css" href="/public/css/imported/ie10-viewport-bug-workaround.css">
 
     <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
+    
+    <!-- valid form -->
+    <script  src="/public/js/validateForm.js"></script>
 </head>
 
 <body style="background-color: #f9f9f9;">
     <!-- <?php include SITE_PATH . "views/blocks/customer/header.php" ?> -->
-
+    <?php include SITE_PATH . "views/blocks/customer/normalhead.php" ?>
+   
     <?php include $subview ?>
 
     <!-- <?php include SITE_PATH . "views/blocks/customer/footer.php" ?> -->

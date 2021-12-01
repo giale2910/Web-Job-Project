@@ -43,6 +43,9 @@
 
     <script  src="/public/js/imported/ie-emulation-modes-warning.js"></script>
     <?php include SITE_PATH . "views/blocks/management/header.php" ?>
+
+    <!-- valid form -->
+    <script  src="/public/js/validateForm.js"></script>
 </head>
 <script>
 var loadFile = function(event) {

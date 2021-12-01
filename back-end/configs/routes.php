@@ -93,6 +93,7 @@ $routes = array(
         "handler" => "user/login",
         "roles" => ["all"]
     ),
+  
     "logout" => array(
         "handler" => "user/logout",
         "roles" => ["all"]
