@@ -9,9 +9,10 @@ class JobModel extends BaseModel
     {
         
         $sql = 
-        "SELECT Job.id, title, company, deadline, salary, job_type, city , contact_email 
+        "SELECT Job.id, title, company, deadline, salary, job_type, city , contact_email ,image
             FROM Job JOIN Location ON Job.`location_id`=Location.`id`
                 JOIN Category ON Job.`category_id`=Category.`id`
+                JOIN User ON Job.`manager_id`=User.`id`
         ";
         if ($searchTerm) $sql .= $searchTerm;
         return $this->sqlFetchAll($sql);
