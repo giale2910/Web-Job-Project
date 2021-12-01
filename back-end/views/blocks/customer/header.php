@@ -59,7 +59,8 @@
                                     <li>
                                         <div class="dropdown btns">
                                             <a class="dropdown-toggle" data-toggle="dropdown">
-                                                <img src="../../../public/images/ava.png" alt="avatar">
+                                                <!-- <img src="../../../public/images/ava.png" alt="avatar"> -->
+                                                <img src="<?php if($userInfo["image"] !== null){ ?> ../../public/images/uploadImage/<?= $userInfo["image"]?> <?php }else{ ?>  ../../public/images/ava1.jpeg <?php }?> " alt="avatar">
                                                 Hi, <?= $userInfo["first_name"] ?>
                                             </a>
                                             <div class="dropdown-menu">

@@ -46,7 +46,7 @@ class UserModel extends BaseModel
     public function editProfile($info)
     {
         $values = array();
-        $fields = array("email", "first_name", "last_name", "phone", "profile_link", "address", "about");
+        $fields = array("email", "first_name", "last_name", "phone", "profile_link", "address", "about","image");
         foreach($fields as $field) $values[] = "$field='".$info[$field]."'";
         $sql = "UPDATE User SET " . implode(",", $values) . " WHERE id=".$info["id"];
         debugAlert($sql);

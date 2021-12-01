@@ -45,7 +45,8 @@ function create_database(PDO $conn, $database, string $version) {
     `web_link` VARCHAR(255) DEFAULT '#',
     `address` VARCHAR(255),
     `about` TEXT,
-    `status` ENUM('Active', 'Deactive') DEFAULT 'Active'
+    `status` ENUM('Active', 'Deactive') DEFAULT 'Active',
+    `image` VARCHAR(100)
     )
     ";
     sql_execute($conn, $sql, " - 'User' table create");
