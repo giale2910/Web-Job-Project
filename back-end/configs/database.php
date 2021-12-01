@@ -4,7 +4,7 @@ $database["port"] = 3306;
 $database["databasename"] = "job_finding";
 $database["username"] = "root";
 $database["password"]="root";
-$database["version"] = "1.1.15";
+$database["version"] = "1.1.14";
 
 $database["admins"] = array(
     array(
@@ -50,7 +50,7 @@ $database["managers"] = array(
         "image" =>'ava1.png'
     ),
     array(
-        "email" => "manager4@gmail.com",
+        "email" => "facebook@gmail.com",
         "password" => "monkey",
         "first_name" => "Facebook",
         "last_name" => ".",
@@ -60,7 +60,7 @@ $database["managers"] = array(
         "image" =>"com1.png",
     ),
     array(
-        "email" => "manager5@gmail.com",
+        "email" => "vng@gmail.com",
         "password" => "monkey",
         "first_name" => "VNG",
         "last_name" => "",
@@ -71,7 +71,7 @@ $database["managers"] = array(
         
     ),
     array(
-        "email" => "manager6@gmail.com",
+        "email" => "google@gmail.com",
         "password" => "monkey",
         "first_name" => "Google",
         "last_name" => "",
@@ -81,7 +81,7 @@ $database["managers"] = array(
         "image" =>"com2.png"
     ),
     array(
-        "email" => "manager7@gmail.com",
+        "email" => "microsoft@gmail.com",
         "password" => "monkey",
         "first_name" => "Microsoft",
         "last_name" => "",
@@ -91,7 +91,7 @@ $database["managers"] = array(
         "image" =>"com3.png"
     ),
     array(
-        "email" => "manager8@gmail.com",
+        "email" => "grab@gmail.com",
         "password" => "monkey",
         "first_name" => "Grab",
         "last_name" => "",
@@ -101,7 +101,7 @@ $database["managers"] = array(
         "image" =>"com5.png"
     ),
     array(
-        "email" => "manager9@gmail.com",
+        "email" => "amazon@gmail.com",
         "password" => "monkey",
         "first_name" => "Amazon",
         "last_name" => "",
@@ -110,6 +110,36 @@ $database["managers"] = array(
         "address" => "TPHCM",
         "image" =>"com6.png"
     ),
+    array(
+        "email" => "kfc@gmail.com",
+        "password" => "monkey",
+        "first_name" => "KFC",
+        "last_name" => "",
+        "profile_link" =>"https://www.facebook.com/facebookapp",
+        "phone" => "0938919001",
+        "address" => "TPHCM",
+        "image" =>"com8.png"
+    ),
+    array(
+        "email" => "30shine9@gmail.com",
+        "password" => "monkey",
+        "first_name" => "30shine",
+        "last_name" => "",
+        "profile_link" =>"https://www.facebook.com/facebookapp",
+        "phone" => "0938919001",
+        "address" => "TPHCM",
+        "image" =>"com7.png"
+    ),
+    array(
+        "email" => "30shine9@gmail.com",
+        "password" => "monkey",
+        "first_name" => "Yola",
+        "last_name" => "",
+        "profile_link" =>"https://www.facebook.com/facebookapp",
+        "phone" => "0938919001",
+        "address" => "TPHCM",
+        "image" =>"com9.png"
+    )
     
 );
 $database["customers"] = array(

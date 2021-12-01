@@ -143,21 +143,20 @@ function create_database(PDO $conn, $database, string $version) {
         (7, 'Education')
         ",
         "INSERT INTO Job(id, title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description) VALUES 
-        (1, 'A.I Replacement Lecturer', 'HCM University of Technology', 2, 2, 1, '2021-08-18', '2022-01-01', 350, 'Full time', 'Any', 'Kindergarten', -1, 'oisp@hcmut.edu.vn', 'Please replace the current A.I. lecturer ASAP - this is a call for help.'),
-        (2, 'Hair dresser', '30Shine', 3, 3, 6, '2021-09-11', '2021-11-11', 160, 'Part time', 'Any', 'High school', 2, 'vng@yahoo.com', 'Cut your hair and your self confidence'),
+        (1, 'A.I Replacement Lecturer', 'HCM University of Technology', 10, 2, 1, '2021-08-18', '2022-01-01', 350, 'Full time', 'Any', 'Kindergarten', -1, 'oisp@hcmut.edu.vn', 'Please replace the current A.I. lecturer ASAP - this is a call for help.'),
+        (2, 'Hair dresser', '30Shine', 12, 3, 6, '2021-09-11', '2021-11-11', 160, 'Part time', 'Any', 'High school', 2, 'vng@yahoo.com', 'Cut your hair and your self confidence'),
         (3, 'Front-end Developer ', 'VNG', 6, 3, 1, '2021-09-11', '2021-11-11', 200, 'Full time', 'Any', 'High school', 2, 'vng@yahoo.com', 'We need you !!! Join us now'),
-        (4, 'Dai Nam C.E.O', 'Dai Nam', 7, 4, 1, '2021-09-11', '2021-11-11', 320, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
-        (5, 'Back-end Developer ', 'VNG', 6, 3, 1, '2021-09-11', '2021-11-11', 600, 'Part time', 'Any', 'High school', 2, 'vng@yahoo.com', 'We need you !!! Join us now'),
-        (6, 'Restaurant Manager', 'Bistro Restaurant', 2, 3, 6, '2021-09-11', '2021-11-11', 160, 'Part time', 'Any', 'High school', 2, 'vng@yahoo.com', 'Cut your hair and your self confidence'),
+        (4, 'Dai Nam C.E.O', 'Dai Nam', 3, 4, 7, '2021-09-11', '2021-11-11', 320, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
+        (5, 'Back-end Developer ', 'VNG', 8, 3, 1, '2021-09-11', '2021-11-11', 600, 'Part time', 'Any', 'High school', 2, 'vng@yahoo.com', 'We need you !!! Join us now'),
+        (6, 'Restaurant Manager', 'KFC', 11, 3, 6, '2021-09-11', '2021-11-11', 160, 'Part time', 'Any', 'High school', 2, 'vng@yahoo.com', 'Cut your hair and your self confidence'),
         (7, 'Software Tester', 'Google', 7, 4, 1, '2021-09-11', '2021-11-11', 200, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
-        (8, 'Business Analysis', 'Google', 7, 4, 1, '2021-09-11', '2021-11-11', 400, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
-        (9, 'UX/UI Design', 'Google', 7, 4, 1, '2021-09-11', '2021-11-11', 300, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
+        (8, 'Business Analysis', 'Google', 6, 4, 1, '2021-09-11', '2021-11-11', 400, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
+        (9, 'UX/UI Design', 'Google', 5, 4, 1, '2021-09-11', '2021-11-11', 300, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
         (10, 'Dentist', 'Minh Khai Clinic', 3, 4, 3, '2021-09-11', '2021-11-11', 160, 'Part time', 'Any', 'High school', 2, 'abc@yahoo.com', 'Cut your hair and your self confidence'),
-        (11, 'Security', 'Google', 7, 4, 1, '2021-09-11', '2021-11-11', 420, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
-        (12, 'English Teacher', 'HCMUT', 2, 2, 7, '2021-09-11', '2021-11-11', 160, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
+        (11, 'Security', 'Google', 9, 4, 1, '2021-09-11', '2021-11-11', 420, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
+        (12, 'English Teacher', 'Yola', 13, 2, 7, '2021-09-11', '2021-11-11', 160, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
         (13, 'Project Manager', 'Google', 7, 4, 1, '2021-09-11', '2021-11-11', 500, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
-        (14, 'Hair dresser', 'Google',7, 4, 1, '2021-09-11', '2021-11-11', 220, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence'),
-        (15, 'AI. Researcher', 'Google', 7, 4, 1, '2021-09-11', '2021-11-11', 350, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence')
+        (14, 'AI. Researcher', 'Google', 9, 4, 1, '2021-09-11', '2021-11-11', 350, 'Part time', 'Any', 'High school', 2, 'google@yahoo.com', 'Cut your hair and your self confidence')
         
         ",
         "INSERT INTO JobExperience(job_id, experience_text) VALUES

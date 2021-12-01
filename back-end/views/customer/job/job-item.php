@@ -3,7 +3,8 @@
 <?php foreach ($jobList as $job) { ?> 
     <div class="job-box" style="margin-bottom:20px;">
         <div class="company-logo">
-            <img src="http://placehold.it/90x90" alt="logo">
+            <!-- <img src="http://placehold.it/90x90" alt="logo"> -->
+            <img src="../../../public/images/uploadImage/<?php echo $job["image"];?>" alt="logo">
         </div>
         <div class="description">
             <div class="float-left">
