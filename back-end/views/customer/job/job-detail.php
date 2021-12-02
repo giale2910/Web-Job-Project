@@ -41,13 +41,15 @@
                         <!-- job box 2 start -->
                         <div class="job-box-2">
                             <div class="company-logo">
-                                <img src="http://placehold.it/80x80" alt="avatar">
+                                <!-- <img src="http://placehold.it/80x80" alt="avatar"> -->
+                                <img src="../../../public/images/uploadImage/<?php echo $jobOverview["image"];?>" alt="avatar"style="border: 1px solid lightgray">
                             </div>
                             <div class="description">
                                 <h5 class="title"><a href="#"><?php echo $jobOverview["title"];?></a></h5>
                                 <div class="candidate-listing-footer">
                                     <ul>
-                                        <li><i class="flaticon-work"></i><?php echo $jobOverview["company"];?></li>
+                                        <!-- <li><i class="flaticon-work"></i><?php echo $jobOverview["company"];?></li> -->
+                                        <li><i class="flaticon-work"></i><?php echo $jobOverview["first_name"];?></li>
                                         <li><i class="flaticon-pin"></i> <?php echo $jobOverview["city"];?></li>
                                         <li><i class="flaticon-time"></i> <?php echo $jobOverview["job_type"];?></li>
                                     </ul>
@@ -209,7 +211,7 @@
                             </div>
                             <div class="clearfix"></div>
                             <!-- Quick contact start -->
-                            <div class="widget-5 contact-2 quick-contact">
+                            <!-- <div class="widget-5 contact-2 quick-contact">
                                 <h3 class="sidebar-title">Quick Contacts</h3>
                                 <div class="s-border"></div>
                                 <form action="#" method="GET" enctype="multipart/form-data">
@@ -226,6 +228,11 @@
                                         <button type="submit" class="btn btn-md button-theme">Send Message</button>
                                     </div>
                                 </form>
+                            </div> -->
+                            <div class="widget-5 contact-2 quick-contact">
+                                <h3 class="sidebar-title">Quick Contacts</h3>
+                                <div class="s-border"></div>
+                                <a href="mailto: <?= $jobOverview["email"]?>" ><button class="btn btn-md button-theme" style="background:blue">Send Email</button></a> 
                             </div>
                         </div>
                     </div>

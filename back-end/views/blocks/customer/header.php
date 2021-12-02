@@ -34,6 +34,16 @@
                             Jobs
                         </a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="company" id="navbarDropdownMenuLink10">
+                            Company
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="job-seeker" id="navbarDropdownMenuLink10">
+                            Job Seeker
+                        </a>
+                    </li>
                     
                     <li class="d-lg-none d-xl-none nav-item dropdown">
                         <a class="nav-link " href="fav-job" id="navbarDropdownMenuLink10">Favorite List</a>

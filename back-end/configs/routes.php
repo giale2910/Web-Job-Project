@@ -156,6 +156,37 @@ $routes = array(
         "handler" => "user/logout",
         "roles" => ["all"]
     ),
+    //company + jobSeeker
+    "company" => array(
+        "handler" => "customer/jobseekercompany/renderCompanyListing",
+        "roles" => ["all"]
+    ),
+    "job-seeker" => array(
+        "handler" => "customer/jobseekercompany/renderJobseekerListing",
+        "roles" => ["all"]
+    ),
+    "company-job" => array(
+        "handler" => "customer/jobseekercompany/renderCompanyJob",
+        "roles" => ["all"]
+    ),
+    //aplly
+    "job/apply-job" => array(
+        "handler" => "customer/job/applyJob",
+        "roles" => ["all"]
+    ),
+    "job/remove-apply-job" => array(
+        "handler" => "customer/job/removeApplyJob",
+        "roles" => ["all"]
+    ),
+    // "job/get-user-apply" => array(
+    //     "handler" => "customer/job/getUserApplyForJob",
+    //     "roles" => ["all"]
+    // ),
+    "user-apply" => array(
+        "handler" => "customer/job/renderUserApplyForJob",
+        "roles" => ["all"]
+    ),
+    
     
 );
 
