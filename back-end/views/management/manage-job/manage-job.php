@@ -20,6 +20,7 @@
                                 <th class="hdn">Deadline</th>
                                 <th>Salary</th>
                                 <th>Actions</th>
+                                <th>Candidate</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +44,10 @@
                                     <td class="actions">
                                         <a href="/management/update-job?id=<?php echo $job["id"];?>"><i class="fa fa-pencil"></i></a>
                                         <a href="#"><i class="delete fa fa-trash-o"></i></a>
+                                        
+                                    </td>
+                                    <td >
+                                        <a href="/user-apply?id=<?php echo $job["id"];?>" style="border:1px solid gray;padding:10px 20px 10px 20px;border-radius:30px;">View candidates</a>
                                     </td>
                                 </tr>
                             <?php } ?>

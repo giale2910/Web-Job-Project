@@ -103,7 +103,15 @@ function create_database(PDO $conn, $database, string $version) {
             CONSTRAINT `PK_JobUser` PRIMARY KEY(`job_id`, `user_id`),
             CONSTRAINT `FK_FavJob` FOREIGN KEY(`job_id`) REFERENCES `Job`(`id`) ON DELETE CASCADE,
             CONSTRAINT `FK_FavCus` FOREIGN KEY(`user_id`) REFERENCES `User`(`id`) ON DELETE CASCADE
-        )"
+        )",
+        "CREATE TABLE ApplyJob (
+            `job_id` INTEGER NOT NULL,
+            `user_id` INTEGER NOT NULL,
+            CONSTRAINT `PK_JobUser` PRIMARY KEY(`job_id`, `user_id`),
+            CONSTRAINT `FK_job` FOREIGN KEY (`job_id`) REFERENCES `Job`(`id`) ON DELETE CASCADE,
+            CONSTRAINT `FK_user` FOREIGN KEY (`user_id`) REFERENCES `User`(`id`) ON DELETE CASCADE
+           
+        )",
     );
 
     foreach ($sqls as $sql) {

@@ -211,7 +211,7 @@
                             </div>
                             <div class="clearfix"></div>
                             <!-- Quick contact start -->
-                            <div class="widget-5 contact-2 quick-contact">
+                            <!-- <div class="widget-5 contact-2 quick-contact">
                                 <h3 class="sidebar-title">Quick Contacts</h3>
                                 <div class="s-border"></div>
                                 <form action="#" method="GET" enctype="multipart/form-data">
@@ -228,6 +228,11 @@
                                         <button type="submit" class="btn btn-md button-theme">Send Message</button>
                                     </div>
                                 </form>
+                            </div> -->
+                            <div class="widget-5 contact-2 quick-contact">
+                                <h3 class="sidebar-title">Quick Contacts</h3>
+                                <div class="s-border"></div>
+                                <a href="mailto: <?= $jobOverview["email"]?>" ><button class="btn btn-md button-theme" style="background:blue">Send Email</button></a> 
                             </div>
                         </div>
                     </div>

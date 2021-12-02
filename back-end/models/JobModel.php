@@ -139,7 +139,18 @@ class JobModel extends BaseModel
             "id" => $id
         ));
     }
-
+    public function applyJob($info){
+        $job_id = $info["job-id"];
+        $user_id = $_SESSION["user_id"];
+        $stmt = $this->conn->prepare("INSERT INTO ApplyJob(job_id, user_id) VALUES ($job_id, $user_id)");
+        return $stmt->execute();
+    }
+    public function removeApplyJob($info){
+        $job_id = $info["job-id"];
+        $user_id = $_SESSION["user_id"];
+        $stmt = $this->conn->prepare("DELETE FROM ApplyJob WHERE `job_id`=$job_id AND `user_id`=$user_id");
+        return $stmt->execute();
+    }  
     public function addFavoriteJob($info){
         $job_id = $info["job-id"];
         $user_id = $_SESSION["user_id"];
@@ -165,4 +176,17 @@ class JobModel extends BaseModel
         debugAlert($sql);
         return $this->sqlFetchAll($sql);
     }
+
+    public function getUserApplyForJob($job_id){
+        // $user_id = $_SESSION["user_id"];
+
+        $sql = "
+            SELECT job_id, user_id,email,first_name,last_name,phone,profile_link,address,about,image
+            FROM ApplyJob  JOIN User ON ApplyJob.`user_id`= User.`id`
+            WHERE job_id=$job_id";
+        debugAlert($sql);
+        return $this->sqlFetchAll($sql);
+    }
+
+    
 }

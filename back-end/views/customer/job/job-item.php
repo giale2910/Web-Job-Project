@@ -24,7 +24,8 @@
             </div>
             <div class="div-right">
                 <!-- <a href="mailto: <?= $job["contact_email"]?>" class="apply-button">Apply Now</a> -->
-                <a href="mailto: <?= $job["email"]?>" class="apply-button">Apply Now</a>
+                <!-- <a href="mailto: <?= $job["email"]?>" class="apply-button">Apply Now</a> -->
+                <a id="<?= $job["id"]?>" onclick="applỵJob(this.id)" <?= $job["email"]?>" class="apply-button">Apply Now</a>
                 <a id="<?= $job["id"]?>" onclick="addFavorite(this.id)">
                     <i id="icon-<?= $job["id"]?>" class="flaticon-heart favourite" >
                     </i>
@@ -39,7 +40,7 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination">
         <?php if ($page != 0) {?> 
-            <li class="page-item">
+            <li class="page-item" >
                 <a class="page-link" href="<?php urlUpdate("page", $page-1);?>">Prev</a></li> 
         <?php } ?>
             <li class="page-item"><a class="page-link active" href="#"><?= $page?></a></li>
@@ -66,6 +67,28 @@
             }
         }
         let uri = (state) ? "job/remove-favorite" : "job/add-favorite";
+        xmlhttp.open("POST", uri, true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("job-id="+job_id);
+    }
+
+    function applỵJob(job_id){
+        var xmlhttp = new XMLHttpRequest();      
+        let state = document.getElementById(job_id).style.backgroundColor === 'white';
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState==4 && this.status==200) {
+                if (state) {
+                    document.getElementById(job_id).style.backgroundColor = "deepskyblue";
+                    document.getElementById(job_id).style.color = "white";
+                }
+                else{
+                
+                    document.getElementById(job_id).style.backgroundColor = "white";
+                    document.getElementById(job_id).style.color = "black";
+                }
+            }
+        }
+        let uri = (state) ? "job/apply-job" : "job/remove-apply-job";
         xmlhttp.open("POST", uri, true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send("job-id="+job_id);

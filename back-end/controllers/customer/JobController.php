@@ -132,6 +132,35 @@ class JobController extends BaseController
         echo "<script>alert('Job added!'); document.location='/management';</script>";
     }
 
+    public function applyJob()
+    {
+        $this->job->applyJob($_POST);
+    }
+    public function removeApplyJob()
+    {
+        $this->job->removeApplyJob($_POST);
+    }
+    // public function getUserApplyForJob()
+    // {
+    //     $userApply = $this->job->getUserApplyForJob();
+    //     $userIds = array_map(fn($row):string => $row["job_id"], $userApply);
+    //     return $userIds;
+    // }
+
+    public function renderUserApplyForJob()
+    {
+        $data = parent::baseRenderData();
+        $data["users"] = $this->job->getUserApplyForJob($_GET["id"]);
+        $this->load->view("layouts/manager", "management/get-apply-job/get-apply-job", $data);
+    }
+    // public function getApply()
+    // {
+    //     $favoriteJobs = $this->job->getUserFavoriteJobs();
+    //     $favoriteIds = array_map(fn($row):string => $row["job_id"], $favoriteJobs);
+    //     return $favoriteIds;
+    // }
+
+
     public function addFavorite()
     {
         if (!isset($_SESSION["user_id"])) return null;
@@ -194,4 +223,7 @@ class JobController extends BaseController
         $jobs = $this->job->getJobView($searchTerm);
         return $jobs;
     }
+
+
+    
 }
