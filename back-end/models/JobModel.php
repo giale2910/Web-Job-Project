@@ -126,14 +126,67 @@ class JobModel extends BaseModel
         return $newJobId;
     }
 
+    public function updateJobResponsibility($jobId, $responsibility)
+    {
+        $insertTerms = "";
+        foreach($responsibility as $text){
+            $insertTerms = $text;
+        }
+        $sql = 
+        "UPDATE JobResponsibility SET responsibility_text=:responsibility WHERE job_id=:id";
+        return $this->sqlFetchAll($sql, array("id"=>$jobId,"responsibility"=>$insertTerms ));
+    }
+
+    public function updateJobExperience($jobId, $experience)
+    {
+        $insertTerms = "";
+        foreach($responsibility as $text){
+            $insertTerms = $text;
+        }
+        $sql = 
+        "UPDATE JobExperience SET experience_text=:experience WHERE job_id=:id";
+        return $this->sqlFetchAll($sql, array("id"=>$jobId,"experience"=>$experience ));
+    }
+
+    public function updateLocation($jobId, $experience)
+    {
+        $insertTerms = "";
+        foreach($responsibility as $text){
+            $insertTerms = $text;
+        }
+        $sql = 
+        "UPDATE JobExperience SET experience_text=:experience WHERE job_id=:id";
+        return $this->sqlFetchAll($sql, array("id"=>$jobId,"experience"=>$experience ));
+    }
+
     public function editJob($info)
     {
+        $info["location"] = array(
+            "lat" => $info["lat"],
+            "lng" => $info["lng"], 
+            "name" => $info["locationName"], 
+            "city" => "Ho Chi Minh City"
+        );
+
+        $newLocationId = $this->postAndGetId(
+            array("lat", "lng", "name", "city"),
+            array(),
+            $info["location"],
+            "Location(lat, lng, name, city)"
+        );
+
+        $info["location_id"] = $newLocationId;
+
+
         $values = array();
-        $fields = array("title", "company", "deadline", "salary", "job_type", "gender", "qualification","min_experience", "contact_email", "description");
+        $fields = array("title", "company", "deadline", "salary", "job_type", "gender", "qualification","min_experience", "contact_email", "description", "location_id");
         foreach($fields as $field) $values[] = "$field='".$info[$field]."'";
         $sql = "UPDATE Job SET " . implode(",", $values) . " WHERE id=".$info["id"];
         debugAlert($sql);
         $stmt = $this->conn->prepare($sql);
+        $this->updateJobResponsibility($info["id"], $info["responsibility"]);
+        $this->updateJobExperience($info["id"], $info["experience"]);
+
         $stmt->execute();
     }
     
