@@ -24,11 +24,11 @@
     <link rel="stylesheet" type="text/css"  href="/public/css/imported/slick.css">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css?version=2">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/customer/commons/breadcum.css?version=4">
-    <link rel="stylesheet" type="text/css" href="public/css/customer/register/register-form.css?version=4">
-    <link rel="stylesheet" type="text/css" href="/public/css/customer/login/login-form.css?version=4">
+    <link rel="stylesheet" type="text/css" href="/public/css/customer/commons/breadcum.css?version=13">
+    <link rel="stylesheet" type="text/css" href="public/css/customer/register/register-form.css?version=12">
+    <link rel="stylesheet" type="text/css" href="/public/css/customer/login/login-form.css?version=11">
  
     
     <!-- Favicon icon -->

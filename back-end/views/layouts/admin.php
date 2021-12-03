@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css"  href="/public/css/imported/slick.css">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/imported/style.css?version=16">
     <link rel="stylesheet" type="text/css" href="/public/css/imported/component/header.css?version=4">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="/public/css/imported/skins/midnight-blue.css">
 

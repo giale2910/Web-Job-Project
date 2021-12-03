@@ -147,11 +147,11 @@
         </div>
         <div class="slick-slider-area">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 5, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 3}}, {"breakpoint": 768,"settings":{"slidesToShow": 2}}]}'>
-                <div class="slick-slide-item"><img src="/public/images/Grab-logo.png" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="/public/images/lazada-logo.png" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="/public/images/shopee-logo.png" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="/public/images/KMS-Logo.png" alt="brand" class="img-fluid"></div>
-                <div class="slick-slide-item"><img src="/public/images/Viettel-logo.svg.png" alt="brand" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/Grab-logo.png" alt="best_brand_with_hiring_with_high_salary" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/lazada-logo.png" alt="best_brand_with_hiring_with_high_salary" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/shopee-logo.png" alt="best_brand_with_hiring_with_high_salary" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/KMS-Logo.png" alt="best_brand_with_hiring_with_high_salary" class="img-fluid"></div>
+                <div class="slick-slide-item"><img src="/public/images/Viettel-logo.svg.png" alt="best_brand_with_hiring_with_high_salary" class="img-fluid"></div>
                
                
                 
