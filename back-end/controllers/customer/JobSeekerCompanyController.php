@@ -67,7 +67,7 @@ class JobSeekerCompanyController extends BaseController
 
         $page = isset($_GET["page"]) ? ($_GET["page"])*10 : 0 ;
 
-        if (isset($_GET["search"])) $filter[] = "CONCAT(first_name,last_name) LIKE '%".$_GET["search"]."%'";
+        if (isset($_GET["search"])) $filter[] = " AND ". "CONCAT(first_name,last_name) LIKE '%".$_GET["search"]."%'";
         $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
         if ($location && strpos($location, "All")===false)
             $filter[] = "city = '".$_GET["Location"] . "'";
@@ -77,8 +77,8 @@ class JobSeekerCompanyController extends BaseController
             $filter[] = "category = '" . $category . "'";
         
 
-        $searchTerm = (count($filter) === 0) ? "WHERE role = 'customer' " : "WHERE " . implode(" AND ", $filter) . " AND role = 'customer'";
-        // $searchTerm .= " LIMIT 10 OFFSET " . $page;
+        $searchTerm = (count($filter) === 0) ? " " : " " . implode(" AND ", $filter) ;
+        $searchTerm .= " LIMIT 10 OFFSET " . $page;
 
         if (isset($_GET["sort"])) $searchTerm .= " ORDER BY " . $_GET["sort"];
         
@@ -99,7 +99,7 @@ class JobSeekerCompanyController extends BaseController
 
         $page = isset($_GET["page"]) ? ($_GET["page"])*10 : 0 ;
 
-        if (isset($_GET["search"])) $filter[] = "first_name LIKE '%".$_GET["search"]."%'" ;
+        if (isset($_GET["search"])) $filter[] =" AND ". "first_name LIKE '%".$_GET["search"]."%'" ;
         $location = isset($_GET["Location"]) ? $_GET["Location"] : 0;
         if ($location && strpos($location, "All")===false)
             $filter[] = "city = '".$_GET["Location"] . "'";
@@ -108,7 +108,9 @@ class JobSeekerCompanyController extends BaseController
         if ($category && strpos($category, "All")===false)
             $filter[] = "category = '" . $category . "'";
         
-        $searchTerm = (count($filter) === 0) ? "WHERE role = 'manager' " : "WHERE " . implode(" AND ", $filter) . " AND role = 'manager'";
+        // $searchTerm = (count($filter) === 0) ? "WHERE role = 'manager' " : "WHERE " . implode(" AND ", $filter) . " AND role = 'manager'";
+        // $searchTerm = (count($filter) === 0) ? " " : "WHERE " . implode(" AND ", $filter) ;
+        $searchTerm = (count($filter) === 0) ? " " : " " . implode(" AND ", $filter) ;
 
         $searchTerm .= " LIMIT 10 OFFSET " . $page;
 

@@ -43,7 +43,7 @@
             <li class="page-item" >
                 <a class="page-link" href="<?php urlUpdate("page", $page-1);?>">Prev</a></li> 
         <?php } ?>
-            <li class="page-item"><a class="page-link active" href="#"><?= $page?></a></li>
+            <li class="page-item"><a class="page-link active" href="#"><?= $page ?></a></li>
             <li class="page-item">
                 <a id="custom-text" class="page-link" href="<?php urlUpdate("page", $page+1);?>">Next</a>
             </li>

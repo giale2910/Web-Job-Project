@@ -15,15 +15,16 @@ class UserModel extends BaseModel
     public function getAllUsers($searchTerm=NULL)
     {
         // return $this->sqlFetchAll("SELECT * FROM User WHERE role = 'customer'");
-        $sql = "SELECT * FROM User ";
+        $sql = "SELECT * FROM User WHERE role = 'customer' ";
         if ($searchTerm) $sql .= $searchTerm ;
 
         return $this->sqlFetchAll($sql);
     }
     public function getAllManagers($searchTerm=NULL)
     {
-        $sql = "SELECT * FROM User ";
+        $sql = "SELECT * FROM User WHERE role = 'manager' ";
         if ($searchTerm) $sql .= $searchTerm;
+        
         return $this->sqlFetchAll($sql);
     }
     public function findUserByEmail($email)
