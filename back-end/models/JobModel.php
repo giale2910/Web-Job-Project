@@ -140,23 +140,12 @@ class JobModel extends BaseModel
     public function updateJobExperience($jobId, $experience)
     {
         $insertTerms = "";
-        foreach($responsibility as $text){
+        foreach($experience as $text){
             $insertTerms = $text;
         }
         $sql = 
         "UPDATE JobExperience SET experience_text=:experience WHERE job_id=:id";
-        return $this->sqlFetchAll($sql, array("id"=>$jobId,"experience"=>$experience ));
-    }
-
-    public function updateLocation($jobId, $experience)
-    {
-        $insertTerms = "";
-        foreach($responsibility as $text){
-            $insertTerms = $text;
-        }
-        $sql = 
-        "UPDATE JobExperience SET experience_text=:experience WHERE job_id=:id";
-        return $this->sqlFetchAll($sql, array("id"=>$jobId,"experience"=>$experience ));
+        return $this->sqlFetchAll($sql, array("id"=>$jobId,"experience"=>$insertTerms ));
     }
 
     public function editJob($info)
