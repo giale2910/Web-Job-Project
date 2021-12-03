@@ -115,7 +115,7 @@
                         <div class="div-right">
                             <!-- <a  href = "mailto: phuonggiale13@gmail.com" class="apply-button">Email to Apply</a> -->
                             <!-- <a href="#"><i class="flaticon-heart favourite"></i></a> -->
-                            <a href="<?php echo $company["profile_link"];?>" target="_blank"><img class="favourite" src="../../../public/images/cv1.png" style="width:30px; height:30px;border-radius:30px; border: solid 1px #fff;"></a>
+                            <a href="<?php echo $user["profile_link"];?>" target="_blank"><img class="favourite" src="../../../public/images/cv1.png" style="width:30px; height:30px;border-radius:30px; border: solid 1px #fff;"></a>
 
                         </div>
                     </div>
