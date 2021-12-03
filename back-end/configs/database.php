@@ -8,7 +8,7 @@ $database["version"] = "1.1.14";
 
 $database["admins"] = array(
     array(
-        "email" => "admin@mail.com",
+        "email" => "admin@gmail.com",
         "password" => "admin",
         "first_name" => "Andy",
         "last_name" => "Min",
@@ -20,8 +20,8 @@ $database["admins"] = array(
 );
 $database["managers"] = array(
     array(
-        "email" => "manager1@yahoo.com",
-        "password" => "123456",
+        "email" => "manager1@gmail.com",
+        "password" => "manager1",
         "first_name" => "HCMUT",
         "last_name" => "",
         "profile_link" =>"https://oisp.hcmut.edu.vn/",
@@ -31,11 +31,9 @@ $database["managers"] = array(
     ),
     array(
         "email" => "manager2@gmail.com",
-        "password" => "monkey",
+        "password" => "manager2",
         "first_name" => "Shoppe",
         "last_name" => "",
-        // "first_name" => "Brad-Jonas",
-        // "last_name" => "Hardick",
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
@@ -43,7 +41,7 @@ $database["managers"] = array(
     ),
     array(
         "email" => "manager3@gmail.com",
-        "password" => "monkey",
+        "password" => "manager3",
         "first_name" => "Lacoste",
         "last_name" => "",
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
@@ -53,7 +51,7 @@ $database["managers"] = array(
     ),
     array(
         "email" => "facebook@gmail.com",
-        "password" => "monkey",
+        "password" => "facebook",
         "first_name" => "Facebook",
         "last_name" => ".",
         "profile_link" =>"https://www.facebook.com/facebookapp",
@@ -64,7 +62,7 @@ $database["managers"] = array(
 
     array(
         "email" => "vng@gmail.com",
-        "password" => "monkey",
+        "password" => "vng",
         "first_name" => "VNG",
         "last_name" => "",
         "profile_link" =>"https://www.vng.com.vn/",
@@ -75,7 +73,7 @@ $database["managers"] = array(
 
     array(
         "email" => "google@gmail.com",
-        "password" => "monkey",
+        "password" => "google",
         "first_name" => "Google",
         "last_name" => "",
         "profile_link" =>"hhttps://about.google/",
@@ -85,7 +83,7 @@ $database["managers"] = array(
     ),
     array(
         "email" => "microsoft@gmail.com",
-        "password" => "monkey",
+        "password" => "microsoft",
         "first_name" => "Microsoft",
         "last_name" => "",
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
@@ -96,7 +94,7 @@ $database["managers"] = array(
         
     array(
         "email" => "grab@gmail.com",
-        "password" => "monkey",
+        "password" => "grab",
         "first_name" => "Grab",
         "last_name" => "",
         "profile_link" =>"https://www.grab.com/vn/en/",
@@ -106,7 +104,7 @@ $database["managers"] = array(
     ),
     array(
         "email" => "amazon@gmail.com",
-        "password" => "monkey",
+        "password" => "amazon",
         "first_name" => "Amazon",
         "last_name" => "",
         "profile_link" =>"https://www.facebook.com/facebookapp",
@@ -116,7 +114,7 @@ $database["managers"] = array(
     ),
     array(
         "email" => "kfc@gmail.com",
-        "password" => "monkey",
+        "password" => "kfc",
         "first_name" => "KFC",
         "last_name" => "",
         "profile_link" =>"https://www.facebook.com/facebookapp",
@@ -126,7 +124,7 @@ $database["managers"] = array(
     ),
     array(
         "email" => "30shine9@gmail.com",
-        "password" => "monkey",
+        "password" => "30shine9",
         "first_name" => "30shine",
         "last_name" => "",
         "profile_link" =>"https://www.facebook.com/facebookapp",
@@ -136,7 +134,7 @@ $database["managers"] = array(
     ),
     array(
         "email" => "yola@gmail.com",
-        "password" => "monkey",
+        "password" => "yola",
         "first_name" => "Yola",
         "last_name" => "",
         "profile_link" =>"https://www.facebook.com/facebookapp",
@@ -148,8 +146,8 @@ $database["managers"] = array(
 );
 $database["customers"] = array(
     array(
-        "email" => "user0@hcmut.edu.vn",
-        "password" => "1011101",
+        "email" => "bachkhoa@hcmut.edu.vn",
+        "password" => "bachkhoa",
         "first_name" => "Bach Khoa",
         "last_name" => "Nguyen",
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
@@ -158,8 +156,8 @@ $database["customers"] = array(
         "image" =>'ava1.png'
     ),
     array(
-        "email" => "user1@hcmut.edu.vn",
-        "password" => "1011101",
+        "email" => "giale@hcmut.edu.vn",
+        "password" => "giale",
         "first_name" => "Gia Le",
         "last_name" => "Dang",
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
@@ -168,8 +166,8 @@ $database["customers"] = array(
         "image" =>"ava2.png"
     ),
     array(
-        "email" => "user2@hcmut.edu.vn",
-        "password" => "1212",
+        "email" => "minhkiet@hcmut.edu.vn",
+        "password" => "minhkiet",
         "first_name" => "Minh Kiet",
         "last_name" => "Bui",
         "profile_link" =>"https://i.topcv.vn/minhkiet?ref=4855467",
@@ -178,8 +176,8 @@ $database["customers"] = array(
         "image" =>"ava3.png"
     ),
     array(
-        "email" => "user3@hcmut.edu.vn",
-        "password" => "1212",
+        "email" => "gioian@hcmut.edu.vn",
+        "password" => "gioian",
         "first_name" => "Gioi An",
         "last_name" => "Ly",
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
@@ -188,8 +186,8 @@ $database["customers"] = array(
         "image" =>"ava4.png" 
     ),
     array(
-        "email" => "user4@hcmut.edu.vn",
-        "password" => "1212",
+        "email" => "minhsang@hcmut.edu.vn",
+        "password" => "minhsang",
         "first_name" => "Minh Sang",
         "last_name" => "Trieu",
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
@@ -198,8 +196,8 @@ $database["customers"] = array(
         "image" =>"ava6.png"   
     ),
     array(
-        "email" => "user5@hcmut.edu.vn",
-        "password" => "1212",
+        "email" => "dangkhoa@hcmut.edu.vn",
+        "password" => "dangkhoa",
         "first_name" => "Dang Khoa",
         "last_name" => "Tran",
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
@@ -208,8 +206,8 @@ $database["customers"] = array(
         "image" =>"ava7.png"   
     ),
     array(
-        "email" => "user6@hcmut.edu.vn",
-        "password" => "1212",
+        "email" => "thanhsach@hcmut.edu.vn",
+        "password" => "thanhsach",
         "first_name" => "Thanh Sach",
         "last_name" => "Le",
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
@@ -219,8 +217,8 @@ $database["customers"] = array(
     ),
     
     array(
-        "email" => "user7@hcmut.edu.vn",
-        "password" => "1212",
+        "email" => "huaphung@hcmut.edu.vn",
+        "password" => "huaphung",
         "first_name" => "Hua Phung",
         "last_name" => "Nguyen",
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
