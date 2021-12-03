@@ -132,6 +132,17 @@ class JobController extends BaseController
         echo "<script>alert('Job added!'); document.location='/management';</script>";
     }
 
+    public function delete()
+    {
+        /*
+        TODO [front-end]: 
+        Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)
+        */
+        debugAlert("Posting job");
+        $this->job->jobDeleted($_GET["id"]);
+        echo "<script>alert('Job deleted!'); document.location='/management/manage-job';</script>";
+    }
+
     public function applyJob()
     {
         $this->job->applyJob($_POST);

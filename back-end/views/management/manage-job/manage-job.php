@@ -43,7 +43,7 @@
                                     <td> <?php echo $job["salary"];?> </td>
                                     <td class="actions">
                                         <a href="/management/update-job?id=<?php echo $job["id"];?>"><i class="fa fa-pencil"></i></a>
-                                        <a href="#"><i class="delete fa fa-trash-o"></i></a>
+                                        <a href="/management/job/delete?id=<?php echo $job["id"];?>"><i class="delete fa fa-trash-o"></i></a>
                                         
                                     </td>
                                     <td >
