@@ -145,7 +145,7 @@
 
         <script>
             function LoadMap(propertes) {
-                const defaultLocation = {lat: 10.8144067, lng: 106.7106083};
+                const defaultLocation = {lat: <?php echo $jobOverview["lat"]?>, lng: <?php echo $jobOverview["lng"]?>};
                 var mapOptions = {
                     center: new google.maps.LatLng(defaultLocation.lat, defaultLocation.lng),
                     zoom: 15,
