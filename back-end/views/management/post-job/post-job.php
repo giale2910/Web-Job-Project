@@ -108,7 +108,18 @@
                                 <textarea class="input-text" id="description" name="description" placeholder="Detailed Information"></textarea>
                             </div>
                         </div>
-                        
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Job Experience</label>
+                                <textarea class="input-text" id="description" name="experience[]" placeholder="Detailed Information"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Job Responsibility</label>
+                                <textarea class="input-text" id="description" name="responsibility[]" placeholder="Detailed Information"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- TODO: Add Qualification / Responsibility option (multiple text), see job-detail -->
