@@ -102,6 +102,10 @@ $routes = array(
         "handler" => "customer/job/post",
         "roles" => ["manager", "admin"]
     ),
+    "management/job/delete" => array(
+        "handler" => "customer/job/delete",
+        "roles" => ["manager", "admin"]
+    ),
     "job/add-favorite" => array(
         "handler" => "customer/job/addFavorite",
         "roles" => ["all"]

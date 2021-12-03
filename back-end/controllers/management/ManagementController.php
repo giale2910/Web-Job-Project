@@ -72,6 +72,16 @@ class ManagementController extends BaseController
         backendAlert("Job posted successfully!");
     }
 
+    public function deleteJob()
+    {
+        $jobId = $_GET;
+        echo '<script>';
+        echo 'console.log('. json_encode( $jobId ) .')';
+        echo '</script>';
+        $this->job->jobDeleted($jobId["id"]);
+        backendAlert("Delete posted successfully!");
+    }
+
     public function renderDashboardManagement()
     {
         $data = parent::baseRenderData();
