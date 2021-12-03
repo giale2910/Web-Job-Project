@@ -402,3 +402,7 @@
     display: inline;
     line-height: 117px;
 }
+
+.hidden {
+    display: none;
+}
