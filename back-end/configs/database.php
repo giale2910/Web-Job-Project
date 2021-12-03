@@ -27,7 +27,7 @@ $database["managers"] = array(
         "profile_link" =>"https://oisp.hcmut.edu.vn/",
         "phone" => "0938919001",
         "address" => "246 Ly Thuong Kiet Q.5",
-        "image" =>'com0.png'
+        "image" =>'c.png'
     ),
     array(
         "email" => "manager2@gmail.com",
@@ -39,7 +39,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>'com10.png'
+        "image" =>'c10.png'
     ),
     array(
         "email" => "manager3@gmail.com",
@@ -49,7 +49,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>'com11.jpeg'
+        "image" =>'c11.jpeg'
     ),
     array(
         "email" => "facebook@gmail.com",
@@ -59,8 +59,9 @@ $database["managers"] = array(
         "profile_link" =>"https://www.facebook.com/facebookapp",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com1.png",
+        "image" =>"c1.png",
     ),
+
     array(
         "email" => "vng@gmail.com",
         "password" => "monkey",
@@ -69,9 +70,9 @@ $database["managers"] = array(
         "profile_link" =>"https://www.vng.com.vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com4.png",
-        
+        "image" =>"c4.png",    
     ),
+
     array(
         "email" => "google@gmail.com",
         "password" => "monkey",
@@ -80,7 +81,7 @@ $database["managers"] = array(
         "profile_link" =>"hhttps://about.google/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com2.png"
+        "image" =>"c2.png"
     ),
     array(
         "email" => "microsoft@gmail.com",
@@ -90,8 +91,9 @@ $database["managers"] = array(
         "profile_link" =>"https://www.microsoft.com/vi-vn/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com3.png"
+        "image" =>"c3.png"
     ),
+        
     array(
         "email" => "grab@gmail.com",
         "password" => "monkey",
@@ -100,7 +102,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.grab.com/vn/en/",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com5.png"
+        "image" =>"c5.png"
     ),
     array(
         "email" => "amazon@gmail.com",
@@ -110,7 +112,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.facebook.com/facebookapp",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com6.png"
+        "image" =>"c6.png"
     ),
     array(
         "email" => "kfc@gmail.com",
@@ -120,7 +122,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.facebook.com/facebookapp",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com8.png"
+        "image" =>"c8.png"
     ),
     array(
         "email" => "30shine9@gmail.com",
@@ -130,7 +132,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.facebook.com/facebookapp",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com7.png"
+        "image" =>"c7.png"
     ),
     array(
         "email" => "yola@gmail.com",
@@ -140,7 +142,7 @@ $database["managers"] = array(
         "profile_link" =>"https://www.facebook.com/facebookapp",
         "phone" => "0938919001",
         "address" => "TPHCM",
-        "image" =>"com9.png"
+        "image" =>"c9.png"
     )
     
 );
@@ -174,7 +176,6 @@ $database["customers"] = array(
         "phone" => "0938919002",
         "address" => "TPHCM",
         "image" =>"ava3.png"
-        
     ),
     array(
         "email" => "user3@hcmut.edu.vn",
@@ -184,8 +185,7 @@ $database["customers"] = array(
         "profile_link" =>"https://i.topcv.vn/giale?ref=4782604",
         "phone" => "0232454323",
         "address" => "TPHCM",
-        "image" =>"ava4.png"
-        
+        "image" =>"ava4.png" 
     ),
     array(
         "email" => "user4@hcmut.edu.vn",
@@ -217,6 +217,7 @@ $database["customers"] = array(
         "address" => "TPHCM",
         "image" =>"ava9.png"   
     ),
+    
     array(
         "email" => "user7@hcmut.edu.vn",
         "password" => "1212",

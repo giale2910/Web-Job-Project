@@ -35,6 +35,7 @@ class UserController extends BaseController
         if ($user){
             backendAlert("Email account exists !!! Please re-enter another email account !!!",'/login');
         }else{
+           
             if ($_POST["password"] == $_POST['rePassword']) {
                 unset($_POST["rePassword"]);
               
@@ -48,7 +49,10 @@ class UserController extends BaseController
     {
         $user = $this->user->findUserByEmail($_POST["email"]);
         if ($user) {
-            if (password_verify($_POST["password"], $user["password"])) {
+            if($user['status'] == "Deactive"){
+                backendAlert("Account is deactive !!!",'/login');
+            }
+            else if (password_verify($_POST["password"], $user["password"])) {
                 $_SESSION["user_id"] = $user["id"];
                 $_SESSION["role"] = $user["role"];
                 $_SESSION["logged"] = true;
