@@ -76,9 +76,9 @@ class JobModel extends BaseModel
         // Location(id, lat, lng, name, city)
         // Temporarily do this until we get location from front-end
         $info["location"] = array(
-            "lat" => "10.8144067",
-            "lng" => "106.7106083", 
-            "name" => "Ben xe Mien Dong", 
+            "lat" => $info["lat"],
+            "lng" => $info["lng"], 
+            "name" => $info["locationName"], 
             "city" => "Ho Chi Minh City"
         );
 
