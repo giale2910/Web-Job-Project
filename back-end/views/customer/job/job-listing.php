@@ -64,14 +64,14 @@
                             </a>
                             <div id="options-content4" class="collapse">
                                 <div class="radio">
-                                    <input id="fulltime" type="radio" name="job-type">
-                                    <label for="Full time">
+                                    <input id="fulltime" type="radio" name="job-type" value="Full time">
+                                    <label for="fulltime">
                                         Full Time
                                     </label>
                                 </div>
                                 <div class="radio">
-                                    <input id="parttime" type="radio" name="job-type">
-                                    <label for="Part time">
+                                    <input id="parttime" type="radio" name="job-type" value="Part time">
+                                    <label for="parttime">
                                         Part Time
                                     </label>
                                 </div>
@@ -123,7 +123,7 @@
                             </div>
 
                             <a class="show-more-options" data-toggle="collapse" data-target="#options-content">
-                                <i class="fa fa-plus-circle"></i> Offerd Salary
+                                <i class="fa fa-plus-circle"></i> Offered Salary
                             </a>
                             <div id="options-content" class="collapse">
                                 <div class="numinput">
