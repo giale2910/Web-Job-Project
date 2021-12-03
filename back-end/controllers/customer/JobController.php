@@ -156,7 +156,7 @@ class JobController extends BaseController
         echo 'console.log('. json_encode( $product ) .')';
         echo '</script>';
         $this->job->editJob($product);
-        echo "<script>alert('Job deleted!'); document.location='/management/manage-job';</script>";
+        echo "<script>alert('Job updated!'); document.location='/management/manage-job';</script>";
     }
 
     public function applyJob()
