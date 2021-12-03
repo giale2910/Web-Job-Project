@@ -125,6 +125,17 @@ class JobModel extends BaseModel
 
         return $newJobId;
     }
+
+    public function editJob($info)
+    {
+        $values = array();
+        $fields = array("title", "company", "deadline", "salary", "job_type", "gender", "qualification","min_experience", "contact_email", "description");
+        foreach($fields as $field) $values[] = "$field='".$info[$field]."'";
+        $sql = "UPDATE Job SET " . implode(",", $values) . " WHERE id=".$info["id"];
+        debugAlert($sql);
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+    }
     
     public function console_log( $data ){
         echo '<script>';

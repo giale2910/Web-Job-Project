@@ -138,8 +138,24 @@ class JobController extends BaseController
         TODO [front-end]: 
         Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)
         */
-        debugAlert("Posting job");
+        debugAlert("Delete job");
         $this->job->jobDeleted($_GET["id"]);
+        echo "<script>alert('Job deleted!'); document.location='/management/manage-job';</script>";
+    }
+
+    public function update()
+    {
+        /*
+        TODO [front-end]: 
+        Job(title, company, manager_id, location_id, category_id, date_posted, deadline, salary, job_type, gender, qualification, min_experience, contact_email, description)
+        */
+        debugAlert("Update job");
+        $product = $_POST;
+
+        echo '<script>';
+        echo 'console.log('. json_encode( $product ) .')';
+        echo '</script>';
+        $this->job->editJob($product);
         echo "<script>alert('Job deleted!'); document.location='/management/manage-job';</script>";
     }
 

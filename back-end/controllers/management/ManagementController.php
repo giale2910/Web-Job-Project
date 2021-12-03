@@ -219,6 +219,7 @@ class ManagementController extends BaseController
         $result["overview"] = $this->job->getJobOverview($id);
         $result["experience"] = $this->job->getJobExperience($id);
         $result["responsibility"] = $this->job->getJobResponsibility($id);
+        $result["id"] = $id;
         return $result;
     }
 

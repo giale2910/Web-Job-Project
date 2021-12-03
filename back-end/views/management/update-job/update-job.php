@@ -14,12 +14,12 @@
     <body>
         <div class="dashboard-header clearfix">
             <div class="row">
-                <div class="col-sm-12 col-md-6"><h4>Post a Job</h4></div>
+                <div class="col-sm-12 col-md-6"><h4>Update a Job</h4></div>
             </div>
         </div>
 
         <div class="submit-address dashboard-list">
-            <form method="GET">
+            <form method="POST" action="job/update?id=<?php echo $jobOverview["id"];?>" >
                 <h4 class="bg-grea-3"> Basic Information </h4>
                 <div class="search-contents-sidebar">
                     <div class="row pad-20">
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="post-btn"><a href="#" class="btn btn-md button-theme">Update job</a></div>
+                            <button class="post-btn btn btn-md button-theme" type="submit">Update job</button>
                         </div>
                     </div>
                 </div>
